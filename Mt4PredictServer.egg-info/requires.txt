@@ -1,0 +1,15 @@
+pandas
+matplotlib
+grpcio-tools
+grpcio
+Pillow
+mplfinance
+mysql
+scikit-learn
+setuptools
+sqlalchemy
+pytest
+urllib3
+werkzeug
+tensorflow
+numpy

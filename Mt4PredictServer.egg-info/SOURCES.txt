@@ -1,0 +1,9 @@
+README.md
+setup.py
+Mt4PredictServer.egg-info/PKG-INFO
+Mt4PredictServer.egg-info/SOURCES.txt
+Mt4PredictServer.egg-info/dependency_links.txt
+Mt4PredictServer.egg-info/entry_points.txt
+Mt4PredictServer.egg-info/not-zip-safe
+Mt4PredictServer.egg-info/requires.txt
+Mt4PredictServer.egg-info/top_level.txt

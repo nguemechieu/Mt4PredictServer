@@ -1,0 +1,68 @@
+Metadata-Version: 2.4
+Name: Mt4PredictServer
+Version: 1.0.0
+Summary: AI-powered trading software for MetaTrader 4/5
+Home-page: https://github.com/nguemechieu/Mt4PredictServer
+Author: Noel M nguemechieu
+Author-email: nguemechieu@live.com
+License: MIT
+Keywords: metatrader,ai,trading,prediction,forex
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: grpcio-tools
+Requires-Dist: grpcio
+Requires-Dist: Pillow
+Requires-Dist: mplfinance
+Requires-Dist: mysql
+Requires-Dist: scikit-learn
+Requires-Dist: setuptools
+Requires-Dist: sqlalchemy
+Requires-Dist: pytest
+Requires-Dist: urllib3
+Requires-Dist: werkzeug
+Requires-Dist: tensorflow
+Requires-Dist: numpy
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Mt4PredictServer
+
+🚀 **AI-powered real-time prediction server for MetaTrader 4/5 trading systems**  
+This project provides a lightweight Python-based socket server that receives indicator data (EMA, RSI, etc.) from MetaTrader via a C++ DLL, runs a deep learning model, and returns trading signals (`up`, `down`) with confidence scores.
+
+---
+
+## 🔧 Features
+
+- ✅ Real-time TCP server for MT4/MT5 integration
+- ✅ Keras deep learning model support
+- ✅ DLL-bridge compatible with MQL4
+- ✅ Lightweight, production-ready, and fast
+- ✅ Pluggable ML pipeline (e.g., scikit-learn, TensorFlow)
+
+---
+
+## 📦 Installation
+
+> Requires Python 3.12+
+
+```bash
+# Clone the repo
+git clone https://github.com/nguemechieu/Mt4PredictServer.git
+cd Mt4PredictServer
+
+# Install dependencies
+pip install -e .

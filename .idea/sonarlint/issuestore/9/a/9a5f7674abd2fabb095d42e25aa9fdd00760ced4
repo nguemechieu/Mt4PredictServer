@@ -1,0 +1,22 @@
+
+jpython:S1192"KDefine a constant instead of duplicating this literal '26-day EMA' 3 times.(»ÿšÚ8°¤Ý€¢1
+ppython:S1192n"LDefine a constant instead of duplicating this literal "setting.csv" 9 times.(òÀ§®ýÿÿÿÿ8²¤Ý€¢1
+jpython:S1192"KDefine a constant instead of duplicating this literal '12-day EMA' 3 times.(Œ¸ëñ8²¤Ý€¢1
+ppython:S1192!"LDefine a constant instead of duplicating this literal "Signal Line" 4 times.(Ñ°¾¢ýÿÿÿÿ8³¤Ý€¢1
+Xpython:S1172"4Remove the unused function parameter "MODE_HISTORY".(Æ«¥›þÿÿÿÿ8³¤Ý€¢1
+Mpython:S1172")Remove the unused function parameter "i".(Æ«¥›þÿÿÿÿ8³¤Ý€¢1
+{python:S117"XRename this parameter "MODE_HISTORY" to match the regular expression ^[_a-z][a-z0-9_]*$.(Æ«¥›þÿÿÿÿ8³¤Ý€¢1
+Qpython:S1172"2Remove the unused function parameter "time_frame".(Ÿ”¤à8³¤Ý€¢1
+Mpython:S1172".Remove the unused function parameter "symbol".(Ÿ”¤à8³¤Ý€¢1
+=python:S125."Remove this commented out code.(—è÷á8³¤Ý€¢1
+Spython:S1481Ñ".Remove the unused local variable "time_frame".(€©ÆÒþÿÿÿÿ8³¤Ý€¢1
+Cpython:S125à"Remove this commented out code.(»‡Ôúÿÿÿÿÿ8³¤Ý€¢1
+>python:S125æ"Remove this commented out code.(éùä¼8³¤Ý€¢1
+Mpython:S1481–"-Remove the unused local variable "tickvalue".(ÔÅÿŠ8³¤Ý€¢1
+Lpython:S1481—",Remove the unused local variable "ticksize".(ŠÐÚƒ8³¤Ý€¢1
+Ppython:S1172¥"+Remove the unused function parameter "sym".(×óô·úÿÿÿÿ8³¤Ý€¢1
+ypython:S3776Ù"TRefactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.(¯Šÿìøÿÿÿÿ8´¤Ý€¢1
+Kpython:S1172õ"+Remove the unused function parameter "sym".(øÕ”µ8´¤Ý€¢1
+wpython:S100ž"SRename method "IntegerToString" to match the regular expression ^[a-z_][a-z0-9_]*$.(»õ¶çÿÿÿÿÿ8´¤Ý€¢1
+mpython:S100¡"NRename method "StringFind" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÐœÀ­8´¤Ý€¢1
+tpython:S100¤"PRename method "StringSubstr" to match the regular expression ^[a-z_][a-z0-9_]*$.(´‰æèøÿÿÿÿ8´¤Ý€¢1

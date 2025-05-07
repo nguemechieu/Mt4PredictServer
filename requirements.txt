@@ -1,0 +1,23 @@
+# This is a sample requirements.txt file
+# It is used to specify the Python packages and their versions required for your project
+
+# Specify a package without version to get the latest stable version
+
+# Specify a package with a specific version
+# Include additional packages
+pandas
+matplotlib
+grpcio-tools
+grpcio
+Pillow
+mplfinance 
+mysql
+scikit-learn
+setuptools
+sqlalchemy
+pytest
+urllib3
+werkzeug
+tensorflow
+numpy
+PyQt5

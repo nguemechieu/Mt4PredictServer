@@ -1,0 +1,2 @@
+[console_scripts]
+Mt4PredictServer = Mt4PredictServer.main:main
