@@ -18,9 +18,15 @@ This project provides a lightweight Python-based socket server that receives ind
  
  ![arch](architechture.png)
 
-
+📌 Recommended Confidence Thresholds Based on Strategy
+Strategy Type	Recommended Threshold
+Scalping	≥ 0.80
+Swing Trading	≥ 0.70
+Conservative Mode	≥ 0.85
+Exploratory / AI Learning Mode	≥ 0.60 with reduced lot size
 ---
 
+![TEST](testimage.png)
 ## 📦 Installation
 
 > Requires Python 3.12+

@@ -13,3 +13,4 @@ urllib3
 werkzeug
 tensorflow
 numpy
+PyQt5

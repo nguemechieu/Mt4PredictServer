@@ -11,6 +11,7 @@ Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: pandas
 Requires-Dist: matplotlib
 Requires-Dist: grpcio-tools
@@ -26,6 +27,7 @@ Requires-Dist: urllib3
 Requires-Dist: werkzeug
 Requires-Dist: tensorflow
 Requires-Dist: numpy
+Requires-Dist: PyQt5
 Dynamic: author
 Dynamic: author-email
 Dynamic: classifier
@@ -34,11 +36,13 @@ Dynamic: description-content-type
 Dynamic: home-page
 Dynamic: keywords
 Dynamic: license
+Dynamic: license-file
 Dynamic: requires-dist
 Dynamic: requires-python
 Dynamic: summary
 
 # Mt4PredictServer
+![logo](./logo.png)
 
 🚀 **AI-powered real-time prediction server for MetaTrader 4/5 trading systems**  
 This project provides a lightweight Python-based socket server that receives indicator data (EMA, RSI, etc.) from MetaTrader via a C++ DLL, runs a deep learning model, and returns trading signals (`up`, `down`) with confidence scores.
@@ -53,6 +57,11 @@ This project provides a lightweight Python-based socket server that receives ind
 - ✅ Lightweight, production-ready, and fast
 - ✅ Pluggable ML pipeline (e.g., scikit-learn, TensorFlow)
 
+# Architechture
+ 
+ ![arch](architechture.png)
+
+
 ---
 
 ## 📦 Installation
@@ -66,3 +75,4 @@ cd Mt4PredictServer
 
 # Install dependencies
 pip install -e .
+

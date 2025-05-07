@@ -30,7 +30,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.12",
     entry_points={
         "console_scripts": [
             "Mt4PredictServer =app.main:main",
