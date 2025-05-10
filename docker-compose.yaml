@@ -1,0 +1,28 @@
+
+services:
+  mt4:
+    build: ./mt4
+    container_name: mt4
+    networks:
+      - ai_net
+    volumes:
+      - mt4-files:/home/trader/.wine/drive_c/MT4/MQL4/Files
+    depends_on:
+
+      - predictserver
+
+  predictserver:
+    build: ./predictserver
+    container_name: predictserver
+    networks:
+      - ai_net
+    volumes:
+      - mt4-files:/app/shared  # Make sure your Python app reads/writes here
+    ports:
+      - "50051:50051"  # gRPC port
+
+networks:
+  ai_net:
+
+volumes:
+  mt4-files:
