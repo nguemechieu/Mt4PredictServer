@@ -33,7 +33,7 @@ setup(
     python_requires=">=3.12",
     entry_points={
         "console_scripts": [
-            "Mt4PredictServer =app.main:main",
+            "Mt4PredictServer =Mt4PredictServer.main:main",
         ],
     },
     install_requires=read_requirements(),
