@@ -4,15 +4,24 @@ import os
 import subprocess
 import sys
 
-import tensorflow as tf
-from PyQt5.QtCore import QTimer, Qt, QObject
+import keras
+from PyQt5.QtCore import QThread, pyqtSignal,QTimer, Qt, QObject
 from PyQt5.QtGui import QFont, QIcon
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QLabel, QVBoxLayout, QTextEdit, QPushButton, QMessageBox, QHBoxLayout, QTabWidget
 )
 
-from components.predictionChart import PredictionChart
-from components.tensorflow_metrics import TensorFlowMetricsTab
+from src.components.server import PredictServer
+from src.components.AccountInfo import AccountInfo
+from src.components.AccountMetrics import AccountMetrics
+from src.components.ExecuteCommand import ExecuteCommand
+from src.components.GPUMonitor import GPUMonitor
+from src.components.GPUMonitorChart import GPUMonitorChart
+from src.components.PositionHistory import PositionHistory
+from src.components.TrafficMonitor import TrafficMonitor
+from src.components.predictionChart import PredictionChart
+from src.components.tensorflow_metrics import TensorFlowMetricsTab
+
 
 # --- Force UTF-8 encoding ---
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -21,7 +30,6 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 LOG_PATH = "src/logs/predict_server.log"
 PREDICTION_CSV = "src/data/prediction_history.csv"
 SERVER_SCRIPT = "src/server/server.py"
-from PyQt5.QtCore import QThread, pyqtSignal
 
 class CommandWorker(QThread):
     result_signal = pyqtSignal(str)  # Signal to send the result back to the main thread
@@ -30,6 +38,8 @@ class CommandWorker(QThread):
     def __init__(self, param):
         super().__init__()
         self.param = param
+
+
 
     def run(self):
         try:
@@ -107,10 +117,15 @@ def dark_theme_stylesheet():
     }"""
 
 
-class ServerDashboard(QWidget):
+class Mt4PredictServer(QWidget):
     def __init__(self):
         super().__init__()
-        self.command_output = None
+
+
+        self.controller=self
+       
+        self.symbols =["EURUSD","AUDJPY"]
+        self.command_output =QTextEdit(self)
         self.tensorflow_tab = None
         self.worker = None
         self.tabs = None
@@ -129,15 +144,22 @@ class ServerDashboard(QWidget):
         self.logger = None
         self.process = None
         self.reader_thread = None
+        self.candles={}
         self.setWindowTitle("Mt4PredictServer - Unified Dashboard")
         self.setWindowIcon(QIcon("logo.png"))
         self.setGeometry(400, 200, 1000, 800)
         self.setStyleSheet(dark_theme_stylesheet())
-        self.init_ui()
         self.init_logger()
+
+      
+        self.init_ui()
         self.init_timer()
+       
+
 
     def init_ui(self):
+        self.predict_server = PredictServer(controller=self.controller)
+         
         layout = QVBoxLayout()
         self.tabs = QTabWidget()
 
@@ -152,10 +174,8 @@ class ServerDashboard(QWidget):
         self.start_btn = QPushButton("Start Server")
         self.stop_btn = QPushButton("Stop Server")
         self.stop_btn.setEnabled(False)
-
         self.start_btn.clicked.connect(self.start_server)
         self.stop_btn.clicked.connect(self.stop_server)
-
         btn_layout = QHBoxLayout()
         btn_layout.addWidget(self.start_btn)
         btn_layout.addWidget(self.stop_btn)
@@ -169,7 +189,7 @@ class ServerDashboard(QWidget):
         server_tab.setLayout(server_layout)
 
         # Chart Tab
-        self.chart = PredictionChart(self)
+        self.chart = PredictionChart(self.controller)
         self.chart.setMinimumHeight(300)
         chart_tab = QWidget()
         chart_layout = QVBoxLayout()
@@ -182,7 +202,7 @@ class ServerDashboard(QWidget):
         self.gpu_status.setReadOnly(True)
         self.gpu_status.setFont(QFont("Courier New", 10))
         self.gpu_status.setStyleSheet("background-color: #1E1E1E; color: #00FF00;")
-        gpu_tab = QWidget()
+        gpu_tab = QWidget(self)
         gpu_layout = QVBoxLayout()
         gpu_layout.addWidget(QLabel("🖥 GPU Status:"))
         gpu_layout.addWidget(self.gpu_status)
@@ -190,11 +210,6 @@ class ServerDashboard(QWidget):
 
 
         # Execute Command Tab
-        execute_command_tab = QWidget()
-        self.command_output = QTextEdit()
-        self.command_output.setReadOnly(True)
-        self.command_output.setFont(QFont("Courier New", 10))
-        self.command_output.setStyleSheet("background-color:#1e1e1e; color: #00ffcc;")
 
         buy_btn = QPushButton("Buy")
         sell_btn = QPushButton("Sell")
@@ -231,7 +246,10 @@ class ServerDashboard(QWidget):
         execute_layout.addWidget(shutdown_btn)
         execute_layout.addWidget(QLabel("📤 Output:"))
         execute_layout.addWidget(self.command_output)
-        execute_command_tab.setLayout(execute_layout)
+
+        train_btn = QPushButton("Train Model")
+        train_btn.clicked.connect(lambda: self.execute_command("train"))
+        execute_layout.addWidget(train_btn)
 
         self.model_info = QTextEdit()
         self.model_info.setReadOnly(True)
@@ -244,43 +262,51 @@ class ServerDashboard(QWidget):
         self.model_info.setStyleSheet("background-color: #1e1e1e; color: #00ffcc;")
 
         reload_button = QPushButton("🔄 Reload Model")
-        reload_button.clicked.connect(self.reload_model_summary)
+        reload_button.clicked.connect(self.reload_model_summary)  # ✅
 
-        model_tab = QWidget()
-        model_layout = QVBoxLayout()
+
+        model_tab = QWidget(self)
+        model_layout = QVBoxLayout(self)
         model_layout.addWidget(QLabel("🧠 TensorFlow Model Info:"))
         model_layout.addWidget(reload_button)
         model_layout.addWidget(self.model_info)
-        model_tab.setLayout(model_layout)
 
+        model_tab.setLayout(model_layout)
+        account_info= AccountInfo(self.controller)
+        account_metrics= AccountMetrics(   self.controller)
 
         self.tabs.addTab(server_tab, "Server")
+
+        self.tabs.addTab(TrafficMonitor(self),"Traffic Monitor")
         self.tabs.addTab(chart_tab, "Chart")
-        self.tabs.addTab(gpu_tab, "GPU")
+        self.tabs.addTab(GPUMonitor(self.controller), "GPU")
+        self.tabs.addTab(GPUMonitorChart(self.controller), "GPU Chart")
+
         self.tabs.addTab(model_tab, "Model")
         # Add TensorFlow Metrics tab
         self.tensorflow_tab = TensorFlowMetricsTab()
         self.tabs.addTab(self.tensorflow_tab, "TensorFlow Metrics")
         # Buttons to execute commands
-        self.tabs.addTab(execute_command_tab, "Execute Command")
+        self.tabs.addTab(ExecuteCommand(self.controller), "Execute Command")
+
+        self.tabs.addTab(account_metrics,"Account Metrics")
+
+        self.tabs.addTab(account_info,"Account Infos")
+        self.tabs.addTab(PositionHistory(self.controller),"Positions History")
+
+
 
         layout.addWidget(self.tabs)
         self.setLayout(layout)
+
         self.reload_model_summary()
 
-    def get_prediction_csv_path( self):
-        """Get the path to the prediction CSV file."""
-        return PREDICTION_CSV
-    def execute_command(self, param):
-    # Create a new CommandWorker for the given command
-     self.worker = CommandWorker(param)
 
-    # Connect the worker's signals to the appropriate slots
-     self.worker.result_signal.connect(self.update_command_output)  # Handle result
-     self.worker.error_signal.connect(self.update_command_output)   # Handle error
+    def execute_command(self, command):
+     response = self.controller.predict_server.send_command(command)
+     self.update_command_output(response)
 
-    # Start the worker thread
-     self.worker.start()
+
 
     def update_command_output(self, message):
       """Method to update the command output in the UI (runs in the main thread)."""
@@ -288,7 +314,7 @@ class ServerDashboard(QWidget):
 
     def reload_model_summary(self):
         try:
-            model = tf.keras.models.load_model("src/model/model.keras")
+            model = keras.models.load_model("src/model/model.keras")
             self.model_info.clear()
             self.model_info.append("Model Summary:")
             string_io = io.StringIO()
@@ -300,12 +326,14 @@ class ServerDashboard(QWidget):
         except Exception as e:
             self.model_info.setPlainText(f"Failed to load model: {e}")
 
+
     def init_logger(self):
         self.logger = logging.getLogger("Mt4Logger")
         self.logger.setLevel(logging.DEBUG)
 
         class QtSignalEmitter(QObject):
             log_signal = pyqtSignal(str)
+
 
         class QtLogHandler(logging.Handler):
             def __init__(self):
@@ -315,7 +343,6 @@ class ServerDashboard(QWidget):
             def emit(self, record):
                 msg = self.format(record)
                 self.emitter.log_signal.emit(msg)
-
         qt_handler = QtLogHandler()
         qt_handler.setFormatter(logging.Formatter("%(asctime)s - %(message)s"))
         qt_handler.emitter.log_signal.connect(self.append_log)
@@ -362,7 +389,7 @@ class ServerDashboard(QWidget):
                 stderr=subprocess.STDOUT,
                 text=True,
                 encoding='utf-8',
-                bufsize=1,
+                bufsize=128,
             )
             self.status_label.setText("🟢 Status: <b><span style='color: green;'>Running</span></b>")
             self.logger.info("✅ Server started.")
@@ -371,8 +398,19 @@ class ServerDashboard(QWidget):
 
             self.reader_thread = OutputReaderThread(self.process)
             self.reader_thread.output_signal.connect(self.append_log)
+
             self.reader_thread.start()
+            
             self.logger.info("🟢 Reader thread started.")
+            self.candles=self.controller.predict_server.getCandles()
+            logging.info("candles"+self.candles)
+            data=self.controller.predict_server.get_signals_data()
+            self.controller.predict_server.predictor.predict(data)
+         
+            self.controller.predict_server.predictor.load_model()
+            self.controller.predict_server.predictor.load_scaler()
+            self.controller.predict_server.trainer.train_and_save_model()
+          
 
         except Exception as e:
             QMessageBox.critical(self, "Startup Error", str(e))
@@ -401,11 +439,28 @@ class ServerDashboard(QWidget):
             self.reader_thread.stop()
         self.logger.info("👋 GUI closed.")
         event.accept()
-
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = ServerDashboard()
+    window = Mt4PredictServer()
+
+    # Target dimensions
+    width, height = 1100, 750
+    min_width = 900
+    min_height = 600
+
+    # Center window across multi-monitor setup
+    screen = app.primaryScreen()
+    geometry = screen.availableGeometry()
+    x = geometry.x() + (geometry.width() - width) // 2
+    y = geometry.y() + (geometry.height() - height) // 2
+
+    # Apply initial size and position
+    window.resize(width, height)
+    window.move(x, y)
+
+    # Set minimum size only — allow full resizing
+    window.setMinimumSize(min_width, min_height)
+
     window.show()
     app.setStyle("Fusion")
     sys.exit(app.exec_())

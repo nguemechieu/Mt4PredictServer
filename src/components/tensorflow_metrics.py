@@ -4,16 +4,15 @@ import os
 from PyQt5.QtGui import QFont
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QTextEdit, QPushButton, QSizePolicy
 from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
-
-from components.predictionChart import PredictionChart
+from src.components.predictionChart import PredictionChart
 
 
 class TensorFlowMetricsTab(QWidget):
     def __init__(self):
         super().__init__()
         self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        self.SUMMARY_PATH = os.path.join("src", "logs", "training_summary.txt")
-        self.TENSORBOARD_LOG_DIR = os.path.join("src", "logs")
+        self.SUMMARY_PATH = os.path.join("src", "logs", "training_summary.log")
+        self.TENSORBOARD_LOG_DIR = os.path.join("src", "logs","tensorboard_metrics.log")
         self.metrics_tab = None
         self.layout = QVBoxLayout()
         # Show training summary
@@ -53,16 +52,16 @@ class TensorFlowMetricsTab(QWidget):
 
         self.setLayout(self.layout)
 
-    def show_tensorboard_metrics(self, TENSORBOARD_LOG_DIR=None):
+    def show_tensorboard_metrics(self, tensorboard_log_dir=None):
         try:
             # Load scalar metrics from TensorBoard logs
-            ea = EventAccumulator(TENSORBOARD_LOG_DIR)
+            ea = EventAccumulator(tensorboard_log_dir)
             ea.Reload()
             scalar_tags = ea.Tags().get("scalars", [])
 
             if scalar_tags:
                 self.metrics_tab = PredictionChart(self)
-                self.metrics_tab.update_chart(scalar_tags)
+                self.metrics_tab.update_chart()
                 self.layout.addWidget(self.metrics_tab)
             else:
                 self.metrics_tab = QTextEdit()
