@@ -50,7 +50,7 @@ class PositionHistory(QWidget):
             return
 
         try:
-            df = self.controller.predict_server.safe_read_csv(self.history_file)
+            df = self.controller.predict_server.predictor.safe_read_csv(self.history_file)
 
             expected_cols = ["Ticket", "Symbol", "Type", "Lots", "OpenPrice", "ClosePrice", "Profit"]
             self.table.setRowCount(len(df))

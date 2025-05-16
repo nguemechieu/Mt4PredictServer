@@ -12,7 +12,6 @@ class AccountInfo(QWidget):
         self.setWindowTitle("💼 Account Info & Positions")
         self.resize(900, 600)
         self.controller = controller
-        self.account_info = {}
 
         # === Layout ===
         self.layout = QVBoxLayout()
@@ -34,72 +33,78 @@ class AccountInfo(QWidget):
         # Buttons
         button_layout = QHBoxLayout()
         refresh_btn = QPushButton("🔄 Refresh")
-        refresh_btn.clicked.connect(self.load_data)  # Fixed lambda issue
+        refresh_btn.clicked.connect(self.load_data)
         button_layout.addWidget(refresh_btn)
         self.layout.addLayout(button_layout)
 
         # Auto-refresh every 15 seconds
-        self.timer = QTimer()
-        self.timer.timeout.connect(self.load_data)  # Fixed lambda issue
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.load_data)
         self.timer.start(15000)
 
         self.load_data()
 
     def load_data(self):
-        """Load account info and open positions."""
+        """Load both account info and open positions."""
         self.load_account_info()
         self.load_open_positions()
 
     def load_account_info(self):
         """Fetch and display account information."""
         try:
-            account_info = self.controller.predict_server.get_account_info()
+            info = self.controller.predict_server.get_account_info()
 
-            if not account_info:
+            if not info or not isinstance(info, dict):
+                self.account_info_label.setText("⚠️ Invalid account info received.")
                 self.status_label.setText("⚠️ Account info not available.")
                 return
 
+            balance = info.get("balance", 0.0)
+            equity = info.get("equity", 0.0)
+            margin = info.get("margin", 0.0)
+            leverage = info.get("leverage", 0)
+
             info_text = (
-                f"<b>Balance:</b> ${account_info['Balance']:.2f} | "
-                f"<b>Equity:</b> ${account_info['Equity']:.2f} | "
-                f"<b>Margin:</b> ${account_info['Margin']:.2f} | "
-                f"<b>Free Margin:</b> ${account_info['FreeMargin']:.2f} | "
-                f"<b>Leverage:</b> {account_info['Leverage']}x"
+                f"<b>Balance:</b> ${balance:.2f} | "
+                f"<b>Equity:</b> ${equity:.2f} | "
+                f"<b>Margin:</b> ${margin:.2f} | "
+                f"<b>Leverage:</b> {leverage}x"
             )
             self.account_info_label.setText(info_text)
             self.status_label.setText("🟢 Account info loaded.")
 
-        except Exception as e:  # Replaced bare `except`
+        except Exception as e:
+            self.status_label.setText("❌ Failed to load account info.")
             QMessageBox.critical(self, "Error", f"Failed to load account info:\n{e}")
 
     def load_open_positions(self):
         """Fetch and display open positions."""
         try:
-            positions = self.controller.predict_server.get_open_position()
+            positions = self.controller.predict_server.get_open_positions()
 
-            if not positions:
-                self.status_label.setText("⚠️ No open positions available.")
+            if not positions or not isinstance(positions, list):
                 self.table.setRowCount(0)
+                self.status_label.setText("⚠️ No open positions available.")
                 return
 
-            expected_cols = ["Ticket", "Symbol", "Type", "Lots", "OpenPrice", "SL", "TP", "Profit"]
+            columns = ["Ticket", "Symbol", "Type", "Lots", "OpenPrice", "SL", "TP", "Profit"]
             self.table.setRowCount(len(positions))
-            self.table.setColumnCount(len(expected_cols))
-            self.table.setHorizontalHeaderLabels(expected_cols)
+            self.table.setColumnCount(len(columns))
+            self.table.setHorizontalHeaderLabels(columns)
 
-            for row, position in enumerate(positions):
-                for col, col_name in enumerate(expected_cols):
-                    val = str(position.get(col_name, ""))
-                    item = QTableWidgetItem(val)
+            for row, pos in enumerate(positions):
+                for col, name in enumerate(columns):
+                    value = str(pos.get(name, ""))
+                    item = QTableWidgetItem(value)
 
-                    if col_name == "Profit":
+                    if name.lower() == "profit":
                         try:
-                            profit_val = float(val)
-                            if profit_val < 0:
+                            pval = float(value)
+                            if pval < 0:
                                 item.setForeground(Qt.red)
-                            elif profit_val > 0:
+                            elif pval > 0:
                                 item.setForeground(Qt.darkGreen)
-                        except Exception:  # Replaced bare `except`
+                        except Exception:
                             pass
 
                     self.table.setItem(row, col, item)
@@ -107,5 +112,7 @@ class AccountInfo(QWidget):
             self.table.resizeColumnsToContents()
             self.status_label.setText("🟢 Open positions loaded.")
 
-        except Exception as e:  # Replaced bare `except`
+        except Exception as e:
+            self.table.setRowCount(0)
+            self.status_label.setText("❌ Failed to load open positions.")
             QMessageBox.critical(self, "Error", f"Failed to load open positions:\n{e}")

@@ -4,7 +4,7 @@ from PyQt5.QtCore import QTimer
 import os
 
 class TrafficMonitor(QWidget):
-    LOG_PATH = "src/logs/predict_server.log"
+    LOG_PATH = "predict_server.log"
 
     def __init__(self, parent=None):
         super().__init__(parent)

@@ -3,6 +3,7 @@ import logging
 import os
 import subprocess
 import sys
+from threading import Thread
 
 import keras
 from PyQt5.QtCore import QThread, pyqtSignal,QTimer, Qt, QObject
@@ -11,7 +12,7 @@ from PyQt5.QtWidgets import (
     QApplication, QWidget, QLabel, QVBoxLayout, QTextEdit, QPushButton, QMessageBox, QHBoxLayout, QTabWidget
 )
 
-from src.components.server import PredictServer
+from server.server import PredictServer
 from src.components.AccountInfo import AccountInfo
 from src.components.AccountMetrics import AccountMetrics
 from src.components.ExecuteCommand import ExecuteCommand
@@ -120,10 +121,12 @@ def dark_theme_stylesheet():
 class Mt4PredictServer(QWidget):
     def __init__(self):
         super().__init__()
-
-
         self.controller=self
-       
+
+        self.qt_handler = None
+        self.file = None
+        self.predict_server = None
+
         self.symbols =["EURUSD","AUDJPY"]
         self.command_output =QTextEdit(self)
         self.tensorflow_tab = None
@@ -151,15 +154,15 @@ class Mt4PredictServer(QWidget):
         self.setStyleSheet(dark_theme_stylesheet())
         self.init_logger()
 
-      
+
         self.init_ui()
         self.init_timer()
-       
+
 
 
     def init_ui(self):
-        self.predict_server = PredictServer(controller=self.controller)
-         
+
+
         layout = QVBoxLayout()
         self.tabs = QTabWidget()
 
@@ -263,7 +266,7 @@ class Mt4PredictServer(QWidget):
 
         reload_button = QPushButton("🔄 Reload Model")
         reload_button.clicked.connect(self.reload_model_summary)  # ✅
-
+        self.predict_server = PredictServer(controller=self.controller)
 
         model_tab = QWidget(self)
         model_layout = QVBoxLayout(self)
@@ -328,7 +331,7 @@ class Mt4PredictServer(QWidget):
 
 
     def init_logger(self):
-        self.logger = logging.getLogger("Mt4Logger")
+        self.logger = logging.getLogger(__name__)
         self.logger.setLevel(logging.DEBUG)
 
         class QtSignalEmitter(QObject):
@@ -343,14 +346,13 @@ class Mt4PredictServer(QWidget):
             def emit(self, record):
                 msg = self.format(record)
                 self.emitter.log_signal.emit(msg)
-        qt_handler = QtLogHandler()
-        qt_handler.setFormatter(logging.Formatter("%(asctime)s - %(message)s"))
-        qt_handler.emitter.log_signal.connect(self.append_log)
-        self.logger.addHandler(qt_handler)
-
-        file = logging.FileHandler("predict_server.log", encoding="utf-8")
-        file.setFormatter(logging.Formatter("%(asctime)s - %(message)s"))
-        self.logger.addHandler(file)
+        self.qt_handler = QtLogHandler()
+        self.qt_handler.setFormatter(logging.Formatter("%(asctime)s - %(message)s"))
+        self.qt_handler.emitter.log_signal.connect(self.append_log)
+        self.logger.addHandler(self.qt_handler)
+        self.file = logging.FileHandler("predict_server.log", encoding="utf-8")
+        self.file.setFormatter(logging.Formatter("%(asctime)s - %(message)s"))
+        self.logger.addHandler(self.file)
 
     def init_timer(self):
         self.timer = QTimer()
@@ -375,46 +377,55 @@ class Mt4PredictServer(QWidget):
                 self.gpu_status.setPlainText("nvidia-smi not available or failed.")
         except Exception as e:
             self.gpu_status.setPlainText(f"Error fetching GPU status: {e}")
-
-        self.chart.update_chart()
-
     def start_server(self):
-        if self.process and self.process.poll() is None:
+     if self.process and self.process.poll() is None:
             QMessageBox.warning(self, "Already Running", "The server is already running.")
             return
+
+     try:
+        self.process = subprocess.Popen(
+            [sys.executable, SERVER_SCRIPT],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            encoding='utf-8',
+            bufsize=1,
+        )
+
+        self.status_label.setText("🟢 Status: <b><span style='color: green;'>Running</span></b>")
+        self.logger.info("✅ Server process launched.")
+        self.start_btn.setEnabled(False)
+        self.stop_btn.setEnabled(True)
+
+        self.reader_thread = OutputReaderThread(self.process)
+        self.reader_thread.output_signal.connect(self.append_log)
+        self.reader_thread.start()
+
+        # ✅ Run PredictServer.start() in its own thread
+        Thread(target=self.predict_server.start, daemon=True).start()
+
+        self.controller.logger.info("🟢 Reader thread started.")
+        QTimer.singleShot(3000, self.send_initial_signal_ping)
+
+     except Exception as e:
+        QMessageBox.critical(self, "Startup Error", str(e))
+        self.controller.logger.error(f"❌ Failed to start server: {e}")
+
+
+    def send_initial_signal_ping(self):
         try:
-            self.process = subprocess.Popen(
-                [sys.executable, SERVER_SCRIPT],
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                text=True,
-                encoding='utf-8',
-                bufsize=128,
-            )
-            self.status_label.setText("🟢 Status: <b><span style='color: green;'>Running</span></b>")
-            self.logger.info("✅ Server started.")
-            self.start_btn.setEnabled(False)
-            self.stop_btn.setEnabled(True)
+            self.logger.info("📡 Sending initial signal fetch for EURUSD...")
+            signal, self.candles = self.controller.predict_server.get_signals_data("EURUSD")
+            self.logger.info(f"🧠 Initial Signal: {signal}")
+            self.logger.info(f"🕯️ Initial Candles: {self.candles}")
 
-            self.reader_thread = OutputReaderThread(self.process)
-            self.reader_thread.output_signal.connect(self.append_log)
+            prediction = self.controller.predict_server.predictor.predict(signal)
+            self.logger.info(f"📈 Prediction Output: {prediction}")
 
-            self.reader_thread.start()
-            
-            self.logger.info("🟢 Reader thread started.")
-            self.candles=self.controller.predict_server.getCandles()
-            logging.info("candles"+self.candles)
-            data=self.controller.predict_server.get_signals_data()
-            self.controller.predict_server.predictor.predict(data)
-         
-            self.controller.predict_server.predictor.load_model()
-            self.controller.predict_server.predictor.load_scaler()
-            self.controller.predict_server.trainer.train_and_save_model()
-          
-
+            self.append_log(f"📤 Initial signal sent. Prediction: {prediction}")
         except Exception as e:
-            QMessageBox.critical(self, "Startup Error", str(e))
-            self.logger.error(f"❌ Failed to start server: {e}")
+            self.append_log(f"❌ Error in send_initial_signal_ping: {e}")
+            self.logger.exception("❌ Failed during initial signal request.")
 
     def stop_server(self):
         if self.process and self.process.poll() is None:

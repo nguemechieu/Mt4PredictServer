@@ -41,7 +41,7 @@ class AccountMetrics(QWidget):
 
     def load_metrics(self):
         if os.path.exists(self.prediction_file):
-            df = self.controller.predict_server.safe_read_csv(self.prediction_file)
+            df = self.controller.predict_server.predictor.safe_read_csv(self.prediction_file)
             df.columns = ["s1", "s2", "s3", "s4", "symbol", "time", "open", "close", "high", "low", "volume", "predicted"]
             df["predicted"] = pd.to_numeric(df["predicted"], errors="coerce")
             df = df.dropna(subset=["predicted"])

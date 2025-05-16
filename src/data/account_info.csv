@@ -1,1 +1,2 @@
-AccountNumber,Name,Company,Currency,Balance,Equity,FreeMargin,Leverage,Margin
+Balance,Equity,Margin,FreeMargin,Leverage
+
