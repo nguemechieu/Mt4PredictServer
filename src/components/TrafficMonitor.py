@@ -2,7 +2,8 @@ from PySide6.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QLabel
 from PySide6.QtGui import QFont
 from PySide6.QtCore import QTimer
 import os
-LOG_PATH = os.path.join("src", "logs", "src/logs/predict_server.log")
+LOG_PATH = os.path.join("src", "logs", "predict_server.log")
+
 class TrafficMonitor(QWidget):
 
 
@@ -42,7 +43,7 @@ class TrafficMonitor(QWidget):
                 self.last_inode = stat_info.st_ino
                 self.last_log_size = 0
 
-            with open(self.LOG_PATH, "r", encoding="utf-8", errors="ignore") as f:
+            with open(self.LOG_PATH, "r") as f:
                 f.seek(self.last_log_size)
                 new_data = f.read()
                 self.last_log_size = f.tell()

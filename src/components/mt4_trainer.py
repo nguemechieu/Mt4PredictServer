@@ -10,12 +10,13 @@ from tensorflow.python.keras.layers import Dense
 
 class MT4Trainer:
 
-    def __init__(self, controller=None):
-        self.controller = controller
+     def __init__(self):
+         super().__init__()
 
 
 
-    def train_and_save_model(self,symbol, signal_path, candle_path, model_path, scaler_path):
+
+     def train_and_save_model(self,symbol, signal_path, candle_path, model_path, scaler_path):
          try:
             # === Ensure directories exist ===
             os.makedirs(os.path.dirname(model_path), exist_ok=True)
@@ -66,5 +67,5 @@ class MT4Trainer:
             return True
 
          except Exception as e:
-             self.controller.logger.error(f"❌ {symbol}: Training failed - {e}")
+             logging.error(f"❌ {symbol}: Training failed - {e}")
              return False

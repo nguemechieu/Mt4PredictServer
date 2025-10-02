@@ -21,7 +21,9 @@ class ExecuteCommand(QWidget):
 
         # === Title ===
         title = QLabel("🧭 Execute MT4 Command")
-        title.setFont(QFont("Segoe UI", 14, QFont.Bold))
+        title.setFont(QFont("Segoe UI",
+                            14,
+                            QFont.Bold))
         layout.addWidget(title)
 
         # === Command Input Section ===

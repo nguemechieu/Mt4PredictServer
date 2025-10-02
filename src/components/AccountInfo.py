@@ -8,6 +8,7 @@ from PySide6.QtWidgets import (
 class AccountInfo(QWidget):
     """Widget to display account information and open positions."""
     def __init__(self, controller):
+
         super().__init__()
         self.setWindowTitle("💼 Account Info & Positions")
         self.resize(900, 600)
@@ -53,7 +54,7 @@ class AccountInfo(QWidget):
         """Fetch and display account information."""
         try:
 
-            info = self.controller.predict_server.predictor.get_account_info()
+            info =[] #self.controller.predictor.get_account_info()
 
             if not info or not isinstance(info, dict):
                 self.account_info_label.setText("⚠️ Invalid account info received.")
@@ -81,7 +82,7 @@ class AccountInfo(QWidget):
     def load_open_positions(self):
         """Fetch and display open positions."""
         try:
-            positions = self.controller.predict_server.predictor.get_open_position()
+            positions = []
 
             if not positions or not isinstance(positions, list):
                 self.table.setRowCount(0)

@@ -5,6 +5,8 @@ from PySide6.QtWidgets import (
     QPushButton, QMessageBox
 )
 
+from components.AccountMetrics import safe_read_csv
+
 
 class PositionHistory(QWidget):
     def __init__(self, controller=None):
@@ -50,7 +52,7 @@ class PositionHistory(QWidget):
             return
 
         try:
-            df = self.controller.predict_server.predictor.safe_read_csv(self.history_file)
+            df = safe_read_csv(self.history_file)
 
             expected_cols = ["Ticket", "Symbol", "Type", "Lots", "OpenPrice", "ClosePrice", "Profit"]
             self.table.setRowCount(len(df))

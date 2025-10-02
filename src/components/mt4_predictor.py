@@ -1,5 +1,6 @@
 import logging
 import os
+import threading
 import time
 from typing import List, Dict, Any
 
@@ -16,11 +17,11 @@ from tensorflow.keras.models import load_model
 
 from components.mt4_trainer import MT4Trainer
 
-
-HOST = "localhost"
-PORT = 50052
 MODEL_PATH = "src/model/model.keras"
 SCALER_PATH = "src/model/scaler.pkl"
+HOST = "127.0.0.1"
+PORT = 50052
+BUFFER_SIZE = 4096
 
 
 def extract_signal_values(message: str):
@@ -65,27 +66,50 @@ def create_model_and_scaler_if_missing(model_path, scaler_path):
     logging.info(f"✅ Dummy model saved at {model_path}")
 
 
+def safe_read_csv(filepath, retries=5, delay=0.1):
+    for attempt in range(retries):
+        try:
+            return pd.read_csv(filepath)
+        except PermissionError as e:
+            if attempt == retries - 1:
+                raise e
+            time.sleep(delay)
+    return None
+
+
+class NpEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, (np.integer,)):
+            return int(obj)
+        if isinstance(obj, (np.floating,)):
+            return float(obj)
+        if isinstance(obj, (np.ndarray,)):
+            return obj.tolist()
+        return super().default(obj)
+
+
+def _send_socket_command(command: dict) -> dict:
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.connect((HOST, PORT))
+            s.sendall((json.dumps(command) + "\n").encode())
+            data = s.recv(BUFFER_SIZE).decode().strip()
+            return json.loads(data)
+    except Exception as e:
+        logging.error(f"❌ Socket error: {e}")
+        return {"status": "error", "reason": str(e)}
+
+
+def get_account_info():
+    return _send_socket_command({"action": "account_info"})
+
+
 class MT4Predictor:
-    def __init__(self, controller=None):
-        self.controller = controller
+    def __init__(self):
         self.model = None
         self.scaler = None
-        self.trainer = MT4Trainer(self.controller)
-
-    # -------------------------
-    # Logging
-    # -------------------------
-    def log(self, message):
-        if self.controller and hasattr(self.controller, "logger"):
-            self.controller.logger.info(message)
-        else:
-            logging.info(message)
-
-    def log_error(self, message):
-        if self.controller and hasattr(self.controller, "logger"):
-            self.controller.logger.error(message)
-        else:
-            logging.error(message)
+        self.trainer = MT4Trainer()
+        self._lock = threading.Lock()
 
     # -------------------------
     # Model / Scaler Handling
@@ -94,25 +118,46 @@ class MT4Predictor:
         try:
             create_model_and_scaler_if_missing(MODEL_PATH, SCALER_PATH)
             self.model = load_model(MODEL_PATH)
-            self.log("✅ Model loaded successfully.")
+            logging.info("✅ Model loaded successfully.")
         except Exception as e:
-            self.log_error(f"❌ Failed to load model: {e}")
+            logging.error(f"❌ Failed to load model: {e}")
             raise RuntimeError("Model loading failed.") from e
 
     def load_scaler(self):
         try:
             if not os.path.exists(SCALER_PATH):
-                self.log("⚠️ Scaler not found. Creating default scaler...")
+                logging.info("⚠️ Scaler not found. Creating default scaler...")
                 dummy_data = np.array([[0.0] * 4, [1.0] * 4])
                 scaler = StandardScaler().fit(dummy_data)
                 os.makedirs(os.path.dirname(SCALER_PATH), exist_ok=True)
                 joblib.dump(scaler, SCALER_PATH)
-                self.log("✅ Default scaler created and saved.")
+                logging.info("✅ Default scaler created and saved.")
             self.scaler = joblib.load(SCALER_PATH)
-            self.log("✅ Scaler loaded successfully.")
+            logging.info("✅ Scaler loaded successfully.")
         except Exception as e:
-            self.log_error(f"❌ Failed to load or create scaler: {e}")
+            logging.error(f"❌ Failed to load or create scaler: {e}")
             raise RuntimeError("Scaler loading failed.") from e
+
+    def auto_train_if_needed(self, symbol: str):
+        """Auto-trains if new candle/signal data exists."""
+        signal_file = f"src/data/signal_{symbol}.csv"
+        candle_file = f"src/data/candle_{symbol}.csv"
+
+        if os.path.exists(signal_file) and os.path.exists(candle_file):
+            try:
+                logging.info(f"🔄 Training model for {symbol} using new data...")
+                self.trainer.train_and_save_model(
+                    symbol,
+                    signal_file,
+                    candle_file,
+                    MODEL_PATH,
+                    SCALER_PATH,
+                )
+                self.model = load_model(MODEL_PATH)
+                self.scaler = joblib.load(SCALER_PATH)
+                logging.info("✅ Auto-training completed and model reloaded.")
+            except Exception as e:
+                logging.error(f"❌ Auto-training failed: {e}")
 
     # -------------------------
     # Prediction
@@ -121,32 +166,33 @@ class MT4Predictor:
         try:
             payload = extract_signal_values(payload1)
         except Exception as e:
-            self.log_error(f"❌ Failed to extract signal values: {e}")
+            logging.error(f"❌ Failed to extract signal values: {e}")
             return None
 
         if not isinstance(payload, (list, np.ndarray)) or len(payload) != 4:
-            self.log_error(f"❌ Invalid payload size or type: {payload}")
+            logging.error(f"❌ Invalid payload size or type: {payload}")
             return None
-
         return payload
 
-    def predict(self, payload):
-        """Accepts signal string and returns {"direction": str, "confidence": float}"""
+    def predict(self, payload, symbol: str = "EURUSD"):
         try:
             signal = self.validate_payload(payload)
             if signal is None:
                 return {"direction": "error", "confidence": 0.0}
 
-            if self.model is None:
-                self.load_model()
-            if self.scaler is None:
-                self.load_scaler()
+            if self.model is None or self.scaler is None:
+                self.auto_train_if_needed(symbol)
+                if self.model is None:
+                    self.load_model()
+                if self.scaler is None:
+                    self.load_scaler()
 
-            self.log(f"📩 Signal received: {payload}")
+            logging.info(f"📩 Signal received: {payload}")
             input_data = np.array([signal])
             scaled_data = self.scaler.transform(input_data)
 
-            prediction = self.model.predict(scaled_data, verbose=0)[0][0]
+            with self._lock:  # ensure thread-safety
+                prediction = float(self.model.predict(scaled_data, verbose=0)[0][0])
 
             if prediction >= 0.55:
                 direction, confidence = "up", prediction
@@ -155,61 +201,41 @@ class MT4Predictor:
             else:
                 direction, confidence = "neutral", 1 - abs(0.5 - prediction)
 
-            result = {"direction": direction, "confidence": round(confidence, 5)}
-            self.log(f"🧠 Prediction: {result}")
+            result = {
+                "symbol": symbol,
+                "direction": direction,
+                "confidence": round(float(confidence), 5),
+                "probability": prediction,
+                "timestamp": time.time()
+            }
+            logging.info(f"🧠 Prediction: {result}")
             return result
 
         except Exception as e:
-            self.log_error(f"❌ Prediction error: {e}")
+            logging.error(f"❌ Prediction error: {e}")
             return {"direction": "error", "confidence": 0.0}
-
-    # -------------------------
-    # Utilities
-    # -------------------------
-    def safe_read_csv(self, filepath, retries=5, delay=0.1):
-        for attempt in range(retries):
-            try:
-                return pd.read_csv(filepath)
-            except PermissionError as e:
-                if attempt == retries - 1:
-                    raise e
-                time.sleep(delay)
-        return None
 
     # -------------------------
     # Socket Communication
     # -------------------------
-    def _send_socket_command(self, command: dict) -> dict:
-        """Low-level socket send/receive helper."""
-        try:
-            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-                s.connect((HOST, PORT))
-                s.sendall((json.dumps(command) + "\n").encode())
-                data = s.recv(4096).decode().strip()
-                return json.loads(data)
-        except Exception as e:
-            self.log_error(f"❌ Socket error: {e}")
-            return {"status": "error", "reason": str(e)}
 
     # -------------------------
     # High-level API
     # -------------------------
-    def get_account_info(self):
-        return self._send_socket_command({"action": "account_info"})
 
     def get_open_position(self):
-        return self._send_socket_command({"action": "open_positions"})
+        return _send_socket_command({"action": "open_positions"})
 
     def get_all_symbols(self) -> List[str]:
-        resp = self._send_socket_command({"action": "symbols"})
+        resp = _send_socket_command({"action": "symbols"})
         return resp.get("symbols", []) if isinstance(resp, dict) else []
 
     def get_market_bid_ask(self, symbol: str) -> Dict[str, Any]:
-        resp = self._send_socket_command({"action": "market", "symbol": symbol})
+        resp = _send_socket_command({"action": "market", "symbol": symbol})
         return resp if isinstance(resp, dict) else {}
 
     def get_all_candles(self) -> List[Dict[str, Any]]:
-        resp = self._send_socket_command({"action": "candles"})
+        resp = _send_socket_command({"action": "candles"})
         return resp.get("candles", []) if isinstance(resp, dict) else []
 
     def get_candle_list(self, symbol: str) -> List[Dict[str, Any]]:
@@ -219,4 +245,4 @@ class MT4Predictor:
     def send_command(self, command: dict) -> dict:
         if not isinstance(command, dict) or "action" not in command:
             return {"status": "error", "reason": "Invalid command format"}
-        return self._send_socket_command(command)
+        return _send_socket_command(command)

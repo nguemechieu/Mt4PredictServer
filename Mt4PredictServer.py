@@ -14,7 +14,6 @@ from PySide6.QtWidgets import (
     QApplication, QWidget, QLabel, QVBoxLayout, QTextEdit, QPushButton,
     QMessageBox, QHBoxLayout, QTabWidget
 )
-from src.server.server import PredictServer
 
 from src.components.AccountInfo import AccountInfo
 from src.components.AccountMetrics import AccountMetrics
@@ -73,11 +72,25 @@ def dark_theme_stylesheet():
 class Mt4PredictServer(QWidget):
     def __init__(self):
         super().__init__()
+        self.tensorflow_tab = None
+        self.gpu_status = None
+
+        self.model_info = None
+        self.chart = None
+        self.server_script = os.path.abspath("src/server/server.py")
+        self.start_btn = None
+        self.stop_btn = None
+        self.predictor=None
+        self.output = None
+        self.predict_server=None
+
         self.status_label = None
+        self.HOST=None
+        self.PORT =None
+        self.BUFFER_SIZE = None
         self.tabs = None
         self.logger = self.init_logger()
-        # add this back
-        self.predict_server = PredictServer(self)
+
 
         self.client_socket = None
         self.process = None
@@ -91,6 +104,7 @@ class Mt4PredictServer(QWidget):
 
         self.init_ui()
         self.init_timer()
+
 
     # -------------------------
     # UI
@@ -281,15 +295,16 @@ class Mt4PredictServer(QWidget):
             return
 
         try:
-            SERVER_SCRIPT = os.path.abspath("src/server/server.py")
+
             self.process = subprocess.Popen(
-                [sys.executable, SERVER_SCRIPT],
+                [sys.executable, self.server_script],
                 stdout=subprocess.PIPE,
                 stderr=subprocess.STDOUT,
                 text=True,
                 encoding="utf-8",
                 bufsize=1,
             )
+
             self.status_label.setText("🟢 Status: <b><span style='color: green;'>Running</span></b>")
             self.start_btn.setEnabled(False)
             self.stop_btn.setEnabled(True)
