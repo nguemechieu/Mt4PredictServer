@@ -1,19 +1,19 @@
-# This is a sample requirements.txt file
-# It is used to specify the Python packages and their versions required for your project
+# Data handling and visualization
+pandas
+matplotlib~=3.10.6
 
-# Specify a package without version to get the latest stable version
+# Machine learning
+scikit-learn~=1.7.2
+joblib~=1.5.2
 
-# Specify a package with a specific version
-# Include additional packages
-pandas~=1.5.3
-matplotlib~=3.9.4
-scikit-learn~=1.5.2
-setuptools~=74.1.3
-numpy~=1.26.4
+# Deep learning (TensorFlow stable on Python 3.12)
+tensorflow~=2.20.0
+keras~=3.11.3
+tensorboard~=2.20.0
+
+# Utilities
+setuptools~=80.9.0
+gputil~=1.4.0
+
+# GUI (supported on Python <= 3.12)
 PyQt5~=5.15.11
-
-keras~=3.9.2
-tensorboard~=2.19.0
-joblib~=1.4.2
-tensorflow~=2.19.0
-GPUutil

@@ -16,12 +16,16 @@
       </option>
       <option name="myCustomValuesEnabled" value="true" />
     </inspection_tool>
-    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
-      <option name="ignoredPackages">
+    <inspection_tool class="PyCompatibilityInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ourVersions">
         <value>
-          <list size="0" />
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="2.7" />
+            <item index="1" class="java.lang.String" itemvalue="3.14" />
+          </list>
         </value>
       </option>
     </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
   </profile>
 </component>

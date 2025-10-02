@@ -1,8 +1,8 @@
 import logging
 import os
 
-from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QTextEdit, QPushButton, QSizePolicy
+from PySide6.QtGui import QFont
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QLabel, QTextEdit, QPushButton, QSizePolicy
 from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
 from src.components.predictionChart import PredictionChart
 
@@ -10,7 +10,7 @@ from src.components.predictionChart import PredictionChart
 class TensorFlowMetricsTab(QWidget):
     def __init__(self):
         super().__init__()
-        self.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+
         self.SUMMARY_PATH = os.path.join("src", "logs", "training_summary.log")
         self.TENSORBOARD_LOG_DIR = os.path.join("src", "logs","tensorboard_metrics.log")
         self.metrics_tab = None
@@ -33,7 +33,7 @@ class TensorFlowMetricsTab(QWidget):
             return
         # Show training summary if available
         if os.path.exists(self.SUMMARY_PATH):
-            with open(self.SUMMARY_PATH, "r", encoding="utf-8") as f:
+            with open(self.SUMMARY_PATH, "r") as f:
                 summary = f.read()
                 self.summary_text = QTextEdit()
                 self.summary_text.setReadOnly(True)

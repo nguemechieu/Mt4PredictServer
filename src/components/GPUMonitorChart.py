@@ -1,8 +1,7 @@
 import GPUtil
-import psutil
 import matplotlib.pyplot as plt
-from PyQt5.QtCore import QTimer
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel, QSizePolicy
+from PySide6.QtCore import QTimer
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QLabel, QSizePolicy
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 

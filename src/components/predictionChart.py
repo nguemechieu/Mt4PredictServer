@@ -1,7 +1,7 @@
 import logging
 import os
 import pandas as pd
-from PyQt5.QtWidgets import QWidget, QComboBox, QVBoxLayout, QLabel, QSizePolicy
+from PySide6.QtWidgets import QWidget, QComboBox, QVBoxLayout, QLabel, QSizePolicy
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 

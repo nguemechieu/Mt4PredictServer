@@ -1,20 +1,30 @@
-import ctypes
 import logging
 import os
 import time
+from typing import List, Dict, Any
+
 import joblib
+import json
+import socket
 import numpy as np
 import pandas as pd
-from keras.api.models import Sequential, load_model
-from keras.api.layers import Dense
+
 from sklearn.preprocessing import StandardScaler
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.models import load_model
+
 from components.mt4_trainer import MT4Trainer
 
+
+HOST = "localhost"
+PORT = 50052
+MODEL_PATH = "src/model/model.keras"
+SCALER_PATH = "src/model/scaler.pkl"
+
+
 def extract_signal_values(message: str):
-    """
-    Extracts the first 4 floats from a signal string like:
-    ":signal:0.7,0.6,0.4,0.9,EURUSD,..."
-    """
+    """Extract first 4 floats from a signal string like ':signal:0.7,0.6,0.4,0.9,EURUSD,...'"""
     try:
         if ":" in message:
             message = message.split(":", 2)[-1]
@@ -25,8 +35,6 @@ def extract_signal_values(message: str):
     except Exception as e:
         raise ValueError(f"Failed to extract signal values: {e}")
 
-MODEL_PATH = "src/model/model.keras"
-SCALER_PATH = "src/model/scaler.pkl"
 
 def create_model_and_scaler_if_missing(model_path, scaler_path):
     os.makedirs(os.path.dirname(model_path), exist_ok=True)
@@ -52,10 +60,10 @@ def create_model_and_scaler_if_missing(model_path, scaler_path):
     ])
     model.compile(optimizer="adam", loss="binary_crossentropy", metrics=["accuracy"])
     model.fit(x_scaled, y_train, epochs=5, batch_size=32, verbose=0)
+
     model.save(model_path)
     logging.info(f"✅ Dummy model saved at {model_path}")
 
-create_model_and_scaler_if_missing(MODEL_PATH, SCALER_PATH)
 
 class MT4Predictor:
     def __init__(self, controller=None):
@@ -64,6 +72,9 @@ class MT4Predictor:
         self.scaler = None
         self.trainer = MT4Trainer(self.controller)
 
+    # -------------------------
+    # Logging
+    # -------------------------
     def log(self, message):
         if self.controller and hasattr(self.controller, "logger"):
             self.controller.logger.info(message)
@@ -76,8 +87,12 @@ class MT4Predictor:
         else:
             logging.error(message)
 
+    # -------------------------
+    # Model / Scaler Handling
+    # -------------------------
     def load_model(self):
         try:
+            create_model_and_scaler_if_missing(MODEL_PATH, SCALER_PATH)
             self.model = load_model(MODEL_PATH)
             self.log("✅ Model loaded successfully.")
         except Exception as e:
@@ -99,6 +114,9 @@ class MT4Predictor:
             self.log_error(f"❌ Failed to load or create scaler: {e}")
             raise RuntimeError("Scaler loading failed.") from e
 
+    # -------------------------
+    # Prediction
+    # -------------------------
     def validate_payload(self, payload1):
         try:
             payload = extract_signal_values(payload1)
@@ -110,17 +128,10 @@ class MT4Predictor:
             self.log_error(f"❌ Invalid payload size or type: {payload}")
             return None
 
-        if any(not isinstance(x, (int, float)) for x in payload):
-            self.log_error(f"❌ Non-numeric values in payload: {payload}")
-            return None
-
         return payload
 
     def predict(self, payload):
-        """
-        Accepts signal string payload (e.g., "0.7,0.6,0.4,0.9,EURUSD,...")
-        and returns dict: {"direction": str, "confidence": float}
-        """
+        """Accepts signal string and returns {"direction": str, "confidence": float}"""
         try:
             signal = self.validate_payload(payload)
             if signal is None:
@@ -152,6 +163,9 @@ class MT4Predictor:
             self.log_error(f"❌ Prediction error: {e}")
             return {"direction": "error", "confidence": 0.0}
 
+    # -------------------------
+    # Utilities
+    # -------------------------
     def safe_read_csv(self, filepath, retries=5, delay=0.1):
         for attempt in range(retries):
             try:
@@ -160,74 +174,49 @@ class MT4Predictor:
                 if attempt == retries - 1:
                     raise e
                 time.sleep(delay)
+        return None
 
-    def get_account_info(self):
+    # -------------------------
+    # Socket Communication
+    # -------------------------
+    def _send_socket_command(self, command: dict) -> dict:
+        """Low-level socket send/receive helper."""
         try:
-            buffer = ctypes.create_string_buffer(1024)
-            self.controller.predict_server.dll.GetAccountInfo(buffer, 1024)
-            decoded = buffer.value.decode("utf-8")
-            return self.parse_account_info(decoded)
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                s.connect((HOST, PORT))
+                s.sendall((json.dumps(command) + "\n").encode())
+                data = s.recv(4096).decode().strip()
+                return json.loads(data)
         except Exception as e:
-            self.log_error(f"❌ Failed to fetch account info: {e}")
-            return {}
+            self.log_error(f"❌ Socket error: {e}")
+            return {"status": "error", "reason": str(e)}
+
+    # -------------------------
+    # High-level API
+    # -------------------------
+    def get_account_info(self):
+        return self._send_socket_command({"action": "account_info"})
 
     def get_open_position(self):
-        try:
-            buffer = ctypes.create_string_buffer(1024)
-            self.controller.predict_server.dll.GetOpenPositions(buffer, 1024)
-            decoded = buffer.value.decode("utf-8")
-            return self.parse_positions(decoded)
-        except Exception as e:
-            self.log_error(f"❌ Failed to fetch open positions: {e}")
-            return []
+        return self._send_socket_command({"action": "open_positions"})
 
-    def send_command(self, command: dict) -> str:
-        try:
-            if not isinstance(command, dict) or "action" not in command:
-                raise ValueError("Invalid command format. Must be a dict with 'action' key.")
+    def get_all_symbols(self) -> List[str]:
+        resp = self._send_socket_command({"action": "symbols"})
+        return resp.get("symbols", []) if isinstance(resp, dict) else []
 
-            action = command["action"].lower()
-            args = []
+    def get_market_bid_ask(self, symbol: str) -> Dict[str, Any]:
+        resp = self._send_socket_command({"action": "market", "symbol": symbol})
+        return resp if isinstance(resp, dict) else {}
 
-            if action in ["buy", "sell", "buylimit", "selllimit", "buystop", "sellstop"]:
-                args = [command.get("symbol", ""), str(command.get("lot", 0.1)), str(command.get("sl", 50)), str(command.get("tp", 40))]
-            elif action == "modify":
-                args = [command.get("symbol", ""), str(command.get("sl", 0)), str(command.get("tp", 0))]
-            elif action in ["close", "shutdown", "pause", "resume", "closeall"]:
-                args = [command.get("symbol", "EURUSD")] if "symbol" in command else []
-            elif action in ["account_info", "open_positions", "history", "trade_history"]:
-                pass
-            else:
-                raise ValueError(f"Unsupported action: {action}")
+    def get_all_candles(self) -> List[Dict[str, Any]]:
+        resp = self._send_socket_command({"action": "candles"})
+        return resp.get("candles", []) if isinstance(resp, dict) else []
 
-            message = f"{action}:{','.join(args)}" if args else action
-            self.controller.predict_server.dll.WriteToBridge(message.encode())
-            response = self.controller.predict_server.dll.ReadSharedBuffer().decode().strip()
+    def get_candle_list(self, symbol: str) -> List[Dict[str, Any]]:
+        candles = self.get_all_candles()
+        return [c for c in candles if c.get("symbol") == symbol]
 
-            self.log(f"📤 Command Sent: {message}")
-            self.log(f"📥 SharedBuffer Response: {response}")
-            return response
-
-        except Exception as e:
-            self.log_error(f"❌ Failed to send command: {e}")
-            return f"error,{e}"
-
-    def parse_account_info(self, account_info_str):
-        return {
-            "balance": account_info_str.strip(),
-            "equity": 0.0,
-            "margin": 0.0,
-            "leverage": 0
-        }
-
-    def parse_positions(self, positions_str):
-        return [{
-            "Ticket": positions_str,
-            "Symbol": "EURUSD",
-            "Type": "Buy",
-            "Lots": 1.0,
-            "OpenPrice": 1.2000,
-            "SL": 1.1900,
-            "TP": 1.2100,
-            "Profit": 100.0
-        }]
+    def send_command(self, command: dict) -> dict:
+        if not isinstance(command, dict) or "action" not in command:
+            return {"status": "error", "reason": "Invalid command format"}
+        return self._send_socket_command(command)

@@ -1,18 +1,19 @@
-from PyQt5.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QLabel
-from PyQt5.QtGui import QFont
-from PyQt5.QtCore import QTimer
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QLabel
+from PySide6.QtGui import QFont
+from PySide6.QtCore import QTimer
 import os
-
+LOG_PATH = os.path.join("src", "logs", "src/logs/predict_server.log")
 class TrafficMonitor(QWidget):
-    LOG_PATH = "predict_server.log"
+
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setWindowTitle("📡 MT4 <-> DLL Traffic Monitor")
+        self.LOG_PATH = LOG_PATH
+        self.setWindowTitle("📡 MT4 <-> Traffic Monitor")
         self.setMinimumSize(700, 400)
 
         layout = QVBoxLayout()
-        self.label = QLabel("Real-Time Traffic Log (DLL <-> Python)")
+        self.label = QLabel("Real-Time Traffic Log (MT4 <-> Python)")
         self.label.setFont(QFont("Segoe UI", 14))
         layout.addWidget(self.label)
 
@@ -23,6 +24,7 @@ class TrafficMonitor(QWidget):
 
         self.setLayout(layout)
         self.last_log_size = 0
+        self.last_inode = None
 
         # Auto-refresh every second
         self.timer = QTimer(self)
@@ -34,14 +36,23 @@ class TrafficMonitor(QWidget):
             if not os.path.exists(self.LOG_PATH):
                 return
 
-            with open(self.LOG_PATH, "r", encoding="utf-8") as f:
+            # Reset if file rotated or truncated
+            stat_info = os.stat(self.LOG_PATH)
+            if self.last_inode is None or self.last_inode != stat_info.st_ino or stat_info.st_size < self.last_log_size:
+                self.last_inode = stat_info.st_ino
+                self.last_log_size = 0
+
+            with open(self.LOG_PATH, "r", encoding="utf-8", errors="ignore") as f:
                 f.seek(self.last_log_size)
                 new_data = f.read()
                 self.last_log_size = f.tell()
 
             if new_data:
-                self.text_area.append(new_data.strip())
-                self.text_area.verticalScrollBar().setValue(self.text_area.verticalScrollBar().maximum())
+                for line in new_data.strip().splitlines():
+                    self.text_area.append(line)
+                self.text_area.verticalScrollBar().setValue(
+                    self.text_area.verticalScrollBar().maximum()
+                )
 
         except Exception as e:
             self.text_area.append(f"❌ Log read error: {e}")

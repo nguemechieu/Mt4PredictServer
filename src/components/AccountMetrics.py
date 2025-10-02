@@ -3,7 +3,7 @@ from datetime import datetime
 
 import matplotlib.pyplot as plt
 import pandas as pd
-from PyQt5.QtWidgets import (
+from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QTableWidget, QTableWidgetItem, QTextEdit
 )
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
@@ -11,11 +11,13 @@ from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 
 
 class AccountMetrics(QWidget):
-    def __init__(self,controller):
-        super().__init__(controller)
+    def __init__(self, controller=None):
+
+        super().__init__()
         self.setWindowTitle("📊 Account Metrics & AI Analysis")
         self.resize(1000, 700)
         self.controller=controller
+
 
         self.layout = QVBoxLayout()
         self.setLayout(self.layout)
@@ -34,19 +36,19 @@ class AccountMetrics(QWidget):
 
         self.training_log_text = QTextEdit()
         self.training_log_text.setReadOnly(True)
+
         self.layout.addWidget(QLabel("📚 Last Training Summary:"))
         self.layout.addWidget(self.training_log_text)
-
         self.load_metrics()
+
 
     def load_metrics(self):
         if os.path.exists(self.prediction_file):
-            df = self.controller.predict_server.predictor.safe_read_csv(self.prediction_file)
+            df = self.controller.predict_server.predictor.safe_read_csv(filepath=self.prediction_file)
             df.columns = ["s1", "s2", "s3", "s4", "symbol", "time", "open", "close", "high", "low", "volume", "predicted"]
             df["predicted"] = pd.to_numeric(df["predicted"], errors="coerce")
             df = df.dropna(subset=["predicted"])
             df["direction"] = df["predicted"].apply(lambda p: "up" if p >= 0.55 else "down" if p <= 0.45 else "neutral")
-
             total = len(df)
             ups =+ (df["direction"] == "up")
             downs = +(df["direction"] == "down")

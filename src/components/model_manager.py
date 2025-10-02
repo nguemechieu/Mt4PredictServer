@@ -81,8 +81,10 @@ class ModelManager:
 
         model_mtime = ModelManager.get_mod_time(model_path)
         scaler_mtime = ModelManager.get_mod_time(scaler_path)
+
         signal_mtime = ModelManager.get_mod_time(signal_path)
         candle_mtime = ModelManager.get_mod_time(candle_path)
+
 
         needs_training = (
                 not os.path.exists(model_path)

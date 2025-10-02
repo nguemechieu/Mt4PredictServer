@@ -1,8 +1,8 @@
-from PyQt5.QtWidgets import (
+from PySide6.QtGui import QFont
+from PySide6.QtWidgets import (
     QWidget, QLabel, QVBoxLayout, QHBoxLayout, QLineEdit, QPushButton,
-    QComboBox, QMessageBox, QGroupBox, QFrame
+    QComboBox, QMessageBox, QGroupBox
 )
-from PyQt5.QtGui import QFont
 
 
 class ExecuteCommand(QWidget):

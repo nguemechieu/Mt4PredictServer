@@ -3,8 +3,10 @@ import os
 import joblib
 import pandas as pd
 from keras import Sequential
-from keras.api.layers import Dense
+
 from sklearn.preprocessing import StandardScaler
+from tensorflow.python.keras.layers import Dense
+
 
 class MT4Trainer:
 

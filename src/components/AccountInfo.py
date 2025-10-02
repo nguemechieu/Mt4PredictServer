@@ -1,5 +1,5 @@
-from PyQt5.QtCore import QTimer, Qt
-from PyQt5.QtWidgets import (
+from PySide6.QtCore import QTimer, Qt
+from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QTableWidget, QTableWidgetItem,
     QPushButton, QMessageBox, QHBoxLayout
 )
@@ -52,7 +52,8 @@ class AccountInfo(QWidget):
     def load_account_info(self):
         """Fetch and display account information."""
         try:
-            info = self.controller.predict_server.get_account_info()
+
+            info = self.controller.predict_server.predictor.get_account_info()
 
             if not info or not isinstance(info, dict):
                 self.account_info_label.setText("⚠️ Invalid account info received.")
@@ -80,7 +81,7 @@ class AccountInfo(QWidget):
     def load_open_positions(self):
         """Fetch and display open positions."""
         try:
-            positions = self.controller.predict_server.get_open_positions()
+            positions = self.controller.predict_server.predictor.get_open_position()
 
             if not positions or not isinstance(positions, list):
                 self.table.setRowCount(0)
@@ -104,8 +105,9 @@ class AccountInfo(QWidget):
                                 item.setForeground(Qt.red)
                             elif pval > 0:
                                 item.setForeground(Qt.darkGreen)
-                        except Exception:
-                            pass
+                        except Exception as ass:
+
+                            self.controller.logger.error(ass)
 
                     self.table.setItem(row, col, item)
 

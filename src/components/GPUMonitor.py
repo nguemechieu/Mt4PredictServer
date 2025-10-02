@@ -1,9 +1,9 @@
 import subprocess
 import tensorflow as tf
 from tensorflow.python.client import device_lib
-from PyQt5.QtCore import QTimer
-from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import (
+from PySide6.QtCore import QTimer
+from PySide6.QtGui import QFont
+from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QTextEdit, QPushButton, QHBoxLayout
 )
 
