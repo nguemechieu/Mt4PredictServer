@@ -16,6 +16,7 @@
       </option>
       <option name="myCustomValuesEnabled" value="true" />
     </inspection_tool>
+<<<<<<< HEAD
     <inspection_tool class="PyCompatibilityInspection" enabled="false" level="WARNING" enabled_by_default="false">
       <option name="ourVersions">
         <value>
@@ -26,6 +27,8 @@
         </value>
       </option>
     </inspection_tool>
+=======
+>>>>>>> 867f6f7ba4f7d457969f4977a7cd79d530d08477
     <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false" />
   </profile>
 </component>

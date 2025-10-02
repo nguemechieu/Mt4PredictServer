@@ -1352,3 +1352,59 @@
 2025-10-01 23:23:01,975 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
 2025-10-01 23:23:03,798 - 🔄 No pong in 30s. Retry 2/3
 2025-10-01 23:23:04,011 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:26:00,698 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:26:02,744 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:26:07,272 - 🔄 No pong in 30s. Retry 1/3
+2025-10-01 23:26:07,765 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:12,762 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:15,729 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:26:17,274 - 🔄 No pong in 30s. Retry 2/3
+2025-10-01 23:26:17,764 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:26:17,777 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:22,773 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:27,276 - 🔄 No pong in 30s. Retry 3/3
+2025-10-01 23:26:27,279 - ❌ Connection lost.
+2025-10-01 23:26:27,779 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:30,730 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:26:32,767 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:26:32,783 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:37,282 - 🔄 No pong in 30s. Retry 1/3
+2025-10-01 23:26:37,768 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:42,767 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:45,716 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:26:47,286 - 🔄 No pong in 30s. Retry 2/3
+2025-10-01 23:26:47,749 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:26:47,775 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:52,773 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:26:57,287 - 🔄 No pong in 30s. Retry 3/3
+2025-10-01 23:26:57,287 - ❌ Connection lost.
+2025-10-01 23:26:57,773 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:00,733 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:27:02,753 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:27:02,781 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:07,288 - 🔄 No pong in 30s. Retry 1/3
+2025-10-01 23:27:07,776 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:12,777 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:15,753 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:27:17,289 - 🔄 No pong in 30s. Retry 2/3
+2025-10-01 23:27:17,771 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:27:17,800 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:22,774 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:27,291 - 🔄 No pong in 30s. Retry 3/3
+2025-10-01 23:27:27,292 - ❌ Connection lost.
+2025-10-01 23:27:27,779 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:30,756 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:27:32,788 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:27:32,793 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:37,294 - 🔄 No pong in 30s. Retry 1/3
+2025-10-01 23:27:37,799 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:42,793 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:45,757 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:27:47,298 - 🔄 No pong in 30s. Retry 2/3
+2025-10-01 23:27:47,787 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-10-01 23:27:47,794 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:52,810 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:27:57,300 - 🔄 No pong in 30s. Retry 3/3
+2025-10-01 23:27:57,301 - ❌ Connection lost.
+2025-10-01 23:27:57,810 - [WinError 2] The system cannot find the file specified
+2025-10-01 23:28:00,741 - ❌ Socket error: [WinError 10061] No connection could be made because the target machine actively refused it
