@@ -197,16 +197,15 @@ class Mt4PredictServer(QWidget):
         self.tabs.addTab(self.server_tab, "Server")
         self.tabs.addTab(ResourceMonitorFrame(self), "Monitor")
         self.tabs.addTab( LivePredictionsFrame(self.controller), "Predictor")
-        self.tabs.addTab(AutoTradeMonitor(self), "AutoTrade Manager")
-        self.tabs.addTab(GPTChatFrame(self), "GPT Chat")
+        self.tabs.addTab(GPTChatFrame(self), "ChatGPT Advisor")
         self.tabs.addTab(AccountInfo(self), "Account - Open orders")
-        self.tabs.addTab(PositionHistory(self), "Position Historic")
+        self.tabs.addTab(PositionHistory(self), "Position History")
 
         self.tabs.addTab(PredictionChart(self), "Prediction Chart")
 
         self.tabs.addTab(TensorFlowMetricsTab(), "TensorFlow Metrics")
         self.tabs.addTab(ExecuteCommand(self), "Execute Command")
-        self.tabs.addTab(model_tab, "Model")
+        self.tabs.addTab(model_tab, "Tensorflow Model")
 
         layout.addWidget(self.tabs)
         self.setLayout(layout)

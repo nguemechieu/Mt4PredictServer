@@ -12,7 +12,6 @@ from PySide6.QtWidgets import (
 )
 
 from src.server.server import PredictServer
-from src.server.AutoTradeManager import AutoTradeManager
 
 
 # =====================================================

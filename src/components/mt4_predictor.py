@@ -16,8 +16,8 @@ from components.mt4_trainer import MT4Trainer
 # ==============================================================
 # CONSTANTS
 # ==============================================================
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "model/model.keras")
-SCALER_PATH = os.path.join(os.path.dirname(__file__), "model/scaler.pkl")
+MODEL_PATH = os.path.join("./src/model", "model/model.keras")
+SCALER_PATH = os.path.join("./src/model", "model/scaler.pkl")
 MIN_CONF_THRESHOLD = 0.6
 
 
