@@ -5,10 +5,7 @@ from datetime import datetime
 
 import numpy as np
 import pandas as pd
-
-from components.mt4_trainer import MT4Trainer
-
-
+from src.components.mt4_trainer import MT4Trainer
 class ModelManager:
     @staticmethod
     def get_mod_time(path):
