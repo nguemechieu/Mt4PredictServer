@@ -1,3 +1,18 @@
+"""
+===============================================================
+🔮 PredictServer — Autonomous AI Trading Bridge
+---------------------------------------------------------------
+Bridges MT4 DLL ↔ Python backend with full AI intelligence.
+
+✅ Features:
+    • Persistent socket server for MT4 connection
+    • Adaptive strategy learning
+    • GPT reasoning and reflection
+    • Autonomous portfolio & risk management
+    • Telegram alerts and daily summaries
+===============================================================
+"""
+
 import json
 import logging
 import os
@@ -5,22 +20,33 @@ import queue
 import socket
 import threading
 import time
-from functools import total_ordering
 
 import numpy as np
 import pandas as pd
-from telegram import TelegramObject
+from PySide6.QtGui import QColor
 
+# === Internal Imports ===
+from components.AdaptiveStrategyEngine import AdaptiveStrategyEngine
+from components.FeedbackTrainer import FeedbackTrainer
+from components.PortfolioManager import PortfolioManager
+from components.ReasoningEngine import ReasoningEngine
+from components.TelegramNotifier import TelegramNotifier
 from src.components.GPTAdvisor import GPTAdvisor
 from src.components.mt4_predictor import MT4Predictor
 
+# ==========================================================
+# Global Configuration
+# ==========================================================
 HOST = "127.0.0.1"
 PORT = 9999
 BUFFER_SIZE = 4096
+
+
 # ==========================================================
-# JSON encoder for NumPy types
+# JSON Encoder (handles NumPy types)
 # ==========================================================
 class NpEncoder(json.JSONEncoder):
+    """Ensure NumPy types are JSON-serializable."""
     def default(self, obj):
         if isinstance(obj, (np.integer,)):
             return int(obj)
@@ -32,17 +58,17 @@ class NpEncoder(json.JSONEncoder):
 
 
 # ==========================================================
-# Default logger
+# Utilities
 # ==========================================================
 def _default_logger():
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s: %(message)s")
+    """Create a default logger if none is provided."""
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
     return logging.getLogger("PredictServer")
 
 
-
-
 def append_csv(path, new_df):
-    """Append rows to a CSV safely (avoiding overwrites)."""
+    """Safely append rows to CSV (no duplicates, no overwrite)."""
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     if not os.path.exists(path):
         new_df.to_csv(path, index=False)
     else:
@@ -50,19 +76,38 @@ def append_csv(path, new_df):
         combined = pd.concat([old, new_df], ignore_index=True)
         combined.drop_duplicates(inplace=True)
         combined.to_csv(path, index=False)
-class PredictServer:
-    """Socket bridge between MT4 DLL and Python AI backend."""
 
+
+# ==========================================================
+# Main Server Class
+# ==========================================================
+class PredictServer:
+    """
+    🌐 PredictServer — The bridge between MT4 Expert Advisor and AI Core.
+
+    Responsibilities:
+        • Manage socket connections with MT4
+        • Handle candle/indicator updates
+        • Route GPT reasoning and adaptive strategy calls
+        • Enforce risk controls & trading hours
+        • Send Telegram alerts and daily AI reflections
+    """
+
+    # ------------------------------------------------------
     def __init__(self, controller=None):
         self.controller = controller
         self.logger = getattr(controller, "logger", _default_logger())
 
-        # Core components
-        self.gpt = GPTAdvisor(self.controller)
-        self.predictor = MT4Predictor(self.controller)
+        # === Core Intelligence Components ===
+        self.gpt = GPTAdvisor(controller)
+        self.predictor = MT4Predictor(controller)
+        self.adaptive_engine = AdaptiveStrategyEngine(controller, "./src/data/order_history.csv")
+        self.reasoning_engine = ReasoningEngine(controller)
+        self.portfolio = PortfolioManager(controller)
+        self.notifier = TelegramNotifier(controller=controller)
 
-
-        # Runtime state
+        # === State Memory ===
+        self.confidence = 0.0
         self.last_confidence = {}
         self.last_direction = {}
         self.last_gpt_time = {}
@@ -70,113 +115,137 @@ class PredictServer:
         self.order_history = []
         self.open_orders = []
 
-        self.clients = []
+        # === Networking & Concurrency ===
+        self.server_socket = None
+        self.clients = {}
         self._stop_event = threading.Event()
         self._lock = threading.Lock()
-        self.server_socket = None
-
-        # Buffers
         self.candle_buffers = {}
         self.prediction_queues = {}
         self.active_workers = {}
 
-    # ==========================================================
-    # Lifecycle
-    # ==========================================================
+        # Start Daily Reporting Thread
+        threading.Thread(target=self._daily_cycle, daemon=True).start()
+
+    # ======================================================
+    # Lifecycle Management
+    # ======================================================
     def start(self):
-        """Start the socket server."""
+        """Start persistent TCP server."""
         try:
             self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             self.server_socket.bind((HOST, PORT))
-            self.server_socket.listen(5)
+            self.server_socket.listen(10)
+            self.server_socket.settimeout(1.0)
             self.logger.info(f"🟢 PredictServer listening on {HOST}:{PORT}")
+
             threading.Thread(target=self._accept_loop, daemon=True).start()
         except Exception as e:
             self.logger.error(f"❌ Server start failed: {e}")
 
     def stop(self):
-        """Gracefully stop the server."""
+        """Gracefully shut down server and all client connections."""
         self._stop_event.set()
-        for c in list(self.clients):
-            try:
-                c.close()
-            except Exception as ex:
-                self.logger.error(ex)
+        try:
+            for addr, conn in list(self.clients.items()):
+                try:
+                    conn.shutdown(socket.SHUT_RDWR)
+                except Exception:
+                    pass
+                conn.close()
+                self.logger.info(f"🔌 Closed connection: {addr}")
 
-
-        if self.server_socket:
-            try:
+            if self.server_socket:
                 self.server_socket.close()
-            except Exception as exx:
-                self.logger.error(exx)
 
-        self.logger.info("🛑 PredictServer stopped.")
+            self.logger.info("🛑 PredictServer stopped.")
+        except Exception as e:
+            self.logger.error(f"❌ Stop error: {e}")
 
-    # ==========================================================
-    # Connection Handling
-    # ==========================================================
+    # ======================================================
+    # Connection Management
+    # ======================================================
     def _accept_loop(self):
+        """Accept incoming MT4 connections."""
         while not self._stop_event.is_set():
             try:
                 conn, addr = self.server_socket.accept()
-                self.clients.append(conn)
+                conn.settimeout(15.0)
+                with self._lock:
+                    self.clients[addr] = conn
                 self.logger.info(f"🔗 Client connected: {addr}")
-                threading.Thread(target=self._handle_client, args=(conn, addr), daemon=True).start()
+
+                threading.Thread(target=self._client_loop, args=(conn, addr), daemon=True).start()
+            except socket.timeout:
+                continue
             except OSError:
                 break
             except Exception as e:
                 self.logger.error(f"❌ Accept error: {e}")
 
-    def _handle_client(self, conn, addr):
-        """Handle each MT4 client."""
+    def _client_loop(self, conn, addr):
+        """Handle each connected MT4 client."""
         try:
             while not self._stop_event.is_set():
                 msg = self.receive_message(conn)
                 if msg is None:
-                    break
+                    continue
+
+                # Ping-pong keep alive
+                if msg.get("type") == "ping":
+                    self.send_message(conn, {"type": "pong", "timestamp": time.time()})
+                    continue
+
+                # Route message
                 response = self.process_message(msg)
                 if response:
                     self.send_message(conn, response)
-        except Exception as e:
-            self.logger.error(f"❌ Client error {addr}: {e}")
+
+        except socket.timeout:
+            self.logger.debug(f"⚠️ Idle timeout from {addr}, keeping alive...")
+        except (ConnectionResetError, ConnectionAbortedError, OSError):
+            self.logger.warning(f"⚠️ Connection lost: {addr}")
         finally:
+            with self._lock:
+                self.clients.pop(addr, None)
             conn.close()
-            if conn in self.clients:
-                self.clients.remove(conn)
             self.logger.info(f"🔌 Disconnected: {addr}")
 
-    # ==========================================================
-    # I/O
-    # ==========================================================
+    # ======================================================
+    # I/O Handlers
+    # ======================================================
     def receive_message(self, conn):
+        """Safely receive JSON messages from MT4."""
         try:
             data = conn.recv(BUFFER_SIZE)
             if not data:
                 return None
             text = data.decode("utf-8", errors="ignore").strip()
-            if not text:
-                return None
             for chunk in text.split("\n"):
                 if chunk.strip():
                     return json.loads(chunk)
+        except socket.timeout:
             return None
         except Exception as e:
             self.logger.error(f"❌ Receive error: {e}")
-            return None
+        return None
 
     def send_message(self, conn, response):
+        """Send a structured JSON response to MT4."""
         try:
             packet = json.dumps(response, cls=NpEncoder) + "\n"
             conn.sendall(packet.encode("utf-8"))
-            self.logger.debug(f"📤 Sent: {packet.strip()}")
+        except (BrokenPipeError, ConnectionResetError):
+            pass
         except Exception as e:
             self.logger.error(f"❌ Send error: {e}")
 
-    # ==========================================================
+    # ======================================================
     # Dispatcher
-    # ==========================================================
+    # ======================================================
     def process_message(self, msg):
+        """Dispatch messages based on their type."""
         mtype = (msg.get("type") or "").lower()
         try:
             if mtype == "ping":
@@ -189,40 +258,51 @@ class PredictServer:
                 return {"status": "error", "reason": f"Unknown message type '{mtype}'"}
         except Exception as e:
             self.logger.error(f"❌ Process error: {e}")
-            return {"type": "info", "status": "error", "reason": str(e), "timestamp": time.time()}
+            return {"status": "error", "reason": str(e), "timestamp": time.time()}
 
-    # ==========================================================
-    # Candle Handler
-    # ==========================================================
-    def _process_candles(self, msg)->None:
+    # ======================================================
+    # Candle Data Handler
+    # ======================================================
+    def _process_candles(self, msg):
+        """Handle incoming candle and indicator updates."""
         symbol = str(msg.get("symbol") or "EURUSD")
         candle = msg.get("candle") or {}
         ind_data = msg.get("indicators") or {}
 
-        # --- Save account info ---
+        # Save account and trade data
+        self._update_account_data(msg)
+
+        # Validate candle
+        if not isinstance(candle, dict) or not candle:
+            raise ValueError(f"Invalid candle data for {symbol}")
+
+        # Buffer candles
+        self._update_candle_buffer(symbol, candle)
+
+        # Skip until enough candles accumulated
+        if len(self.candle_buffers[symbol]) < 10:
+            return None
+
+        # --- Adaptive Strategy and Reasoning ---
+        self._handle_trade_logic(symbol, ind_data)
+        return None
+
+    def _update_account_data(self, msg):
+        """Save account info, open orders, and order history."""
         self.account_info = msg.get("account_info", {})
         if self.account_info:
-            df_acc = pd.DataFrame([self.account_info])
-            df_acc.dropna()
-            append_csv("./src/data/account_info.csv", df_acc)
+            append_csv("./src/data/account_info.csv", pd.DataFrame([self.account_info]))
 
-        # --- Save order history ---
         self.order_history = msg.get("order_history", [])
-        if isinstance(self.order_history, list) and len(self.order_history) > 0:
-            df_hist = pd.DataFrame(self.order_history)
-            append_csv("./src/data/order_history.csv", df_hist)
+        if self.order_history:
+            append_csv("./src/data/order_history.csv", pd.DataFrame(self.order_history))
 
-        # --- Save open orders ---
         self.open_orders = msg.get("open_orders", [])
-        if isinstance(self.open_orders, list) and len(self.open_orders) > 0:
-            df_open = pd.DataFrame(self.open_orders)
-            append_csv("./src/data/open_orders.csv", df_open)
+        if self.open_orders:
+            append_csv("./src/data/open_orders.csv", pd.DataFrame(self.open_orders))
 
-        # --- Validate candle ---
-        if not isinstance(candle, dict) or not candle:
-            raise {"type":"candles","status": "error", "reason": "missing candle data", "symbol": symbol}
-
-        # --- Candle buffer ---
+    def _update_candle_buffer(self, symbol, candle):
+        """Maintain rolling candle data buffer."""
         with self._lock:
             if symbol not in self.candle_buffers:
                 self.candle_buffers[symbol] = pd.DataFrame()
@@ -230,314 +310,239 @@ class PredictServer:
                 self.prediction_queues[symbol] = queue.Queue()
 
         df = pd.DataFrame([{
-            "open": float(candle.get("open", 0.0)),
-            "high": float(candle.get("high", 0.0)),
-            "low": float(candle.get("low", 0.0)),
-            "close": float(candle.get("close", 0.0)),
-            "volume": float(candle.get("volume", 0.0))
+            "time": candle.get("time", 0),
+            "open": candle.get("open", 0.0),
+            "high": candle.get("high", 0.0),
+            "low": candle.get("low", 0.0),
+            "close": candle.get("close", 0.0),
+            "volume": candle.get("volume", 0.0),
         }])
-        df['time']=   candle.get("time", 0)
-
-        df+=df
-        df.drop_duplicates(inplace=True)
-
-
-        num_cols = ["open", "high", "low", "close", "volume"]
-        df[num_cols] = df[num_cols].apply(pd.to_numeric, errors="coerce")
-
 
         with self._lock:
-            old_df = self.candle_buffers[symbol]
-            self.candle_buffers[symbol] = pd.concat([old_df, df], ignore_index=True).tail(10)
-        total_candles = len(self.candle_buffers[symbol])
-        if total_candles<10:
-                return None
-
-
+            combined = pd.concat([self.candle_buffers[symbol], df], ignore_index=True)
+            self.candle_buffers[symbol] = combined.tail(10)
 
         self.logger.info(f"📊 {symbol}: {len(self.candle_buffers[symbol])} candles buffered")
 
-        # --- Queue prediction ---
+    def _handle_trade_logic(self, symbol, ind_data):
+        """Run adaptive strategy, reasoning, and prediction logic."""
+        # Record trade metrics
+        self.adaptive_engine.record_trade(
+            symbol=symbol,
+            indicators={
+                "rsi": ind_data.get("rsi", 0.0),
+                "ema_fast": ind_data.get("ema_fast", 0.0),
+                "ema_slow": ind_data.get("ema_slow", 0.0),
+            },
+            decision="BUY",
+            profit_pips=self.account_info.get("profit", 0.0),
+        )
+
+        # Generate reasoning
+        reasoning_text = self.reasoning_engine.explain_decision(
+            symbol=symbol,
+            indicators=ind_data,
+            prediction={"signal": "BUY", "confidence": self.confidence},
+            account_state={
+                "balance": self.account_info.get("balance", 0.0),
+                "risk_ratio": self.adaptive_engine.get_strategy()["risk_ratio"],
+            },
+        )
+
+        # Save and retrain model incrementally
+        self._retrain_predictor(symbol, ind_data)
+        self._queue_prediction(symbol, ind_data)
+        self.logger.info(f"🧠 Reasoning complete for {symbol}: {reasoning_text[:100]}...")
+
+    def _retrain_predictor(self, symbol, ind_data):
+        """Train ML model on latest signal data."""
+        signal_path = f"./src/data/signal_{symbol}.csv"
+        candle_path = f"./src/data/candle_{symbol}.csv"
+        model_path = "./model/model.keras"
+        scaler_path = "./model/scaler.pkl"
+        order_history_path = "./src/data/order_history.csv"
+
+        ind_df = pd.DataFrame([ind_data])
+        ind_df.to_csv(signal_path, index=False)
+        self.candle_buffers[symbol].to_csv(candle_path, index=False)
+
+        self.predictor.trainer.train_and_save_model(
+            symbol, signal_path, candle_path, model_path, scaler_path, order_history_path
+        )
+
+    def _queue_prediction(self, symbol, ind_data):
+        """Add data to prediction queue and start worker if idle."""
         features = [
-            float(ind_data.get("ema_fast", 0.0)),
-            float(ind_data.get("ema_slow", 0.0)),
-            float(ind_data.get("rsi", 0.0)),
-            float(ind_data.get("macd", 0.0))
-            #float(ind_data.get("cci" , 0.0)),          # New
-            #float(ind_data.get("last_open_price", 0.0)),    # New
-            #float(ind_data.get("last_close_price" , 0.0)),   # New
-            #float(ind_data.get("avg_loss_last_3" , 0.0)),    # New
+            ind_data.get("ema_fast", 0.0),
+            ind_data.get("ema_slow", 0.0),
+            ind_data.get("rsi", 0.0),
+            ind_data.get("macd", 0.0),
         ]
-
-        ind_data_df= pd.DataFrame([{
-            "ema_fast": float(ind_data.get("ema_fast", 0.0)),
-            "ema_slow": float(ind_data.get("ema_slow", 0.0)),
-            "rsi": float(ind_data.get("rsi", 0.0)),
-            "macd": float(ind_data.get("macd", 0.0))
-            #"previous_loss": float(ind_data.get("previous_loss", 0.0)),
-            #"last_open_price": float(ind_data.get("last_open_price", 0.0)),
-            #"last_close_price": float(ind_data.get("last_close_price", 0.0)),
-            #"avg_loss_last_3": float(ind_data.get("avg_loss_last_3", 0.0)),
-        }])
-        ind_data_df.to_csv("./src/data/signal_"+symbol+".csv")
-        df.to_csv("./src/data/candle_"+symbol+".csv")
-
-        model_path="./model/model.keras"
-        scaler_path="./model/scaler.pkl"
-        order_history_path="./src/data/order_history.csv"
-
-
-
-        self.predictor.trainer.train_and_save_model(symbol,"./src/data/signal_"+symbol+".csv",
-                                                    "./src/data/candle_"+symbol+".csv",model_path,scaler_path,
-                                                    order_history_path )
-
-
-
-        self.prediction_queues[symbol].put((symbol, features, df.iloc[-1].to_dict()))
-
+        self.prediction_queues[symbol].put((symbol, features, {}))
         if symbol not in self.active_workers or not self.active_workers[symbol].is_alive():
             worker = threading.Thread(target=self._prediction_worker, args=(symbol,), daemon=True)
             self.active_workers[symbol] = worker
             worker.start()
 
-
-        return None
-
-    # ==========================================================
+    # ======================================================
     # Prediction Worker
-    # ==========================================================
-    def _prediction_worker(self, symbol=None):
+    # ======================================================
+    def _prediction_worker(self, symbol):
+        """Continuously process prediction queue for a symbol."""
+        if not self._within_trading_hours():
+            self.logger.info("🌙 Outside trading hours — paused.")
+            self.notifier.send("🌙 AI paused — outside trading window (6 AM–6 PM UTC).")
+            time.sleep(60 * 60)
+            return
+
+        # Risk controls
+        state = self.portfolio.evaluate_portfolio()
+        pause, reason = self.portfolio.should_pause_trading()
+        if pause:
+            self.logger.warning(f"🚫 Trading paused due to: {reason}")
+            self.notifier.send(f"⚠️ Trading paused — {reason}")
+            return
+
+        self.lot_size = self.portfolio.adjust_lot_size(self.confidence, risk_ratio=0.02)
+        self.logger.info(f"📏 Adjusted lot size: {self.lot_size}")
+
         q = self.prediction_queues[symbol]
         while not q.empty():
             try:
-                symbol, features, candle = q.get()
+                symbol, features, _ = q.get()
                 result = self.predictor.predict(symbol, features)
-                cur_dir = str(result.get("direction", "neutral"))
-                conf = float(result.get("confidence", 0.0))
-
-                now = time.time()
-                prev_dir = self.last_direction.get(symbol)
-                prev_conf = self.last_confidence.get(symbol, 0.0)
-                last_call = self.last_gpt_time.get(symbol, 0)
-                cooldown = (now - last_call) > 300
-
-                direction_changed = (prev_dir != cur_dir)
-                confidence_changed = abs(prev_conf - conf) > 0.1
-
-                if direction_changed or confidence_changed or cooldown:
-                    prompt = (
-                        f"You are a trading assistant.\n"
-                        f"Symbol: {symbol}\nDirection: {cur_dir}\nConfidence: {conf:.2f}\n"
-                        f"EMA Fast: {features[0]} | EMA Slow: {features[1]}\n"
-                        f"RSI: {features[2]} | MACD: {features[3]}\n"
-                        f"Position history : {self.order_history}\n"
-                        f"Account info : {self.account_info}\n"
-                        f"Open orders : {self.open_orders}\n"
-                        "Provide reasoning and suggested action."
-                    )
-                    try:
-                        gpt_response = self.gpt.ask(prompt)
-                    except Exception as e:
-                        gpt_response = f"GPT analysis failed: {e}"
-                    self.last_gpt_time[symbol] = now
-                else:
-                    gpt_response = "No significant market change detected."
-
-                # --- Reversal ---
-                if prev_dir and prev_dir != cur_dir:
-                    self.logger.warning(f"🔁 Reversal {symbol}: {prev_dir} → {cur_dir}")
-                    reversal = {
-                        "type": "trade_command",
-                        "action": "CLOSE",
-                        "symbol": symbol,
-                        "reason": f"Reversal {prev_dir}→{cur_dir}",
-                        "timestamp": time.time(),
-                    }
-                    for c in list(self.clients):
-                        threading.Thread(target=self.send_message, args=(c, reversal), daemon=True).start()
-
-                # --- Save ---
-                self.last_direction[symbol] = cur_dir
-                self.last_confidence[symbol] = conf
-
-                record = {
-                    "symbol": symbol,
-                    "direction": cur_dir,
-                    "confidence": conf,
-                    "timestamp": time.time(),
-                    "analysis": gpt_response,
-                }
-                self._save_prediction(record)
-
-                response = {**record, "status": "ok"}
-                for c in list(self.clients):
-                    threading.Thread(target=self.send_message, args=(c, response), daemon=True).start()
-
+                self._handle_prediction_result(symbol, features, result)
             except Exception as e:
-                self.logger.error(f"❌ Prediction thread error for {symbol}: {e}")
+                self.logger.error(f"❌ Prediction worker error ({symbol}): {e}")
 
-    # ==========================================================
-    # Save Prediction
-    # ==========================================================
-    def _save_prediction(self, record):
-        try:
-            os.makedirs("./src/data", exist_ok=True)
-            df = pd.DataFrame([record])
+    def _handle_prediction_result(self, symbol, features, result):
+        """Process prediction results, send updates, and log outcomes."""
+        cur_dir = result.get("direction", "neutral")
+        conf = float(result.get("confidence", 0.0))
 
-            path = "./src/data/predictions.csv"
+        prev_dir = self.last_direction.get(symbol)
+        prev_conf = self.last_confidence.get(symbol, 0.0)
+        now = time.time()
+        cooldown = (now - self.last_gpt_time.get(symbol, 0)) > 300
 
-            write_header = not os.path.exists(path)
-            df.to_csv(path, mode="a", index=False, header=write_header)
-        except Exception as e:
-            self.logger.error(f"❌ Save prediction failed: {e}")
+        direction_changed = (prev_dir != cur_dir)
+        confidence_changed = abs(prev_conf - conf) > 0.1
 
-
-
-    def _process_gpt(self, msg=None):
-        """
-        Handle GPT or AI advisory queries with full trading context.
-        Accepts:
-            {
-              "type": "gpt_query",
-              "query": "Should I close EURUSD?",
-              "context": {
-                  "symbol": "EURUSD",
-                  "indicators": {...}
-              }
-            }
-        Returns:
-            {
-              "type": "ai_response",
-              "status": "ok",
-              "symbol": "EURUSD",
-              "content": "...analysis...",
-              "timestamp": ...
-            }
-        """
-
-
-        try:
-        # --- Validate GPT query ---
-         query = (msg.get("query") or "").strip()
-         if not query:
-            return {"status": "error", "reason": "Empty GPT query.", "timestamp": time.time()}
-
-         if not hasattr(self, "gpt") or self.gpt is None:
-            return {"status": "error", "reason": "GPTAdvisor not initialized.", "timestamp": time.time()}
-
-         context = msg.get("context", {})
-         symbol = context.get("symbol", "N/A")
-         indicators = context.get("indicators", {})
-
-        # === Collect live data for GPT context ===
-         acc_info = getattr(self, "account_info", {})
-         open_orders = getattr(self, "open_orders", [])
-         order_history = getattr(self, "order_history", [])
-
-        # --- Format account info for GPT ---
-         acc_summary = (
-            f"Account Name: {acc_info.get('account_name', 'N/A')} | "
-            f"Balance: ${acc_info.get('balance', 0):.2f} | "
-            f"Equity: ${acc_info.get('equity', 0):.2f} | "
-            f"Margin: ${acc_info.get('margin', 0):.2f} | "
-            f"Free Margin: ${acc_info.get('free_margin', 0):.2f}"
-            f"Profit: ${acc_info.get('profit', 0):.2f}"
-        )
-
-        # --- Summarize open orders ---
-         open_summary = "No open orders."
-         if isinstance(open_orders, list) and len(open_orders) > 0:
-            open_summary = "\n".join([
-                f"- {o.get('symbol', '?')} | {o.get('type', '?')} | Lots: {o.get('lots', '?')} | "
-                f"Profit: {o.get('profit', 0):.2f}"
-                for o in open_orders[:5]  # limit to 5 for readability
-            ])
-
-        # --- Summarize order history ---
-         hist_summary = "No closed trades."
-         if isinstance(order_history, list) and len(order_history) > 0:
-            hist_df = pd.DataFrame(order_history)
-            total_trades = len(hist_df)
-            total_pnl = hist_df["profit"].sum() if "profit" in hist_df else 0.0
-            win_rate = (
-                (hist_df["profit"] > 0).sum() / total_trades * 100
-                if total_trades > 0 else 0
+        # Trigger GPT reasoning if major change
+        if direction_changed or confidence_changed or cooldown:
+            prompt = (
+                f"Symbol: {symbol}\nDirection: {cur_dir}\nConfidence: {conf:.2f}\n"
+                f"EMA Fast: {features[0]} | EMA Slow: {features[1]}\n"
+                f"RSI: {features[2]} | MACD: {features[3]}"
             )
-            hist_summary = (
-                f"Total Trades: {total_trades} | "
-                f"PnL: ${total_pnl:.2f} | Win Rate: {win_rate:.2f}%"
-            )
+            try:
+                gpt_response = self.gpt.ask(prompt)
+            except Exception as e:
+                gpt_response = f"GPT analysis failed: {e}"
+            self.last_gpt_time[symbol] = now
+        else:
+            gpt_response = "No significant change detected."
 
-        # === Build an advanced GPT prompt ===
-         prompt = (
-            f"You are a professional trading assistant analyzing real-time trading data.\n\n"
-            f"=== USER QUERY ===\n{query}\n\n"
-            f"=== SYMBOL ===\n{symbol}\n\n"
-            f"=== TECHNICAL INDICATORS ===\n{json.dumps(indicators, indent=2)}\n\n"
-            f"=== ACCOUNT OVERVIEW ===\n{acc_summary}\n\n"
-            f"=== OPEN POSITIONS ===\n{open_summary}\n\n"
-            f"=== TRADE HISTORY SUMMARY ===\n{hist_summary}\n\n"
-            f"Based on all this information, provide:\n"
-            f"1. A concise analysis of the market condition for {symbol}.\n"
-            f"2. Whether to BUY, SELL, or HOLD.\n"
-            f"3. Any risk or margin-related warnings.\n"
-            f"4. Confidence level (0–100%)."
-        )
+        # Handle reversals
+        if prev_dir and prev_dir != cur_dir:
+            self._send_reversal(symbol, prev_dir, cur_dir)
 
-        # --- Execute GPT query ---
-         start = time.time()
-         try:
-            answer = self.gpt.ask(prompt)
-         except Exception as e:
-            self.logger.error(f"❌ GPT query failed: {e}")
-            answer = f"⚠️ GPT request failed: {e}"
-         latency = time.time() - start
+        # Update records
+        self.last_direction[symbol] = cur_dir
+        self.last_confidence[symbol] = conf
 
-        # --- Return structured response ---
-         response = {
-            "type": "ai_response",
-            "status": "ok" if "⚠️" not in answer else "error",
+        record = {
             "symbol": symbol,
-            "query": query,
-            "content": answer,
-            "latency_sec": round(latency, 2),
-            "timestamp": time.time()
+            "direction": cur_dir,
+            "confidence": conf,
+            "timestamp": now,
+            "analysis": gpt_response,
         }
+        self._save_prediction(record)
 
-        # --- Log GPT output ---
-         self.logger.info(f"🧠 GPT Adviser [{symbol}] | {query[:50]}... ({latency:.2f}s)")
-
-        # Optional: Save GPT log
-         self._save_gpt_log(symbol, query, prompt, answer, latency)
-
-         return response
-
-        except Exception as e_:
-         self.logger.error(f"❌ GPT processing exception: {e_}")
-        return {"type":"info","status": "error", "reason": str(e_), "timestamp": time.time()}
-
-
-# ==========================================================
-# Optional GPT Log Saver
-# ==========================================================
-    def _save_gpt_log(self, symbol, query, prompt, answer, latency):
-     """Save GPT requests and responses to a CSV log for later analysis."""
-     try:
-        os.makedirs("./src/data", exist_ok=True)
-        path = "./src/data/gpt_log.csv"
-        record = [{
-            "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+    def _send_reversal(self, symbol, prev_dir, cur_dir):
+        """Send trade close signal on market reversal."""
+        self.logger.warning(f"🔁 Reversal {symbol}: {prev_dir} → {cur_dir}")
+        msg = {
+            "type": "trade_command",
+            "action": "CLOSE",
             "symbol": symbol,
-            "query": query,
-            "prompt": prompt,
-            "latency_sec": latency,
-            "response_preview": answer[:200],
-        }]
-        df = pd.DataFrame(record)
+            "reason": f"Reversal {prev_dir}→{cur_dir}",
+            "timestamp": time.time(),
+        }
+        for c in list(self.clients.values()):
+            threading.Thread(target=self.send_message, args=(c, msg), daemon=True).start()
 
-        append_csv(path, df)
-     except Exception as e:
-        self.logger.error(f"❌ Failed to save GPT log: {e}")
+    # ======================================================
+    # GPT Query Handler
+    # ======================================================
+    def _process_gpt(self, msg):
+        """Process GPT trading queries (advisory requests)."""
+        try:
+            query = (msg.get("query") or "").strip()
+            if not query:
+                return {"status": "error", "reason": "Empty GPT query"}
 
+            symbol = msg.get("context", {}).get("symbol", "N/A")
+            indicators = msg.get("context", {}).get("indicators", {})
+            acc_info = self.account_info
 
+            prompt = (
+                f"You are an AI trading assistant.\n\n"
+                f"Query: {query}\nSymbol: {symbol}\nIndicators: {json.dumps(indicators, indent=2)}\n"
+                f"Balance: {acc_info.get('balance', 0)} | Equity: {acc_info.get('equity', 0)}"
+            )
+            start = time.time()
+            answer = self.gpt.ask(prompt)
+            latency = time.time() - start
+
+            self._save_gpt_log(symbol, query, prompt, answer, latency)
+            return {
+                "type": "ai_response",
+                "status": "ok",
+                "symbol": symbol,
+                "query": query,
+                "content": answer,
+                "latency_sec": round(latency, 2),
+                "timestamp": time.time(),
+            }
+        except Exception as e:
+            self.logger.error(f"❌ GPT process error: {e}")
+            return {"status": "error", "reason": str(e)}
+
+    # ======================================================
+    # Helpers
+    # ======================================================
+    def _save_gpt_log(self, symbol, query, prompt, answer, latency):
+        """Save GPT queries and responses to CSV."""
+        try:
+            record = [{
+                "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
+                "symbol": symbol,
+                "query": query,
+                "prompt": prompt,
+                "response_preview": answer[:200],
+                "latency_sec": latency,
+            }]
+            append_csv("./src/data/gpt_log.csv", pd.DataFrame(record))
+        except Exception as e:
+            self.logger.error(f"❌ Failed to save GPT log: {e}")
+
+    def _within_trading_hours(self):
+        """Return True if within 6 AM–6 PM UTC trading window."""
+        hour = time.gmtime().tm_hour
+        return 6 <= hour <= 18
+
+    def _daily_cycle(self):
+        """Run daily performance reflection and Telegram summary."""
+        while not self._stop_event.is_set():
+            try:
+                time.sleep(60 * 60 * 24)  # every 24 hours
+                portfolio_state = self.portfolio.evaluate_portfolio()
+                feedback = FeedbackTrainer(controller=self.controller)
+                df, summary = feedback.analyze_reasoning(n_last=100)
+                reflection = feedback.gpt_reflect(df, summary) or "No reflection available."
+                self.notifier.daily_summary(portfolio_state, summary, reflection)
+                self.logger.info("📬 Daily summary sent.")
+            except Exception as e:
+                self.logger.error(f"❌ Daily cycle error: {e}")

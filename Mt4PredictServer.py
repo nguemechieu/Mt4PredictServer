@@ -67,6 +67,7 @@ class OutputReaderThread(QThread):
     def __init__(self,  controller=None):
         super().__init__()
         self.process = controller
+        self.poll=None
         self.controller = controller
         self.output = QTextEdit()
         self.output.setReadOnly(True)
@@ -166,7 +167,6 @@ class Mt4PredictServer(QWidget):
         self.gpt = GPTAdvisor(controller=self)
         self.predictor = MT4Predictor(controller=self)
         self.server = PredictServer(controller=self)
-
         # UI setup
         self.server_tab = ServerControlFrame(
             controller=self.controller,
@@ -178,7 +178,6 @@ class Mt4PredictServer(QWidget):
 
         self.logger.info("🧠 Initializing Mt4PredictServer GUI...")
 
-        self.setWindowTitle("Mt4PredictServer — Live Trading")
         self.setWindowIcon(QIcon("logo.png"))
         self.setGeometry(400, 200, 1200, 800)
         self.setStyleSheet(dark_theme_stylesheet())
@@ -228,17 +227,24 @@ class Mt4PredictServer(QWidget):
         model_layout.addWidget(self.model_info)
         model_tab.setLayout(model_layout)
 
+        self.setWindowTitle("MT4 Predict Server — AI Trading Dashboard")
+
         # --- Add all tabs ---
         self.tabs.addTab(self.server_tab, "Server")
-        self.tabs.addTab(ResourceMonitorFrame(self.controller), "Monitor")
-        self.tabs.addTab( LivePredictionsFrame(self.controller), "Predictor")
+
+
+        self.tabs.addTab(GPTChatFrame(controller=self.controller), "AI Advisor")
+
+        self.tabs.addTab(ResourceMonitorFrame(self.controller),  "Resource Monitor")
+
         self.tabs.addTab(GPTChatFrame(self.controller), "AI Advisor")
+        self.tabs.addTab( LivePredictionsFrame(self.controller), "Predictor")
         self.tabs.addTab(AccountInfo(self.controller), "Account - Open orders")
-        self.tabs.addTab(PositionHistory(self.controller), "Position History")
-        self.tabs.addTab(TensorFlowMetricsTab(), "Metrics")
+        self.tabs.addTab(PositionHistory(self.controller), "Positions History")
+        self.tabs.addTab(TensorFlowMetricsTab(), "TF Metrics")
         self.tabs.addTab(ExecuteCommand(self.controller), "Commands")
-        self.tabs.addTab(TensorBoardViewer(self.controller), "TensorBoard Viewer")
-        self.tabs.addTab(model_tab, "Tensorflow Model")
+        self.tabs.addTab(TensorBoardViewer(self.controller), "TB Viewer")
+        self.tabs.addTab(model_tab, "TF Model")
         layout.addWidget(self.tabs)
         self.setLayout(layout)
         self._reload_model_summary()

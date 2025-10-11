@@ -1,25 +1,37 @@
+version: "3.9"
 
 services:
   mt4:
-    build: ./mt4
+    build: .
     container_name: mt4
-    networks:
-      - ai_net
+    restart: always
+    environment:
+      - SERVER_HOST=predictserver
+      - SERVER_PORT=9999
+      - DISPLAY=:0
+      - TZ=America/New_York
     volumes:
       - mt4-files:/home/trader/.wine/drive_c/MT4/MQL4/Files
     depends_on:
-
       - predictserver
-
-  predictserver:
-    build: ./predictserver
-    container_name: predictserver
     networks:
       - ai_net
+
+  predictserver:
+    build: .
+    container_name: predictserver
+    restart: always
+    environment:
+      - LOG_DIR=/app/shared/logs
+      - PORT=9999
     volumes:
-      - mt4-files:/app/shared  # Make sure your Python app reads/writes here
+      - mt4-files:/app/shared
     ports:
-      - "50051:50051"  # gRPC port
+      - "50051:50051"
+      - "9999:9999"
+      - "6006:6006"   # TensorBoard
+    networks:
+      - ai_net
 
 networks:
   ai_net:

@@ -32,10 +32,10 @@ WORKDIR /home/trader
 RUN wineboot --init || true
 
 # Copy your MT4 installer (assumes you have a terminal.exe or installer.exe)
-COPY mt4_installer.exe /home/trader/
+COPY mt4setup.exe.exe /home/trader/
 
 # Install MT4 (silent if possible)
-RUN xvfb-run wine mt4_installer.exe || true
+RUN xvfb-run wine mt4setup.exe || true
 
 # Optional: configure Wine and start script
 COPY start.sh /home/trader/

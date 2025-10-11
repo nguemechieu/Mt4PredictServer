@@ -62,7 +62,6 @@ class GPTChatFrame(QWidget):
         self._init_ui()
         self._connect_signals()
         self._load_last_voice()
-        self._auto_read_selection()
 
     # ==========================================================
     # UI SETUP
@@ -294,7 +293,10 @@ class GPTChatFrame(QWidget):
     def _on_stop_clicked(self):
         self.dialog_active = False
         self.is_listening = False
-        self.tts_engine.disconnect()
+        if self.chat_display:
+            self.chat_display.clear()
+
+        self.tts_engine.stop()
         self._stop_blinking_indicator()
         self._append_message("System", "🛑 Conversation stopped manually.", QColor("#ffaa00"))
 
@@ -343,7 +345,7 @@ class GPTChatFrame(QWidget):
             return
 
         # Append the 'Done' marker
-        self.chat_display.append("\n✅ Done.\n")
+        self.chat_display.append("\n\n")
 
 
         # ✅ Ensure auto-reading of every GPT answer
@@ -351,7 +353,7 @@ class GPTChatFrame(QWidget):
             self._read_or_speak(self._last_gpt_response)
 
     def _on_stream_error(self, msg):
-        self.chat_display.append(f"\n❌ {msg}\n")
+        self.chat_display.append(f"\n❌Error: {msg}\n")
 
     # ==========================================================
     # SMART READ FUNCTION (ALWAYS READ OR READ SELECTED TEXT)
