@@ -33,7 +33,7 @@ class AccountMetrics(QWidget):
         self.setLayout(self.layout)
 
         self.prediction_file = "src/data/prediction_history.csv"
-        self.training_log = "src/logs/training_summary.log"
+        self.training_log = "src/logs/metric_summary.log"
 
         self.summary_label = QLabel()
         self.layout.addWidget(self.summary_label)

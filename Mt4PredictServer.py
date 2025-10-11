@@ -16,18 +16,20 @@ from PySide6.QtWidgets import (
 from tensorflow.keras.models import load_model
 
 # --- Frame imports ---
-from components.GPTAdvisor import GPTAdvisor
-from components.mt4_predictor import MT4Predictor
-from frames.AccountInfo import AccountInfo
-from frames.AutoTradeMonitor import AutoTradeMonitor
-from frames.ExecuteCommand import ExecuteCommand
-from frames.GPTChat import GPTChatFrame
-from frames.LivePredictionsFrame import LivePredictionsFrame
-from frames.PositionHistory import PositionHistory
-from frames.ResourceMonitorFrame import ResourceMonitorFrame
-from frames.ServerControlFrame import ServerControlFrame
-from frames.predictionChart import PredictionChart
-from frames.tensorflow_metrics import TensorFlowMetricsTab
+from src.components.GPTAdvisor import GPTAdvisor
+from src.components.mt4_predictor import MT4Predictor
+from src.frames.AccountInfo import AccountInfo
+
+from src.frames.tensorboadviewer import TensorBoardViewer
+
+from src.frames.ExecuteCommand import ExecuteCommand
+from src.frames.GPTChat import GPTChatFrame
+from src.frames.LivePredictionsFrame import LivePredictionsFrame
+from src.frames.PositionHistory import PositionHistory
+from src.frames.ResourceMonitorFrame import ResourceMonitorFrame
+from src.frames.ServerControlFrame import ServerControlFrame
+
+from src.frames.tensorflow_metrics import TensorFlowMetricsTab
 from src.server.server import PredictServer
 
 # =====================================================
@@ -96,8 +98,41 @@ class OutputReaderThread(QThread):
             self.output_signal.emit(f"[Server Stop Error] {e}")
         self.quit()
         self.wait()
+# =====================================================
+# FILE MAINTENANCE UTILITIES
+# =====================================================
+def cleanup_large_files(base_dir: str = "./src", max_size_mb: int = 50):
+    """
+    Automatically delete or rotate large .csv and .log files exceeding size limit.
+    - base_dir: root directory to scan (default ./src)
+    - max_size_mb: threshold in MB (default 50 MB)
+    """
+    deleted_files = []
+    size_limit = max_size_mb * 1024 * 1024  # convert to bytes
 
+    try:
+        for root, _, files in os.walk(base_dir):
+            for file in files:
+                if file.endswith((".csv", ".log")):
+                    path = os.path.join(root, file)
+                    if os.path.exists(path) and os.path.getsize(path) > size_limit:
+                        backup = path + ".bak"
+                        shutil.move(path, backup)  # move instead of immediate delete
+                        deleted_files.append((file, os.path.getsize(path)))
+                        with open(path, "w", encoding="utf-8") as f:
+                            f.write("")  # recreate empty file for continued logging
 
+        if deleted_files:
+            print(f"🧹 Cleaned {len(deleted_files)} large files (> {max_size_mb}MB):")
+            for f, s in deleted_files:
+                print(f"   - {f} ({round(s / (1024 * 1024), 2)} MB)")
+
+    except Exception as e:
+        print(f"❌ File cleanup error: {e}")
+
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+cleanup_large_files()
 # =====================================================
 # MAIN APPLICATION WINDOW
 # =====================================================
@@ -195,18 +230,15 @@ class Mt4PredictServer(QWidget):
 
         # --- Add all tabs ---
         self.tabs.addTab(self.server_tab, "Server")
-        self.tabs.addTab(ResourceMonitorFrame(self), "Monitor")
+        self.tabs.addTab(ResourceMonitorFrame(self.controller), "Monitor")
         self.tabs.addTab( LivePredictionsFrame(self.controller), "Predictor")
-        self.tabs.addTab(GPTChatFrame(self), "ChatGPT Advisor")
-        self.tabs.addTab(AccountInfo(self), "Account - Open orders")
-        self.tabs.addTab(PositionHistory(self), "Position History")
-
-        self.tabs.addTab(PredictionChart(self), "Prediction Chart")
-
-        self.tabs.addTab(TensorFlowMetricsTab(), "TensorFlow Metrics")
-        self.tabs.addTab(ExecuteCommand(self), "Execute Command")
+        self.tabs.addTab(GPTChatFrame(self.controller), "AI Advisor")
+        self.tabs.addTab(AccountInfo(self.controller), "Account - Open orders")
+        self.tabs.addTab(PositionHistory(self.controller), "Position History")
+        self.tabs.addTab(TensorFlowMetricsTab(), "Metrics")
+        self.tabs.addTab(ExecuteCommand(self.controller), "Commands")
+        self.tabs.addTab(TensorBoardViewer(self.controller), "TensorBoard Viewer")
         self.tabs.addTab(model_tab, "Tensorflow Model")
-
         layout.addWidget(self.tabs)
         self.setLayout(layout)
         self._reload_model_summary()
@@ -250,7 +282,7 @@ class Mt4PredictServer(QWidget):
     def _reload_model_summary(self):
         """Reload and display TensorFlow model summary."""
         try:
-            path = "src/model/model.keras"
+            path = "model/model.keras"
             if not os.path.exists(path):
                 self.model_info.setPlainText("⚠️ No model file found.")
                 return

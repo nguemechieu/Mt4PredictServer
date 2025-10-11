@@ -117,14 +117,7 @@ class ServerControlFrame(QWidget):
 
     # =====================================================
     # AutoTrader
-    # =====================================================
-    def _init_autotrader(self):
-        if not self.api_key:
-            self.log("⚠️ Missing OpenAI API key — auto-trader disabled.")
-            return
-        self.auto_trader = AutoTradeManager(controller=self.controller)
-        self.auto_trader.stream_signal.connect(self.append_log)
-        self.auto_trader.decision_signal.connect(self._on_ai_decision)
+
 
     def _on_ai_decision(self, decision=None):
         self.log(f"🤖 AI Decision: {decision}")

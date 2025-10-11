@@ -17,6 +17,11 @@ setuptools~=80.9.0
 gputil~=1.4.0
 
 # GUI (supported on Python <= 3.12)
+sounddevice
 PySide6
-
+pyttsx3
+SpeechRecognition
+pyaudio
+vosk
 mplcursors
+

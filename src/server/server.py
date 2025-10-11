@@ -5,17 +5,18 @@ import queue
 import socket
 import threading
 import time
+from functools import total_ordering
+
 import numpy as np
 import pandas as pd
+from telegram import TelegramObject
 
-from components.GPTAdvisor import GPTAdvisor
-from components.mt4_predictor import MT4Predictor
+from src.components.GPTAdvisor import GPTAdvisor
+from src.components.mt4_predictor import MT4Predictor
 
 HOST = "127.0.0.1"
 PORT = 9999
 BUFFER_SIZE = 4096
-
-
 # ==========================================================
 # JSON encoder for NumPy types
 # ==========================================================
@@ -38,8 +39,7 @@ def _default_logger():
     return logging.getLogger("PredictServer")
 
 
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
-os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+
 
 def append_csv(path, new_df):
     """Append rows to a CSV safely (avoiding overwrites)."""
@@ -60,6 +60,7 @@ class PredictServer:
         # Core components
         self.gpt = GPTAdvisor(self.controller)
         self.predictor = MT4Predictor(self.controller)
+
 
         # Runtime state
         self.last_confidence = {}
@@ -100,14 +101,15 @@ class PredictServer:
         for c in list(self.clients):
             try:
                 c.close()
-            except Exception:
-                pass
+            except Exception as ex:
+                self.logger.error(ex)
+
 
         if self.server_socket:
             try:
                 self.server_socket.close()
-            except Exception:
-                pass
+            except Exception as exx:
+                self.logger.error(exx)
 
         self.logger.info("🛑 PredictServer stopped.")
 
@@ -195,12 +197,13 @@ class PredictServer:
     def _process_candles(self, msg)->None:
         symbol = str(msg.get("symbol") or "EURUSD")
         candle = msg.get("candle") or {}
-        ind = msg.get("indicators") or {}
+        ind_data = msg.get("indicators") or {}
 
         # --- Save account info ---
         self.account_info = msg.get("account_info", {})
         if self.account_info:
             df_acc = pd.DataFrame([self.account_info])
+            df_acc.dropna()
             append_csv("./src/data/account_info.csv", df_acc)
 
         # --- Save order history ---
@@ -227,43 +230,84 @@ class PredictServer:
                 self.prediction_queues[symbol] = queue.Queue()
 
         df = pd.DataFrame([{
-            "symbol": symbol,
             "open": float(candle.get("open", 0.0)),
             "high": float(candle.get("high", 0.0)),
             "low": float(candle.get("low", 0.0)),
             "close": float(candle.get("close", 0.0)),
-            "volume": float(candle.get("volume", 0.0)),
-            "timestamp": float(candle.get("time", time.time())),
+            "volume": float(candle.get("volume", 0.0))
         }])
+        df['time']=   candle.get("time", 0)
+
+        df+=df
+        df.drop_duplicates(inplace=True)
+
 
         num_cols = ["open", "high", "low", "close", "volume"]
         df[num_cols] = df[num_cols].apply(pd.to_numeric, errors="coerce")
 
+
         with self._lock:
             old_df = self.candle_buffers[symbol]
             self.candle_buffers[symbol] = pd.concat([old_df, df], ignore_index=True).tail(10)
+        total_candles = len(self.candle_buffers[symbol])
+        if total_candles<10:
+                return None
+
+
 
         self.logger.info(f"📊 {symbol}: {len(self.candle_buffers[symbol])} candles buffered")
 
         # --- Queue prediction ---
         features = [
-            float(ind.get("ema_fast", 0.0)),
-            float(ind.get("ema_slow", 0.0)),
-            float(ind.get("rsi", 0.0)),
-            float(ind.get("macd", 0.0)),
+            float(ind_data.get("ema_fast", 0.0)),
+            float(ind_data.get("ema_slow", 0.0)),
+            float(ind_data.get("rsi", 0.0)),
+            float(ind_data.get("macd", 0.0))
+            #float(ind_data.get("cci" , 0.0)),          # New
+            #float(ind_data.get("last_open_price", 0.0)),    # New
+            #float(ind_data.get("last_close_price" , 0.0)),   # New
+            #float(ind_data.get("avg_loss_last_3" , 0.0)),    # New
         ]
+
+        ind_data_df= pd.DataFrame([{
+            "ema_fast": float(ind_data.get("ema_fast", 0.0)),
+            "ema_slow": float(ind_data.get("ema_slow", 0.0)),
+            "rsi": float(ind_data.get("rsi", 0.0)),
+            "macd": float(ind_data.get("macd", 0.0))
+            #"previous_loss": float(ind_data.get("previous_loss", 0.0)),
+            #"last_open_price": float(ind_data.get("last_open_price", 0.0)),
+            #"last_close_price": float(ind_data.get("last_close_price", 0.0)),
+            #"avg_loss_last_3": float(ind_data.get("avg_loss_last_3", 0.0)),
+        }])
+        ind_data_df.to_csv("./src/data/signal_"+symbol+".csv")
+        df.to_csv("./src/data/candle_"+symbol+".csv")
+
+        model_path="./model/model.keras"
+        scaler_path="./model/scaler.pkl"
+        order_history_path="./src/data/order_history.csv"
+
+
+
+        self.predictor.trainer.train_and_save_model(symbol,"./src/data/signal_"+symbol+".csv",
+                                                    "./src/data/candle_"+symbol+".csv",model_path,scaler_path,
+                                                    order_history_path )
+
+
+
         self.prediction_queues[symbol].put((symbol, features, df.iloc[-1].to_dict()))
 
         if symbol not in self.active_workers or not self.active_workers[symbol].is_alive():
             worker = threading.Thread(target=self._prediction_worker, args=(symbol,), daemon=True)
             self.active_workers[symbol] = worker
             worker.start()
+
+
         return None
 
     # ==========================================================
     # Prediction Worker
     # ==========================================================
-    def _prediction_worker(self, symbol):
+    def _prediction_worker(self, symbol=None):
         q = self.prediction_queues[symbol]
         while not q.empty():
             try:
@@ -339,13 +383,7 @@ class PredictServer:
     def _save_prediction(self, record):
         try:
             os.makedirs("./src/data", exist_ok=True)
-            df = pd.DataFrame([{
-                "Symbol": record["symbol"],
-                "Direction": record["direction"],
-                "Confidence": record["confidence"],
-                "Timestamp": record["timestamp"],
-                "Analysis": record["analysis"],
-            }])
+            df = pd.DataFrame([record])
 
             path = "./src/data/predictions.csv"
 
@@ -356,7 +394,7 @@ class PredictServer:
 
 
 
-    def _process_gpt(self, msg):
+    def _process_gpt(self, msg=None):
         """
         Handle GPT or AI advisory queries with full trading context.
         Accepts:
@@ -378,7 +416,7 @@ class PredictServer:
             }
         """
 
-        global ee
+
         try:
         # --- Validate GPT query ---
          query = (msg.get("query") or "").strip()
@@ -404,6 +442,7 @@ class PredictServer:
             f"Equity: ${acc_info.get('equity', 0):.2f} | "
             f"Margin: ${acc_info.get('margin', 0):.2f} | "
             f"Free Margin: ${acc_info.get('free_margin', 0):.2f}"
+            f"Profit: ${acc_info.get('profit', 0):.2f}"
         )
 
         # --- Summarize open orders ---
@@ -474,9 +513,9 @@ class PredictServer:
 
          return response
 
-        except Exception as ee:
-         self.logger.error(f"❌ GPT processing exception: {ee}")
-        return {"type":"info","status": "error", "reason": str(ee.__str__()), "timestamp": time.time()}
+        except Exception as e_:
+         self.logger.error(f"❌ GPT processing exception: {e_}")
+        return {"type":"info","status": "error", "reason": str(e_), "timestamp": time.time()}
 
 
 # ==========================================================
@@ -491,6 +530,7 @@ class PredictServer:
             "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
             "symbol": symbol,
             "query": query,
+            "prompt": prompt,
             "latency_sec": latency,
             "response_preview": answer[:200],
         }]

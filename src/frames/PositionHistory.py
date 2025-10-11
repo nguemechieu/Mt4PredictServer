@@ -1,22 +1,24 @@
 import os
-
 import pandas as pd
 import matplotlib.pyplot as plt
 from PySide6.QtCore import Qt, QTimer
 from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QLabel, QTableWidget, QTableWidgetItem,
-    QPushButton, QMessageBox, QSizePolicy, QHBoxLayout
+    QPushButton, QMessageBox, QSizePolicy, QHBoxLayout, QScrollArea, QFrame
 )
 from matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.font_manager import fontManager
 
+# --- Font Setup (with Emoji Support) ---
 try:
     fontManager.addfont("C:/Windows/Fonts/seguiemj.ttf")
-    plt.rcParams['font.family'] = 'Segoe UI Emoji'
+    plt.rcParams["font.family"] = "Segoe UI Emoji"
 except Exception:
     pass
+
+
 class PositionHistory(QWidget):
-    """Displays trade history, performance metrics, and profitability chart."""
+    """Displays trade history, performance metrics, and profitability chart with adaptive scrollable layout."""
 
     def __init__(self, controller=None):
         super().__init__(controller)
@@ -25,46 +27,67 @@ class PositionHistory(QWidget):
         self.controller = controller
         self.history_path = "./src/data/order_history.csv"
 
-        # === Layout ===
-        layout = QVBoxLayout()
-        self.setLayout(layout)
+        # === Base Layout ===
+        base_layout = QVBoxLayout(self)
+        base_layout.setContentsMargins(8, 8, 8, 8)
+        base_layout.setSpacing(6)
 
-        # Header
+        # === Scroll Area (Main Content) ===
+        scroll_area = QScrollArea()
+        scroll_area.setWidgetResizable(True)
+        content_widget = QWidget()
+        self.layout_inside = QVBoxLayout(content_widget)
+        self.layout_inside.setAlignment(Qt.AlignTop)
+        scroll_area.setWidget(content_widget)
+        base_layout.addWidget(scroll_area)
+
+        # === Header ===
         header = QLabel("<h2>📄 Trade History</h2>")
-        layout.addWidget(header)
+        header.setAlignment(Qt.AlignCenter)
+        self.layout_inside.addWidget(header)
 
-        # Table
+        # === Table ===
         self.table = QTableWidget()
         self.table.setAlternatingRowColors(True)
-        layout.addWidget(self.table)
+        self.table.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        self.table.horizontalHeader().setStretchLastSection(True)
+        self.layout_inside.addWidget(self.table)
 
-        # Summary + Ranking
+        # === Summary + Ranking ===
         self.summary_label = QLabel()
+        self.summary_label.setWordWrap(True)
         self.rank_label = QLabel()
-        layout.addWidget(self.summary_label)
-        layout.addWidget(self.rank_label)
+        self.rank_label.setWordWrap(True)
+        self.layout_inside.addWidget(self.summary_label)
+        self.layout_inside.addWidget(self.rank_label)
 
-        # Chart area
-        self.figure, self.ax = plt.subplots()
+        # === Chart Section ===
+        self.figure, self.ax = plt.subplots(figsize=(8, 4))
         self.canvas = FigureCanvas(self.figure)
         self.canvas.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
-        layout.addWidget(self.canvas)
+        chart_frame = QFrame()
+        chart_layout = QVBoxLayout(chart_frame)
+        chart_layout.addWidget(self.canvas)
+        self.layout_inside.addWidget(chart_frame)
 
-        # Buttons
+        # === Control Buttons ===
         btn_layout = QHBoxLayout()
+        btn_layout.setAlignment(Qt.AlignCenter)
         refresh_btn = QPushButton("🔄 Refresh Data")
-        refresh_btn.clicked.connect(self.load_data)
         clear_btn = QPushButton("🧹 Clear History")
+        refresh_btn.clicked.connect(self.load_data)
         clear_btn.clicked.connect(self.clear_history)
-        btn_layout.addWidget(refresh_btn)
-        btn_layout.addWidget(clear_btn)
-        layout.addLayout(btn_layout)
+        for btn in (refresh_btn, clear_btn):
+            btn.setMinimumWidth(150)
+            btn.setSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
+            btn_layout.addWidget(btn)
+        self.layout_inside.addLayout(btn_layout)
 
-        # Initial load + auto refresh
-        self.load_data()
+        # === Auto Refresh Timer ===
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.load_data)
-        self.timer.start(20000)  # every 20s
+        self.timer.start(20000)  # 20 seconds
+        self.load_data()
 
     # ------------------------------------------------------------------
     def _load_csv(self):
@@ -75,8 +98,7 @@ class PositionHistory(QWidget):
                 "OpenPrice", "ClosePrice", "Profit", "Analysis"
             ])
         try:
-            df = pd.read_csv(self.history_path)
-            return df
+            return pd.read_csv(self.history_path)
         except Exception as e:
             QMessageBox.warning(self, "Read Error", f"Failed to read order history:\n{e}")
             return pd.DataFrame()
@@ -96,12 +118,12 @@ class PositionHistory(QWidget):
 
         # --- Normalize columns ---
         df.columns = [c.strip().capitalize() for c in df.columns]
-        for col in ["Ticket", "Symbol", "Type", "Lots", "Openprice", "Closeprice", "Profit", "Analysis"]:
+        expected_cols = ["Ticket", "Symbol", "Type", "Lots", "Openprice", "Closeprice", "Profit", "Analysis"]
+        for col in expected_cols:
             if col not in df.columns:
                 df[col] = ""
 
-        # --- Populate table ---
-        expected_cols = ["Ticket", "Symbol", "Type", "Lots", "Openprice", "Closeprice", "Profit", "Analysis"]
+        # --- Populate Table ---
         self.table.setRowCount(len(df))
         self.table.setColumnCount(len(expected_cols))
         self.table.setHorizontalHeaderLabels(expected_cols)
@@ -120,10 +142,11 @@ class PositionHistory(QWidget):
                             item.setForeground(Qt.darkGreen)
                     except Exception:
                         pass
-
+                item.setTextAlignment(Qt.AlignCenter)
                 self.table.setItem(row, col, item)
 
         self.table.resizeColumnsToContents()
+        self.table.resizeRowsToContents()
 
         # --- Update summary, ranking, and chart ---
         self.display_summary(df)
@@ -140,7 +163,7 @@ class PositionHistory(QWidget):
             win_rate = len(win_trades) / total_trades * 100 if total_trades else 0
 
             summary_text = (
-                f"📊 <b>Total Trades:</b> {total_trades} | "
+                f"📊 <b>Total Trades:</b> {total_trades:,} | "
                 f"<b>Total PnL:</b> ${total_profit:.2f} | "
                 f"<b>Win Rate:</b> {win_rate:.2f}%"
             )
@@ -154,6 +177,8 @@ class PositionHistory(QWidget):
     def display_performance_ranking(self, df):
         """Show best/worst trades and per-symbol stats."""
         try:
+            df = df.copy()
+            df["Profit"] = pd.to_numeric(df["Profit"], errors="coerce").fillna(0)
             best_trade = df.loc[df["Profit"].idxmax()]
             worst_trade = df.loc[df["Profit"].idxmin()]
             symbol_stats = df.groupby("Symbol")["Profit"].sum().sort_values(ascending=False)
@@ -162,7 +187,7 @@ class PositionHistory(QWidget):
                 f"🥇 <b>Best Trade:</b> Ticket {int(best_trade['Ticket'])} | "
                 f"Symbol: {best_trade['Symbol']} | Profit: ${best_trade['Profit']:.2f}<br>"
                 f"❌ <b>Worst Trade:</b> Ticket {int(worst_trade['Ticket'])} | "
-                f"Symbol: {worst_trade['Symbol']} | Loss: ${worst_trade['Profit']:.2f}<br>"
+                f"Symbol: {worst_trade['Symbol']} | Loss: ${worst_trade['Profit']:.2f}<br><br>"
                 f"📌 <b>Top Performing Symbols:</b><br>"
             )
 
@@ -181,16 +206,27 @@ class PositionHistory(QWidget):
         """Draw cumulative profitability chart."""
         try:
             df = df.copy()
+            df["Profit"] = pd.to_numeric(df["Profit"], errors="coerce").fillna(0)
             df["CumulativePnL"] = df["Profit"].cumsum()
 
             self.ax.clear()
-            self.ax.plot(df.index, df["CumulativePnL"], marker="o", color="blue", label="Cumulative PnL", linewidth=2)
-            self.ax.bar(df.index, df["Profit"], color=df["Profit"].apply(lambda x: "green" if x > 0 else "red"),
-                        alpha=0.5, label="Trade PnL")
+            self.ax.plot(
+                df.index,
+                df["CumulativePnL"],
+                marker="o",
+                color="blue",
+                label="Cumulative PnL",
+                linewidth=2,
+            )
+            self.ax.bar(
+                df.index,
+                df["Profit"],
+                color=df["Profit"].apply(lambda x: "green" if x > 0 else "red"),
+                alpha=0.5,
+                label="Trade PnL",
+            )
 
-            self.ax.set_title("Profitability Over Time ($)", fontsize=12)
-
-
+            self.ax.set_title("📈 Profitability Over Time ($)", fontsize=12)
             self.ax.set_xlabel("Trade #")
             self.ax.set_ylabel("PnL ($)")
             self.ax.legend()
