@@ -1,2 +1,733 @@
 ,ema_fast,ema_slow,rsi,macd,previous_loss,last_open_price,last_close_price,avg_loss_last_3
 0,0.89501,0.89559,39.34207,-0.00058,0.0,0.0,0.0,0.0
+error,Invalid payload format.,1760418578.3958342
+error,Invalid payload format.,1760418581.1236398
+error,Invalid payload format.,1760418586.1316586
+error,Invalid payload format.,1760418591.1305232
+error,Invalid payload format.,1760418596.1289148
+error,Invalid payload format.,1760418601.1317997
+error,Invalid payload format.,1760418606.1293633
+error,Invalid payload format.,1760418611.165018
+error,Invalid payload format.,1760418616.146152
+error,Invalid payload format.,1760418621.1526923
+error,Invalid payload format.,1760418626.1509519
+error,Invalid payload format.,1760418631.1505752
+error,Invalid payload format.,1760418636.1656897
+error,Invalid payload format.,1760418648.9347665
+error,Invalid payload format.,1760418653.9059155
+error,Invalid payload format.,1760418658.9368718
+error,Invalid payload format.,1760418663.9737823
+error,Invalid payload format.,1760418668.9940617
+error,Invalid payload format.,1760418674.0003479
+error,Invalid payload format.,1760418679.0362432
+error,Invalid payload format.,1760418684.0283403
+error,Invalid payload format.,1760418689.0221262
+error,Invalid payload format.,1760418694.0473933
+error,Invalid payload format.,1760418699.0765874
+error,Invalid payload format.,1760418704.0831017
+error,Invalid payload format.,1760418709.0828505
+error,Invalid payload format.,1760418714.0941982
+error,Invalid payload format.,1760418719.072729
+error,Invalid payload format.,1760418724.0661948
+error,Invalid payload format.,1760418729.1017325
+error,Invalid payload format.,1760418734.144344
+error,Invalid payload format.,1760418739.1772215
+error,Invalid payload format.,1760418744.1124306
+error,Invalid payload format.,1760418749.1047056
+error,Invalid payload format.,1760418754.0776029
+error,Invalid payload format.,1760418759.1317286
+error,Invalid payload format.,1760418764.126697
+error,Invalid payload format.,1760418769.115779
+error,Invalid payload format.,1760418774.121015
+error,Invalid payload format.,1760418779.149043
+error,Invalid payload format.,1760418784.1315773
+error,Invalid payload format.,1760418789.157084
+error,Invalid payload format.,1760418794.162795
+error,Invalid payload format.,1760418799.2151763
+error,Invalid payload format.,1760418804.203702
+error,Invalid payload format.,1760418809.2092557
+error,Invalid payload format.,1760418814.2027874
+error,Invalid payload format.,1760418819.2182581
+error,Invalid payload format.,1760418824.2246206
+error,Invalid payload format.,1760418829.2112184
+error,Invalid payload format.,1760418834.2445614
+error,Invalid payload format.,1760418839.1507344
+error,Invalid payload format.,1760418844.1943157
+error,Invalid payload format.,1760418849.22004
+error,Invalid payload format.,1760418854.2597985
+error,Invalid payload format.,1760418859.287769
+error,Invalid payload format.,1760418864.2144065
+error,Invalid payload format.,1760418869.3263721
+error,Invalid payload format.,1760418874.4025059
+error,Invalid payload format.,1760418879.3395498
+error,Invalid payload format.,1760418884.3073168
+error,Invalid payload format.,1760418889.3050253
+error,Invalid payload format.,1760418894.2539937
+error,Invalid payload format.,1760418899.353098
+error,Invalid payload format.,1760418904.2512314
+error,Invalid payload format.,1760418909.3464644
+error,Invalid payload format.,1760418914.3258245
+error,Invalid payload format.,1760418919.3809216
+error,Invalid payload format.,1760418924.3520453
+error,Invalid payload format.,1760418929.3318367
+error,Invalid payload format.,1760418934.3448703
+error,Invalid payload format.,1760418939.5267634
+error,Invalid payload format.,1760418944.3594182
+error,Invalid payload format.,1760418949.4740314
+error,Invalid payload format.,1760418954.3411932
+error,Invalid payload format.,1760418959.4072163
+error,Invalid payload format.,1760418964.445715
+error,Invalid payload format.,1760418969.4467468
+error,Invalid payload format.,1760418974.3634803
+error,Invalid payload format.,1760418979.4155855
+error,Invalid payload format.,1760418984.380135
+error,Invalid payload format.,1760418989.4701025
+error,Invalid payload format.,1760418995.2928019
+error,Invalid payload format.,1760418999.4144132
+error,Invalid payload format.,1760419006.7710903
+error,Invalid payload format.,1760419011.1785653
+error,Invalid payload format.,1760419014.3695483
+error,Invalid payload format.,1760419019.508294
+error,Invalid payload format.,1760419024.4750938
+error,Invalid payload format.,1760419029.5106392
+error,Invalid payload format.,1760419034.4317188
+error,Invalid payload format.,1760419051.3699672
+error,Invalid payload format.,1760419054.187533
+error,Invalid payload format.,1760419059.1913438
+error,Invalid payload format.,1760419064.1918533
+error,Invalid payload format.,1760419069.1958866
+error,Invalid payload format.,1760419074.205975
+error,Invalid payload format.,1760419079.2063365
+error,Invalid payload format.,1760419090.988522
+error,Invalid payload format.,1760419096.0107124
+error,Invalid payload format.,1760419101.0193894
+error,Invalid payload format.,1760419105.9992397
+error,Invalid payload format.,1760419111.012581
+error,Invalid payload format.,1760419115.9971857
+error,Invalid payload format.,1760419121.0094662
+error,Invalid payload format.,1760419126.0111325
+error,Invalid payload format.,1760419131.0210571
+error,Invalid payload format.,1760419136.0308008
+error,Invalid payload format.,1760419141.0518603
+error,Invalid payload format.,1760419146.0291333
+error,Invalid payload format.,1760419151.0382743
+error,Invalid payload format.,1760419156.0592115
+error,Invalid payload format.,1760419161.0722444
+error,Invalid payload format.,1760419166.1413643
+error,Invalid payload format.,1760419171.1170628
+error,Invalid payload format.,1760419176.1483479
+error,Invalid payload format.,1760419181.1864421
+error,Invalid payload format.,1760419186.1935844
+error,Invalid payload format.,1760419191.1659527
+error,Invalid payload format.,1760419196.233875
+error,Invalid payload format.,1760419201.214292
+error,Invalid payload format.,1760419206.2212086
+error,Invalid payload format.,1760419211.2219038
+error,Invalid payload format.,1760419216.5728414
+error,Invalid payload format.,1760419221.2198603
+error,Invalid payload format.,1760419226.2384553
+error,Invalid payload format.,1760419231.6332273
+error,Invalid payload format.,1760419236.2658784
+error,Invalid payload format.,1760419241.286268
+error,Invalid payload format.,1760419246.293459
+error,Invalid payload format.,1760419251.3018637
+error,Invalid payload format.,1760419257.1780233
+error,Invalid payload format.,1760419261.2851484
+error,Invalid payload format.,1760419266.3444343
+error,Invalid payload format.,1760419271.3390794
+error,Invalid payload format.,1760419276.3329453
+error,Invalid payload format.,1760419281.4735029
+error,Invalid payload format.,1760419286.3419013
+error,Invalid payload format.,1760419292.4281948
+error,Invalid payload format.,1760419296.3486722
+error,Invalid payload format.,1760419302.97178
+error,Invalid payload format.,1760419306.4386508
+error,Invalid payload format.,1760419311.3870802
+error,Invalid payload format.,1760419316.3715963
+error,Invalid payload format.,1760419321.4253166
+error,Invalid payload format.,1760419326.469448
+error,Invalid payload format.,1760419331.4116168
+error,Invalid payload format.,1760419336.437799
+error,Invalid payload format.,1760419344.278513
+error,Invalid payload format.,1760419346.4668145
+error,Invalid payload format.,1760419351.4638305
+error,Invalid payload format.,1760419558.397627
+error,Invalid payload format.,1760419558.4396815
+error,Invalid payload format.,1760419561.4762194
+error,Invalid payload format.,1760419566.4659684
+error,Invalid payload format.,1760419571.4925148
+error,Invalid payload format.,1760419576.4934154
+error,Invalid payload format.,1760419581.491817
+error,Invalid payload format.,1760419586.4936156
+error,Invalid payload format.,1760419591.4863303
+error,Invalid payload format.,1760419596.4974623
+error,Invalid payload format.,1760419601.506843
+error,Invalid payload format.,1760419606.5298252
+error,Invalid payload format.,1760419611.5146885
+error,Invalid payload format.,1760419616.5184588
+error,Invalid payload format.,1760419621.5362427
+error,Invalid payload format.,1760419626.5370083
+error,Invalid payload format.,1760419631.5503726
+error,Invalid payload format.,1760419636.5448036
+error,Invalid payload format.,1760419641.5671015
+error,Invalid payload format.,1760419646.5827003
+error,Invalid payload format.,1760419651.5522478
+error,Invalid payload format.,1760419656.5539525
+error,Invalid payload format.,1760419661.580865
+error,Invalid payload format.,1760419666.6000705
+error,Invalid payload format.,1760419671.583522
+error,Invalid payload format.,1760419676.5778465
+error,Invalid payload format.,1760419681.576423
+error,Invalid payload format.,1760419686.5951703
+error,Invalid payload format.,1760419691.5995815
+error,Invalid payload format.,1760419696.5887551
+error,Invalid payload format.,1760419701.5966966
+error,Invalid payload format.,1760419706.6421185
+error,Invalid payload format.,1760419711.649738
+error,Invalid payload format.,1760419716.6573393
+error,Invalid payload format.,1760419721.720125
+error,Invalid payload format.,1760419726.656078
+error,Invalid payload format.,1760419731.6551719
+error,Invalid payload format.,1760419736.9638317
+error,Invalid payload format.,1760419741.7395968
+error,Invalid payload format.,1760419746.6663759
+error,Invalid payload format.,1760419751.7278962
+error,Invalid payload format.,1760419756.759876
+error,Invalid payload format.,1760419761.755889
+error,Invalid payload format.,1760419766.7355828
+error,Invalid payload format.,1760419771.7566645
+error,Invalid payload format.,1760419776.7690067
+error,Invalid payload format.,1760419781.7609217
+error,Invalid payload format.,1760419786.7693987
+error,Invalid payload format.,1760419791.7676504
+error,Invalid payload format.,1760419796.765113
+error,Invalid payload format.,1760419801.7877367
+error,Invalid payload format.,1760419806.7475867
+error,Invalid payload format.,1760419811.8255355
+error,Invalid payload format.,1760419816.7646894
+error,Invalid payload format.,1760419821.865502
+error,Invalid payload format.,1760419826.7564523
+error,Invalid payload format.,1760419831.7633717
+error,Invalid payload format.,1760419836.8360155
+error,Invalid payload format.,1760419841.9375029
+error,Invalid payload format.,1760419846.860245
+error,Invalid payload format.,1760419851.867678
+error,Invalid payload format.,1760419856.8293247
+error,Invalid payload format.,1760419861.8863535
+error,Invalid payload format.,1760419866.8814342
+error,Invalid payload format.,1760419872.0630314
+error,Invalid payload format.,1760419876.9275026
+error,Invalid payload format.,1760419882.0744221
+error,Invalid payload format.,1760419886.9581437
+error,Invalid payload format.,1760419891.854513
+error,Invalid payload format.,1760419896.8617675
+error,Invalid payload format.,1760419901.8949142
+error,Invalid payload format.,1760419906.926784
+error,Invalid payload format.,1760419912.0053875
+error,Invalid payload format.,1760419916.9645822
+error,Invalid payload format.,1760419921.981879
+error,Invalid payload format.,1760419927.0902455
+error,Invalid payload format.,1760419932.1967452
+error,Invalid payload format.,1760419937.0096443
+error,Invalid payload format.,1760419941.999409
+error,Invalid payload format.,1760419947.0543256
+error,Invalid payload format.,1760419952.0247684
+error,Invalid payload format.,1760419957.0311353
+error,Invalid payload format.,1760419961.9698482
+error,Invalid payload format.,1760419967.1165984
+error,Invalid payload format.,1760419972.0949073
+error,Invalid payload format.,1760419977.3680086
+error,Invalid payload format.,1760419982.024483
+error,Invalid payload format.,1760419987.0185444
+error,Invalid payload format.,1760419992.0831525
+error,Invalid payload format.,1760419997.1091318
+error,Invalid payload format.,1760420002.0967865
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420032.26329
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420032.293564
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420036.7596552
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420041.767734
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420046.761541
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420051.7867048
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420056.7740648
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420061.7776608
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420066.8615692
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420071.7832448
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420076.814031
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420081.8304746
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420086.9439068
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420091.8865974
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420096.866962
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420101.8781195
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420106.8955655
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420111.8837688
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420116.9497325
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420121.914336
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420126.9524758
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420131.9213192
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420136.9178884
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420141.9713337
+error,Invalid payload format,1760420161.5494332
+error,Invalid payload format,1760420161.8713078
+error,Invalid payload format,1760420166.9207683
+error,Invalid payload format,1760420171.9493785
+error,Invalid payload format,1760420176.938151
+error,Invalid payload format,1760420181.933966
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420362.3963585
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420362.4268343
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420367.0540109
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420372.0434818
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420377.0569909
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420382.0640159
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420387.0597587
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420392.074791
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420397.0908997
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420402.1024904
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420407.0963874
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420412.1295838
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420417.136666
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420422.146295
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420427.1295605
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421051.2,165.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421053.73,186.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421058.31,158.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421063.3,182.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421068.33,207.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421073.49,227.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421079.16,611.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421085.45,233.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421088.69,300.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421093.86,267.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421098.88,531.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421103.71,246.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421108.8,209.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421115.17,1544.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421118.62,295.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421123.64,231.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421129.13,398.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421134.59,476.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421139.06,267.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421144.26,402.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421148.88,225.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421153.7,191.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421158.56,270.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421163.9,275.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421168.87,305.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421173.89,239.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421178.72,335.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421183.97,374.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421188.97,326.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421193.89,255.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421199.0,325.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421203.81,283.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421208.91,264.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421214.0,290.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421218.92,273.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421224.27,391.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421229.07,298.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421234.45,500.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421239.05,296.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421244.21,287.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421251.37,365.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421256.13,474.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421261.31,397.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421266.49,331.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421271.44,319.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421276.5,451.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421281.66,409.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421286.87,494.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421291.63,358.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421296.75,454.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421301.84,691.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421306.88,454.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421312.35,589.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421317.08,646.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421322.07,528.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421327.28,484.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421332.1,601.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421337.64,642.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421343.12,809.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421347.55,591.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421352.57,582.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421358.7,1151.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421363.02,820.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421368.73,1000.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421374.36,1076.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421378.47,996.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421383.68,889.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421388.53,839.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421394.12,998.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421398.94,825.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421404.0,926.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421408.75,968.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421414.16,1141.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421419.09,919.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421423.84,990.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421428.55,981.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421433.29,739.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421438.24,819.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421443.37,918.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421448.15,822.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421453.08,782.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421458.07,790.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421463.32,687.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421468.46,825.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421473.42,997.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421478.59,870.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421483.9,581.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421487.33,461.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421493.19,589.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421497.36,712.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421502.56,654.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421507.44,469.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421512.46,562.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421517.14,526.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421523.24,585.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421527.67,607.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421532.48,420.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421537.62,517.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421545.76,729.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421548.69,586.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421552.84,611.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421558.29,699.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421562.79,689.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421567.24,559.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421572.69,675.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421577.48,500.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421584.92,1255.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421589.06,823.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421593.33,664.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421597.71,650.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421602.49,612.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421608.78,906.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421615.35,1032.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421619.53,835.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421623.72,998.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421628.17,715.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421632.92,518.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421638.2,646.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421643.78,914.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421648.97,1228.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421655.5,1791.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421660.93,723.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421665.7,728.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421674.21,1015.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421678.37,650.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421683.16,731.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421687.11,716.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421690.95,662.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421697.03,721.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421701.22,829.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421707.06,1200.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421711.54,1105.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421716.05,715.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421719.67,833.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421723.55,714.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421728.92,877.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421733.81,1017.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421739.31,988.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421744.45,957.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421749.03,890.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421762.52,3635.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421768.91,1172.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421775.01,1262.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421780.68,1158.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421786.1,1207.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421796.3,1991.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421806.41,892.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421815.1,1185.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421820.43,1028.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421827.76,1279.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421839.13,4163.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421846.26,1580.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421852.09,1230.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421858.34,1081.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421864.48,1380.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421878.03,2418.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421883.69,1155.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421889.96,1230.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421897.7,964.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421906.4,1226.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421912.57,1149.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421919.04,1526.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421927.3,1733.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421934.87,1473.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421940.65,1201.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421947.53,1824.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421954.25,1292.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421962.67,2295.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421969.18,1343.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421975.22,1248.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421981.43,1250.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421988.02,1267.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421993.91,1388.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760421999.7,1193.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422007.05,1633.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422014.21,1270.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422025.11,3894.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422034.63,1077.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422046.28,2877.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422061.66,4744.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422071.87,2350.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422084.29,1400.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422090.25,1096.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422099.02,2343.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422108.05,1608.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422114.5,1462.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422121.62,1497.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422129.76,1370.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422139.83,1487.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422147.72,1923.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422155.35,1763.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422162.38,1690.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422169.47,1528.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422176.13,1204.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422182.84,1331.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422189.96,1455.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422196.76,1658.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422203.95,1251.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422211.87,1505.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422219.02,1422.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422226.74,1603.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422233.96,1765.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422241.39,1376.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422248.91,1868.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422257.11,1563.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422269.07,1587.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422276.12,1257.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422284.15,1447.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422292.73,1672.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422305.7,2333.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422314.62,1527.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422325.19,1290.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422334.03,2022.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422345.83,2705.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422352.64,1386.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422359.28,1570.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422367.7,1803.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422486.98,5845.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422512.02,3428.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422520.68,1366.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422528.13,1110.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422535.56,1090.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422541.8,1222.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422548.99,1083.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422555.28,1530.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422561.79,1518.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422569.14,1751.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422585.52,4143.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422611.99,3969.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422627.78,4052.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422641.71,3232.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422657.76,4795.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422678.43,2854.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422692.8,2624.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422709.85,4025.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422733.42,5090.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422750.83,2861.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422762.03,2251.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422777.5,4705.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422795.38,2137.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422815.66,5059.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422836.95,4264.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422857.05,5010.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422873.73,2784.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422899.75,9098.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422917.21,2965.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422937.37,4294.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422954.45,2360.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422968.04,2353.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760422986.25,3142.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423003.88,3770.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423023.1,5049.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423046.98,3662.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423069.24,5239.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423092.39,5023.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423141.64,3771.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423160.57,1955.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423171.29,1392.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423177.18,1102.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423191.31,3564.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423213.93,5712.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423255.02,5291.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760423280.44,5061.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424515.86,222.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424516.95,162.3,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424521.73,544.1,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424526.47,133.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424531.92,183.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424537.24,396.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424542.19,348.1,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424547.2,506.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424552.21,351.3,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424557.41,524.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424562.34,374.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424567.44,323.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424572.35,397.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424577.45,465.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424582.53,424.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424586.95,272.5,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424592.14,415.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424597.1,278.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424602.06,266.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424607.06,268.1,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424612.03,247.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424617.19,481.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424622.95,495.5,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424627.87,513.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424633.03,527.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424638.05,551.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424643.25,1226.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424648.19,669.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424652.81,583.3,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424658.31,367.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424663.09,545.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424668.28,692.3,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424673.13,419.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424678.21,590.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424683.43,663.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424688.51,691.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424693.43,587.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424698.63,668.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424703.21,695.7,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424708.3,729.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424712.41,335.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424718.11,410.1,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424722.86,435.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424728.08,465.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424732.92,345.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424738.08,512.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424743.29,365.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424747.89,412.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424752.76,564.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424757.67,379.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424762.59,367.5,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424767.69,362.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424774.19,904.7,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424779.65,875.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424784.67,894.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424789.58,803.3,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424794.72,916.7,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424799.23,879.5,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424804.9,808.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424810.15,940.3,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424814.64,1003.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424819.48,1087.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424825.19,925.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424830.44,808.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424835.08,1010.3,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424839.97,1039.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424844.93,934.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424850.07,1026.1,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424855.06,1149.5,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424860.18,617.1,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424865.53,1035.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424871.06,1073.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424876.16,888.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424881.36,1049.5,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424886.04,1263.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424891.71,943.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424896.1,657.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424899.52,656.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424903.87,828.4,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424909.86,784.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424914.96,747.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424919.65,822.7,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424925.02,737.6,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424930.56,965.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424934.98,784.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424939.7,849.0,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424945.03,925.3,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424949.86,876.7,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424955.12,1162.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424960.74,718.3,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424966.06,1029.8,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424971.32,807.9,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760424975.84,830.2,0.0,PredictServer
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427280.94,658.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427284.5,582.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427289.37,592.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427294.09,513.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427298.82,621.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427304.24,544.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427309.3,517.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427313.25,209.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427317.7,257.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427322.78,219.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427327.76,217.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427332.74,198.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427339.42,603.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427345.03,696.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427348.35,277.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427353.18,300.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427357.75,237.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427363.03,313.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427368.28,350.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427373.32,395.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427378.43,363.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427383.54,393.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427388.86,458.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427393.25,295.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427398.36,354.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427403.35,375.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427408.62,386.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427413.87,444.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427418.84,449.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427423.55,412.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427428.58,404.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427433.95,481.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427438.8,428.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427443.84,397.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427448.88,439.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427453.62,411.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427458.8,530.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427463.92,498.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427469.12,476.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427474.14,483.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427479.47,647.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427484.11,553.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427489.03,433.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427493.97,492.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427499.46,548.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427504.19,468.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427508.89,443.9,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427514.08,474.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427518.97,447.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427523.88,445.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427529.58,589.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427534.45,696.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427539.73,502.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427544.22,481.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427550.08,532.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427602.66,585.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427639.53,701.0,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427687.08,1026.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427755.01,673.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427793.0,732.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427816.24,763.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427861.17,1065.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760427909.11,1803.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428048.82,1108.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428124.67,159.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428143.46,227.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428166.72,242.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428186.87,210.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428217.79,551.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428260.09,468.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428306.95,619.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428358.21,496.3,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428411.47,542.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428470.87,941.7,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428555.13,996.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428651.56,976.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760428714.48,1512.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429194.79,286.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429215.79,1219.5,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429249.45,348.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429297.79,160.8,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429316.88,211.2,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429346.04,282.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429657.64,182.4,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429678.08,748.6,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429708.06,225.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429730.47,263.1,0.0
+ok,signal_response,AUDCAD,SELL,0.95,0.05,1760429782.7,1255.1,0.0

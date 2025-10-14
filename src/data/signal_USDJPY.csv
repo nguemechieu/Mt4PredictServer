@@ -1,2 +1,726 @@
 ,ema_fast,ema_slow,rsi,macd,previous_loss,last_open_price,last_close_price,avg_loss_last_3
 0,147.61695,147.63726,47.73813,-0.02031,0.0,0.0,0.0,0.0
+error,Invalid payload format.,1760418578.3910162
+error,Invalid payload format.,1760418581.1116881
+error,Invalid payload format.,1760418586.12583
+error,Invalid payload format.,1760418591.118588
+error,Invalid payload format.,1760418596.1235907
+error,Invalid payload format.,1760418601.1265447
+error,Invalid payload format.,1760418606.123608
+error,Invalid payload format.,1760418611.1519094
+error,Invalid payload format.,1760418616.1318307
+error,Invalid payload format.,1760418621.1411808
+error,Invalid payload format.,1760418626.139205
+error,Invalid payload format.,1760418631.1343164
+error,Invalid payload format.,1760418636.1451883
+error,Invalid payload format.,1760418648.9135888
+error,Invalid payload format.,1760418653.893072
+error,Invalid payload format.,1760418658.9143248
+error,Invalid payload format.,1760418663.9412377
+error,Invalid payload format.,1760418668.9713664
+error,Invalid payload format.,1760418673.9706554
+error,Invalid payload format.,1760418678.9953618
+error,Invalid payload format.,1760418684.0034175
+error,Invalid payload format.,1760418688.9916852
+error,Invalid payload format.,1760418694.0125916
+error,Invalid payload format.,1760418699.0387409
+error,Invalid payload format.,1760418704.0590644
+error,Invalid payload format.,1760418709.0567923
+error,Invalid payload format.,1760418714.0513713
+error,Invalid payload format.,1760418719.0326104
+error,Invalid payload format.,1760418724.0267913
+error,Invalid payload format.,1760418729.0511255
+error,Invalid payload format.,1760418734.0839777
+error,Invalid payload format.,1760418739.1103437
+error,Invalid payload format.,1760418744.0650601
+error,Invalid payload format.,1760418749.066145
+error,Invalid payload format.,1760418754.0507207
+error,Invalid payload format.,1760418759.08523
+error,Invalid payload format.,1760418764.0755615
+error,Invalid payload format.,1760418769.057881
+error,Invalid payload format.,1760418774.0726151
+error,Invalid payload format.,1760418779.0910678
+error,Invalid payload format.,1760418784.1030238
+error,Invalid payload format.,1760418789.0969896
+error,Invalid payload format.,1760418794.1120403
+error,Invalid payload format.,1760418799.1747873
+error,Invalid payload format.,1760418804.1522536
+error,Invalid payload format.,1760418809.1521237
+error,Invalid payload format.,1760418814.1611693
+error,Invalid payload format.,1760418819.1617405
+error,Invalid payload format.,1760418824.1480186
+error,Invalid payload format.,1760418829.162246
+error,Invalid payload format.,1760418834.2010384
+error,Invalid payload format.,1760418839.0996974
+error,Invalid payload format.,1760418844.1527364
+error,Invalid payload format.,1760418849.1375103
+error,Invalid payload format.,1760418854.1736658
+error,Invalid payload format.,1760418859.1986852
+error,Invalid payload format.,1760418864.163295
+error,Invalid payload format.,1760418869.247367
+error,Invalid payload format.,1760418874.3537312
+error,Invalid payload format.,1760418879.2751076
+error,Invalid payload format.,1760418884.2429495
+error,Invalid payload format.,1760418889.23004
+error,Invalid payload format.,1760418894.226975
+error,Invalid payload format.,1760418899.2619653
+error,Invalid payload format.,1760418904.1937351
+error,Invalid payload format.,1760418909.2771559
+error,Invalid payload format.,1760418914.2612045
+error,Invalid payload format.,1760418919.301325
+error,Invalid payload format.,1760418924.2622585
+error,Invalid payload format.,1760418929.249761
+error,Invalid payload format.,1760418934.258449
+error,Invalid payload format.,1760418939.3851721
+error,Invalid payload format.,1760418944.2503788
+error,Invalid payload format.,1760418949.3951833
+error,Invalid payload format.,1760418954.291039
+error,Invalid payload format.,1760418959.36019
+error,Invalid payload format.,1760418964.3538969
+error,Invalid payload format.,1760418969.366019
+error,Invalid payload format.,1760418974.3236835
+error,Invalid payload format.,1760418979.3791122
+error,Invalid payload format.,1760418984.3266695
+error,Invalid payload format.,1760418989.378815
+error,Invalid payload format.,1760418994.3893614
+error,Invalid payload format.,1760418999.324801
+error,Invalid payload format.,1760419005.8903842
+error,Invalid payload format.,1760419011.0714073
+error,Invalid payload format.,1760419014.2567143
+error,Invalid payload format.,1760419019.3807778
+error,Invalid payload format.,1760419024.3880115
+error,Invalid payload format.,1760419029.3892183
+error,Invalid payload format.,1760419034.380275
+error,Invalid payload format.,1760419051.365905
+error,Invalid payload format.,1760419054.1795046
+error,Invalid payload format.,1760419059.179609
+error,Invalid payload format.,1760419064.1805005
+error,Invalid payload format.,1760419069.1890452
+error,Invalid payload format.,1760419074.1915252
+error,Invalid payload format.,1760419079.1945293
+error,Invalid payload format.,1760419090.9682443
+error,Invalid payload format.,1760419095.9895287
+error,Invalid payload format.,1760419100.9914467
+error,Invalid payload format.,1760419105.9864554
+error,Invalid payload format.,1760419110.99482
+error,Invalid payload format.,1760419115.9833608
+error,Invalid payload format.,1760419120.9941308
+error,Invalid payload format.,1760419125.9795702
+error,Invalid payload format.,1760419130.996415
+error,Invalid payload format.,1760419136.0060258
+error,Invalid payload format.,1760419141.0318105
+error,Invalid payload format.,1760419146.0128634
+error,Invalid payload format.,1760419151.0173893
+error,Invalid payload format.,1760419156.0457733
+error,Invalid payload format.,1760419161.0482695
+error,Invalid payload format.,1760419166.0915554
+error,Invalid payload format.,1760419171.078477
+error,Invalid payload format.,1760419176.111095
+error,Invalid payload format.,1760419181.1452346
+error,Invalid payload format.,1760419186.1548324
+error,Invalid payload format.,1760419191.1318548
+error,Invalid payload format.,1760419196.1824737
+error,Invalid payload format.,1760419201.179903
+error,Invalid payload format.,1760419206.1850321
+error,Invalid payload format.,1760419211.1822507
+error,Invalid payload format.,1760419216.5495322
+error,Invalid payload format.,1760419221.1880755
+error,Invalid payload format.,1760419226.2051973
+error,Invalid payload format.,1760419231.5622535
+error,Invalid payload format.,1760419236.2176383
+error,Invalid payload format.,1760419241.2456114
+error,Invalid payload format.,1760419246.2668774
+error,Invalid payload format.,1760419251.2614033
+error,Invalid payload format.,1760419257.0912359
+error,Invalid payload format.,1760419261.2468312
+error,Invalid payload format.,1760419266.2992914
+error,Invalid payload format.,1760419271.2981887
+error,Invalid payload format.,1760419276.2759821
+error,Invalid payload format.,1760419281.4214153
+error,Invalid payload format.,1760419286.295679
+error,Invalid payload format.,1760419292.3564405
+error,Invalid payload format.,1760419296.3088665
+error,Invalid payload format.,1760419302.8909478
+error,Invalid payload format.,1760419306.3706276
+error,Invalid payload format.,1760419311.341376
+error,Invalid payload format.,1760419316.3263907
+error,Invalid payload format.,1760419321.3873184
+error,Invalid payload format.,1760419326.41039
+error,Invalid payload format.,1760419331.3716524
+error,Invalid payload format.,1760419336.3909051
+error,Invalid payload format.,1760419344.2021732
+error,Invalid payload format.,1760419346.4232583
+error,Invalid payload format.,1760419351.4156954
+error,Invalid payload format.,1760419558.3877802
+error,Invalid payload format.,1760419558.4289627
+error,Invalid payload format.,1760419561.464604
+error,Invalid payload format.,1760419566.4585004
+error,Invalid payload format.,1760419571.4822538
+error,Invalid payload format.,1760419576.4806707
+error,Invalid payload format.,1760419581.4805405
+error,Invalid payload format.,1760419586.4859505
+error,Invalid payload format.,1760419591.4770098
+error,Invalid payload format.,1760419596.4839783
+error,Invalid payload format.,1760419601.4864006
+error,Invalid payload format.,1760419606.5097475
+error,Invalid payload format.,1760419611.4992669
+error,Invalid payload format.,1760419616.5115283
+error,Invalid payload format.,1760419621.5265868
+error,Invalid payload format.,1760419626.5171814
+error,Invalid payload format.,1760419631.525494
+error,Invalid payload format.,1760419636.5329485
+error,Invalid payload format.,1760419641.5351582
+error,Invalid payload format.,1760419646.5479152
+error,Invalid payload format.,1760419651.5290444
+error,Invalid payload format.,1760419656.5219011
+error,Invalid payload format.,1760419661.544908
+error,Invalid payload format.,1760419666.5600977
+error,Invalid payload format.,1760419671.5468326
+error,Invalid payload format.,1760419676.539723
+error,Invalid payload format.,1760419681.551218
+error,Invalid payload format.,1760419686.560816
+error,Invalid payload format.,1760419691.558261
+error,Invalid payload format.,1760419696.5621362
+error,Invalid payload format.,1760419701.5606694
+error,Invalid payload format.,1760419706.6010423
+error,Invalid payload format.,1760419711.6127753
+error,Invalid payload format.,1760419716.6132543
+error,Invalid payload format.,1760419721.6751997
+error,Invalid payload format.,1760419726.613992
+error,Invalid payload format.,1760419731.6201518
+error,Invalid payload format.,1760419736.9217901
+error,Invalid payload format.,1760419741.6659868
+error,Invalid payload format.,1760419746.6396956
+error,Invalid payload format.,1760419751.6750681
+error,Invalid payload format.,1760419756.7165406
+error,Invalid payload format.,1760419761.7022235
+error,Invalid payload format.,1760419766.7054281
+error,Invalid payload format.,1760419771.7267962
+error,Invalid payload format.,1760419776.7328222
+error,Invalid payload format.,1760419781.706745
+error,Invalid payload format.,1760419786.6918144
+error,Invalid payload format.,1760419791.7207162
+error,Invalid payload format.,1760419796.7293134
+error,Invalid payload format.,1760419801.7364705
+error,Invalid payload format.,1760419806.6946363
+error,Invalid payload format.,1760419811.7631092
+error,Invalid payload format.,1760419816.7218955
+error,Invalid payload format.,1760419821.8138204
+error,Invalid payload format.,1760419826.7048635
+error,Invalid payload format.,1760419831.730124
+error,Invalid payload format.,1760419836.7732847
+error,Invalid payload format.,1760419841.8473554
+error,Invalid payload format.,1760419846.8005903
+error,Invalid payload format.,1760419851.7866802
+error,Invalid payload format.,1760419856.7723522
+error,Invalid payload format.,1760419861.8167913
+error,Invalid payload format.,1760419866.8061316
+error,Invalid payload format.,1760419872.0274067
+error,Invalid payload format.,1760419876.835007
+error,Invalid payload format.,1760419881.9554453
+error,Invalid payload format.,1760419886.8559897
+error,Invalid payload format.,1760419891.809708
+error,Invalid payload format.,1760419896.807234
+error,Invalid payload format.,1760419901.83392
+error,Invalid payload format.,1760419906.8691676
+error,Invalid payload format.,1760419911.927289
+error,Invalid payload format.,1760419916.8848789
+error,Invalid payload format.,1760419921.8948834
+error,Invalid payload format.,1760419926.9838731
+error,Invalid payload format.,1760419932.091914
+error,Invalid payload format.,1760419936.9130304
+error,Invalid payload format.,1760419941.9140847
+error,Invalid payload format.,1760419946.96337
+error,Invalid payload format.,1760419951.9614427
+error,Invalid payload format.,1760419956.9657857
+error,Invalid payload format.,1760419961.9068751
+error,Invalid payload format.,1760419966.9878058
+error,Invalid payload format.,1760419971.9537756
+error,Invalid payload format.,1760419977.2861192
+error,Invalid payload format.,1760419981.9538536
+error,Invalid payload format.,1760419986.9268079
+error,Invalid payload format.,1760419991.9957006
+error,Invalid payload format.,1760419996.9974246
+error,Invalid payload format.,1760420002.0173955
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420032.2521765
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420032.2889988
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420036.751532
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420041.7489636
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420046.7498863
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420051.7702024
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420056.7500405
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420061.7662256
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420066.8406756
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420071.7661233
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420076.79572
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420081.8115413
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420086.911524
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420091.8650887
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420096.851469
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420101.8559408
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420106.8768694
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420111.8633633
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420116.9117918
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420121.8890736
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420126.9192598
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420131.8904254
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420136.8901923
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420141.935127
+error,Invalid payload format,1760420161.5428388
+error,Invalid payload format,1760420161.8663182
+error,Invalid payload format,1760420166.9055285
+error,Invalid payload format,1760420171.9245038
+error,Invalid payload format,1760420176.9254034
+error,Invalid payload format,1760420181.9207106
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420362.3894863
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420362.4171393
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420367.0428863
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420372.0376017
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420377.043708
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420382.0505102
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420387.0442035
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420392.0577788
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420397.0673912
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420402.0773997
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420407.080113
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420412.0995772
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420417.112895
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420422.1133893
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420427.0988264
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421050.53,125.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421053.43,366.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421058.14,143.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421063.1,169.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421068.11,175.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421073.25,221.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421078.52,507.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421085.2,384.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421088.3,267.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421093.57,463.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421098.33,211.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421103.43,225.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421108.5,227.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421113.47,288.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421118.29,226.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421123.39,242.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421128.69,282.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421133.99,569.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421138.7,247.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421143.76,354.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421148.53,245.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421153.48,213.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421158.25,209.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421163.58,371.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421168.52,266.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421173.61,364.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421178.33,226.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421183.56,304.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421188.58,275.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421193.59,317.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421198.62,300.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421203.47,264.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421208.62,332.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421213.69,379.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421218.59,297.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421223.82,388.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421228.71,372.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421233.87,298.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421238.69,312.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421243.82,498.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421250.95,322.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421255.59,372.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421260.84,481.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421266.1,383.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421271.0,396.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421275.94,392.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421281.11,619.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421286.23,401.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421291.2,479.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421296.23,526.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421301.06,622.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421306.35,487.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421311.7,587.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421316.35,635.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421321.42,592.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421326.71,623.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421331.41,600.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421336.86,827.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421342.23,842.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421346.88,704.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421351.88,547.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421357.41,883.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421362.1,744.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421367.66,1043.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421373.16,1001.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421377.36,894.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421382.67,949.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421387.6,1021.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421393.03,1091.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421398.01,1089.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421402.96,952.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421407.67,774.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421412.87,1052.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421418.08,1153.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421422.75,1069.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421427.44,909.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421432.43,855.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421437.29,993.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421442.36,815.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421447.2,757.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421452.14,722.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421457.17,815.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421462.46,736.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421467.54,860.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421472.34,563.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421477.62,935.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421483.21,926.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421486.7,587.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421492.44,575.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421496.52,516.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421501.76,664.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421506.83,619.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421511.76,838.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421516.5,422.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421522.42,605.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421526.91,572.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421531.91,640.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421536.92,620.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421544.87,2866.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421547.98,576.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421552.1,688.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421557.43,733.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421561.96,720.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421566.59,441.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421571.81,517.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421576.84,573.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421583.45,1979.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421588.19,812.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421592.44,627.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421596.94,623.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421601.72,587.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421607.73,1063.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421614.12,652.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421618.47,795.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421622.52,775.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421627.3,806.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421632.18,726.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421637.39,619.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421642.71,785.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421647.6,932.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421653.6,801.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421660.01,878.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421664.81,693.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421672.96,1519.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421677.53,849.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421682.33,1615.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421686.24,615.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421690.1,710.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421696.16,1086.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421700.27,1101.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421705.65,883.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421710.32,777.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421715.09,833.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421718.67,635.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421722.67,753.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421727.87,819.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421732.55,1035.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421738.06,870.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421743.19,879.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421747.96,905.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421757.32,5000.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421767.56,857.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421773.39,1377.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421779.32,915.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421784.7,1345.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421794.11,4382.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421805.2,2164.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421813.73,1238.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421819.12,1161.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421826.31,1303.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421834.71,1473.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421844.52,1389.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421850.65,1433.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421857.06,1198.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421862.7,1527.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421873.66,3360.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421882.27,1223.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421888.48,1714.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421896.46,1248.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421905.02,1211.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421911.14,1489.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421917.17,1245.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421925.36,1578.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421933.19,1159.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421939.22,1039.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421945.46,1424.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421952.76,1778.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421959.9,1451.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421967.67,1169.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421973.74,1180.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421979.9,1329.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421986.58,1039.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421992.27,1238.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760421998.33,1146.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422005.2,1425.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422012.65,1543.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422019.35,1362.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422033.31,1459.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422042.84,2236.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422055.81,2374.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422069.27,2104.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422082.67,1327.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422088.95,1195.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422096.35,1613.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422106.2,1951.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422112.73,1268.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422119.9,1652.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422128.25,1959.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422137.89,1863.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422145.63,1662.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422153.44,1679.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422160.56,1524.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422167.63,1468.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422174.67,1507.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422181.3,1492.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422188.35,1162.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422194.87,1522.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422202.52,1506.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422210.03,1583.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422217.42,1445.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422224.9,1608.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422231.86,1218.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422239.72,1404.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422246.87,1883.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422254.94,1690.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422267.22,1532.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422274.67,1694.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422282.42,1880.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422290.88,2092.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422303.1,2014.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422312.91,1847.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422323.66,1274.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422331.84,2144.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422342.84,2121.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422350.95,1005.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422357.45,1469.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422365.67,1474.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422480.49,5422.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422507.93,5656.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422518.82,1847.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422526.59,1363.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422534.02,2014.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422540.27,926.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422547.68,1407.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422553.21,1061.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422560.11,1056.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422567.13,1462.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422580.9,3068.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422608.76,10949.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422623.14,3318.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422637.94,3714.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422652.69,3022.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422674.89,5400.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422689.71,3311.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422704.95,3589.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422727.62,4888.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422747.62,2537.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422759.18,2018.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422771.71,3922.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422792.71,3483.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422809.97,3659.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422832.23,5622.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422850.99,4160.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422870.32,3973.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422890.22,5867.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422913.95,4212.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422931.98,4372.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422951.5,2823.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422965.39,3420.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422982.55,5029.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760422999.22,2873.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423017.81,2964.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423039.47,3375.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423062.29,4308.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423086.97,5472.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423137.23,3604.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423157.88,4095.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423169.36,2019.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423175.64,1073.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423187.03,3946.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423207.63,3824.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423248.82,4036.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760423274.49,5738.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424516.53,290.2,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424521.49,142.3,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424526.33,126.8,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424531.64,243.7,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424536.82,385.8,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424541.82,328.1,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424546.85,314.1,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424551.82,345.9,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424556.95,412.2,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424561.9,389.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424567.06,342.4,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424571.91,395.7,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424576.97,426.6,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424582.09,392.2,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424586.68,245.1,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424591.79,303.7,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424596.74,316.3,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424601.76,249.6,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424606.71,289.4,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424611.75,240.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424616.76,348.1,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424622.36,499.8,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424627.32,489.7,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424632.44,500.2,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424637.33,628.1,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424642.56,601.9,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424647.54,564.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424652.44,309.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424657.61,620.9,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424662.48,496.8,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424667.65,545.2,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424672.51,528.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424677.48,631.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424682.67,668.1,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424687.74,710.4,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424692.78,558.1,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424697.8,693.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424702.51,603.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424707.59,588.9,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424712.01,335.6,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424717.5,531.2,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424722.33,420.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424727.5,504.8,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424732.42,416.8,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424737.5,449.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424742.78,403.6,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424747.47,318.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424752.25,419.4,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424757.21,348.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424762.18,337.7,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424767.27,335.3,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424773.21,785.4,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424778.53,909.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424783.63,728.1,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424788.55,933.3,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424793.56,936.4,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424798.26,821.9,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424803.63,1072.4,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424808.63,1242.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424813.44,909.7,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424818.41,870.2,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424823.89,1062.8,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424829.25,1012.9,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424833.82,1032.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424838.67,1140.4,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424843.86,981.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424848.69,1247.2,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424853.64,1229.6,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424859.11,939.6,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424864.12,1221.3,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424869.77,1067.7,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424874.96,1080.6,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424880.14,1050.3,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424884.85,989.2,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424890.66,793.8,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424895.16,764.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424898.71,635.3,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424902.94,807.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424908.58,1072.9,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424913.66,1070.0,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424918.65,835.1,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424923.85,954.7,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424929.46,859.4,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424934.01,791.9,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424938.8,756.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424943.45,1427.3,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424948.53,1148.6,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424953.84,1086.8,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424959.57,890.9,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424964.74,1118.3,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424970.16,961.7,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760424974.59,1014.5,0.0,PredictServer
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427280.12,570.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427283.85,605.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427288.68,641.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427293.5,627.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427298.13,419.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427303.62,567.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427308.69,557.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427313.0,242.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427317.4,214.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427322.51,272.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427327.49,235.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427332.47,203.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427338.69,630.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427344.25,643.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427348.02,346.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427352.82,352.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427357.45,199.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427362.66,276.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427367.87,348.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427372.86,315.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427377.98,407.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427383.07,409.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427388.32,456.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427392.91,338.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427397.95,375.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427402.89,356.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427408.14,408.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427413.27,444.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427418.32,450.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427423.06,430.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427428.12,415.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427433.33,490.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427438.26,422.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427443.37,510.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427448.39,485.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427453.13,422.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427458.21,398.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427463.33,458.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427468.53,480.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427473.58,532.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427478.7,519.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427483.47,583.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427488.5,514.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427493.41,481.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427498.81,625.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427503.61,536.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427508.38,488.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427513.51,448.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427518.43,445.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427523.32,463.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427528.9,524.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427533.66,556.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427539.09,646.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427543.65,402.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760427595.26,636.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428023.08,984.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428122.95,153.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428140.71,284.4,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428163.45,251.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428183.69,254.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428211.28,399.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428252.95,521.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428300.84,461.2,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428351.97,429.0,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428403.28,768.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428461.57,678.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428537.54,721.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428637.18,871.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428708.86,195.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760428736.33,299.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429192.31,221.3,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429211.49,332.5,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429241.83,343.7,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429296.23,156.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429314.28,235.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429338.17,331.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429656.3,105.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429671.9,304.1,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429705.1,234.9,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429727.41,255.6,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429771.29,1082.8,0.0
+ok,signal_response,USDJPY,BUY,0.95,0.95,1760429833.0,451.1,0.0

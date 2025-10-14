@@ -1,2 +1,726 @@
 ,ema_fast,ema_slow,rsi,macd,previous_loss,last_open_price,last_close_price,avg_loss_last_3
 0,1.16539,1.16608,38.7947,-0.00069,0.0,0.0,0.0,0.0
+error,Invalid payload format.,1760418578.3420386
+error,Invalid payload format.,1760418581.0990598
+error,Invalid payload format.,1760418586.1050215
+error,Invalid payload format.,1760418591.1008
+error,Invalid payload format.,1760418596.1042237
+error,Invalid payload format.,1760418601.1053858
+error,Invalid payload format.,1760418606.0949442
+error,Invalid payload format.,1760418611.115459
+error,Invalid payload format.,1760418616.0991042
+error,Invalid payload format.,1760418621.1036234
+error,Invalid payload format.,1760418626.0935173
+error,Invalid payload format.,1760418631.107118
+error,Invalid payload format.,1760418636.1131487
+error,Invalid payload format.,1760418648.8729138
+error,Invalid payload format.,1760418653.8603532
+error,Invalid payload format.,1760418658.8801305
+error,Invalid payload format.,1760418663.8803022
+error,Invalid payload format.,1760418668.9110446
+error,Invalid payload format.,1760418673.9144647
+error,Invalid payload format.,1760418678.9328167
+error,Invalid payload format.,1760418683.9373748
+error,Invalid payload format.,1760418688.9490154
+error,Invalid payload format.,1760418693.9600308
+error,Invalid payload format.,1760418698.9789073
+error,Invalid payload format.,1760418703.9875643
+error,Invalid payload format.,1760418709.0086172
+error,Invalid payload format.,1760418713.9800994
+error,Invalid payload format.,1760418718.9836175
+error,Invalid payload format.,1760418723.9783099
+error,Invalid payload format.,1760418728.9918766
+error,Invalid payload format.,1760418733.9752624
+error,Invalid payload format.,1760418739.0110157
+error,Invalid payload format.,1760418743.9848645
+error,Invalid payload format.,1760418748.9945185
+error,Invalid payload format.,1760418753.972636
+error,Invalid payload format.,1760418758.9811792
+error,Invalid payload format.,1760418764.0027213
+error,Invalid payload format.,1760418768.9940977
+error,Invalid payload format.,1760418774.004691
+error,Invalid payload format.,1760418779.0038261
+error,Invalid payload format.,1760418784.009471
+error,Invalid payload format.,1760418789.0118911
+error,Invalid payload format.,1760418794.036912
+error,Invalid payload format.,1760418799.015827
+error,Invalid payload format.,1760418804.041298
+error,Invalid payload format.,1760418809.0562217
+error,Invalid payload format.,1760418814.0546548
+error,Invalid payload format.,1760418819.0557773
+error,Invalid payload format.,1760418824.04171
+error,Invalid payload format.,1760418829.049991
+error,Invalid payload format.,1760418834.058391
+error,Invalid payload format.,1760418839.0354922
+error,Invalid payload format.,1760418844.053087
+error,Invalid payload format.,1760418849.0524304
+error,Invalid payload format.,1760418854.0587523
+error,Invalid payload format.,1760418859.072025
+error,Invalid payload format.,1760418864.0854871
+error,Invalid payload format.,1760418869.09099
+error,Invalid payload format.,1760418874.2510097
+error,Invalid payload format.,1760418879.1248646
+error,Invalid payload format.,1760418884.1170502
+error,Invalid payload format.,1760418889.1233344
+error,Invalid payload format.,1760418894.097831
+error,Invalid payload format.,1760418899.1152117
+error,Invalid payload format.,1760418904.1084304
+error,Invalid payload format.,1760418909.1131985
+error,Invalid payload format.,1760418914.1261315
+error,Invalid payload format.,1760418919.1553888
+error,Invalid payload format.,1760418924.096923
+error,Invalid payload format.,1760418929.1267867
+error,Invalid payload format.,1760418934.144423
+error,Invalid payload format.,1760418939.1919396
+error,Invalid payload format.,1760418944.1411889
+error,Invalid payload format.,1760418949.1902158
+error,Invalid payload format.,1760418954.1572964
+error,Invalid payload format.,1760418959.1961174
+error,Invalid payload format.,1760418964.2100585
+error,Invalid payload format.,1760418969.1895378
+error,Invalid payload format.,1760418974.1856205
+error,Invalid payload format.,1760418979.191097
+error,Invalid payload format.,1760418984.1822865
+error,Invalid payload format.,1760418989.1854942
+error,Invalid payload format.,1760418994.165097
+error,Invalid payload format.,1760418999.18168
+error,Invalid payload format.,1760419004.6407092
+error,Invalid payload format.,1760419009.3071625
+error,Invalid payload format.,1760419014.163837
+error,Invalid payload format.,1760419019.1791255
+error,Invalid payload format.,1760419024.165165
+error,Invalid payload format.,1760419029.186172
+error,Invalid payload format.,1760419034.1954072
+error,Invalid payload format.,1760419051.3534744
+error,Invalid payload format.,1760419054.1651928
+error,Invalid payload format.,1760419059.15466
+error,Invalid payload format.,1760419064.1573837
+error,Invalid payload format.,1760419069.1628964
+error,Invalid payload format.,1760419074.1618993
+error,Invalid payload format.,1760419079.1711686
+error,Invalid payload format.,1760419090.9406724
+error,Invalid payload format.,1760419095.9542835
+error,Invalid payload format.,1760419100.9486558
+error,Invalid payload format.,1760419105.9495833
+error,Invalid payload format.,1760419110.9470546
+error,Invalid payload format.,1760419115.9405746
+error,Invalid payload format.,1760419120.9563847
+error,Invalid payload format.,1760419125.9402614
+error,Invalid payload format.,1760419130.9491806
+error,Invalid payload format.,1760419135.9654045
+error,Invalid payload format.,1760419140.9843576
+error,Invalid payload format.,1760419145.9752557
+error,Invalid payload format.,1760419150.9698265
+error,Invalid payload format.,1760419155.9961917
+error,Invalid payload format.,1760419160.996741
+error,Invalid payload format.,1760419166.0196457
+error,Invalid payload format.,1760419171.0300417
+error,Invalid payload format.,1760419176.044333
+error,Invalid payload format.,1760419181.070705
+error,Invalid payload format.,1760419186.0721881
+error,Invalid payload format.,1760419191.0799756
+error,Invalid payload format.,1760419196.1049147
+error,Invalid payload format.,1760419201.0980656
+error,Invalid payload format.,1760419206.113757
+error,Invalid payload format.,1760419211.1144483
+error,Invalid payload format.,1760419216.435377
+error,Invalid payload format.,1760419221.1029837
+error,Invalid payload format.,1760419226.1181884
+error,Invalid payload format.,1760419231.4689143
+error,Invalid payload format.,1760419236.1323175
+error,Invalid payload format.,1760419241.151833
+error,Invalid payload format.,1760419246.1715317
+error,Invalid payload format.,1760419251.1584399
+error,Invalid payload format.,1760419256.6509428
+error,Invalid payload format.,1760419261.1830661
+error,Invalid payload format.,1760419266.196747
+error,Invalid payload format.,1760419271.1972125
+error,Invalid payload format.,1760419276.2103882
+error,Invalid payload format.,1760419281.2309527
+error,Invalid payload format.,1760419286.230461
+error,Invalid payload format.,1760419291.5386288
+error,Invalid payload format.,1760419296.2156663
+error,Invalid payload format.,1760419301.9984312
+error,Invalid payload format.,1760419306.2397547
+error,Invalid payload format.,1760419311.2421787
+error,Invalid payload format.,1760419316.2345963
+error,Invalid payload format.,1760419321.2669506
+error,Invalid payload format.,1760419326.282916
+error,Invalid payload format.,1760419331.2718177
+error,Invalid payload format.,1760419336.2777026
+error,Invalid payload format.,1760419343.1274092
+error,Invalid payload format.,1760419346.2987254
+error,Invalid payload format.,1760419351.3029976
+error,Invalid payload format.,1760419558.3702843
+error,Invalid payload format.,1760419558.412345
+error,Invalid payload format.,1760419561.441683
+error,Invalid payload format.,1760419566.4357247
+error,Invalid payload format.,1760419571.4571133
+error,Invalid payload format.,1760419576.4577177
+error,Invalid payload format.,1760419581.4594505
+error,Invalid payload format.,1760419586.4656641
+error,Invalid payload format.,1760419591.45783
+error,Invalid payload format.,1760419596.4607422
+error,Invalid payload format.,1760419601.4627802
+error,Invalid payload format.,1760419606.4678624
+error,Invalid payload format.,1760419611.4689722
+error,Invalid payload format.,1760419616.4805691
+error,Invalid payload format.,1760419621.4869118
+error,Invalid payload format.,1760419626.4808125
+error,Invalid payload format.,1760419631.477095
+error,Invalid payload format.,1760419636.4750473
+error,Invalid payload format.,1760419641.4789524
+error,Invalid payload format.,1760419646.4759839
+error,Invalid payload format.,1760419651.4758446
+error,Invalid payload format.,1760419656.4791393
+error,Invalid payload format.,1760419661.4831495
+error,Invalid payload format.,1760419666.4907467
+error,Invalid payload format.,1760419671.4795964
+error,Invalid payload format.,1760419676.4831822
+error,Invalid payload format.,1760419681.4845953
+error,Invalid payload format.,1760419686.476771
+error,Invalid payload format.,1760419691.485247
+error,Invalid payload format.,1760419696.483584
+error,Invalid payload format.,1760419701.4931095
+error,Invalid payload format.,1760419706.5091188
+error,Invalid payload format.,1760419711.5289552
+error,Invalid payload format.,1760419716.542286
+error,Invalid payload format.,1760419721.5828183
+error,Invalid payload format.,1760419726.5280366
+error,Invalid payload format.,1760419731.5579712
+error,Invalid payload format.,1760419736.6684155
+error,Invalid payload format.,1760419741.5623438
+error,Invalid payload format.,1760419746.5852208
+error,Invalid payload format.,1760419751.5952075
+error,Invalid payload format.,1760419756.59082
+error,Invalid payload format.,1760419761.6136138
+error,Invalid payload format.,1760419766.6125593
+error,Invalid payload format.,1760419771.6082182
+error,Invalid payload format.,1760419776.6194723
+error,Invalid payload format.,1760419781.6132207
+error,Invalid payload format.,1760419786.6138158
+error,Invalid payload format.,1760419791.612928
+error,Invalid payload format.,1760419796.6352696
+error,Invalid payload format.,1760419801.6472516
+error,Invalid payload format.,1760419806.6087236
+error,Invalid payload format.,1760419811.6414597
+error,Invalid payload format.,1760419816.616096
+error,Invalid payload format.,1760419821.642885
+error,Invalid payload format.,1760419826.6119437
+error,Invalid payload format.,1760419831.633123
+error,Invalid payload format.,1760419836.625684
+error,Invalid payload format.,1760419841.6546063
+error,Invalid payload format.,1760419846.6816602
+error,Invalid payload format.,1760419851.6353786
+error,Invalid payload format.,1760419856.6666384
+error,Invalid payload format.,1760419861.6847358
+error,Invalid payload format.,1760419866.6666381
+error,Invalid payload format.,1760419871.6842744
+error,Invalid payload format.,1760419876.7135406
+error,Invalid payload format.,1760419881.6845891
+error,Invalid payload format.,1760419886.6726487
+error,Invalid payload format.,1760419891.6951344
+error,Invalid payload format.,1760419896.6956184
+error,Invalid payload format.,1760419901.7116678
+error,Invalid payload format.,1760419906.7439408
+error,Invalid payload format.,1760419911.7393794
+error,Invalid payload format.,1760419916.7479715
+error,Invalid payload format.,1760419921.7283075
+error,Invalid payload format.,1760419926.8003283
+error,Invalid payload format.,1760419931.7259681
+error,Invalid payload format.,1760419936.7633636
+error,Invalid payload format.,1760419941.7473924
+error,Invalid payload format.,1760419946.7576005
+error,Invalid payload format.,1760419951.7542784
+error,Invalid payload format.,1760419956.7413414
+error,Invalid payload format.,1760419961.7654438
+error,Invalid payload format.,1760419966.7415476
+error,Invalid payload format.,1760419971.8074515
+error,Invalid payload format.,1760419977.0862534
+error,Invalid payload format.,1760419981.756272
+error,Invalid payload format.,1760419986.7471597
+error,Invalid payload format.,1760419991.7850416
+error,Invalid payload format.,1760419996.7482674
+error,Invalid payload format.,1760420001.7646632
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420032.273885
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420036.7240658
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420041.724848
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420046.7293673
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420051.7328663
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420056.7210793
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420061.7275093
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420066.7908196
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420071.7396584
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420076.7599835
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420081.765096
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420086.811499
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420091.8079796
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420096.807105
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420101.8264182
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420106.8327963
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420111.8208091
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420116.854906
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420121.8328273
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420126.8446598
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420131.839477
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420136.8423572
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420141.8687794
+error,Invalid payload format,1760420161.8562026
+error,Invalid payload format,1760420166.881106
+error,Invalid payload format,1760420171.8964503
+error,Invalid payload format,1760420176.889392
+error,Invalid payload format,1760420181.894273
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420362.4048758
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420367.022809
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420372.016223
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420377.0219738
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420382.0226452
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420387.022745
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420392.0162299
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420397.0309186
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420402.0370579
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420407.0421786
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420412.0462306
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420417.0488646
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420422.0420988
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420427.042635
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421050.07,400.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421052.69,148.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421057.67,144.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421062.71,187.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421067.7,173.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421072.79,248.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421077.76,213.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421084.03,1466.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421087.79,244.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421092.75,188.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421097.79,213.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421102.82,249.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421107.8,221.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421112.83,237.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421117.77,201.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421122.85,266.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421127.94,307.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421132.9,305.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421137.99,393.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421142.87,284.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421147.85,263.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421152.83,240.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421157.79,192.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421162.86,266.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421167.9,306.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421172.88,305.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421177.84,252.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421182.88,259.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421187.92,292.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421192.9,286.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421197.88,274.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421202.83,227.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421207.85,246.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421212.9,291.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421217.91,283.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421222.92,304.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421227.89,289.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421233.08,445.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421237.94,327.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421242.89,276.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421250.06,563.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421254.82,320.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421259.83,335.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421265.1,591.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421269.92,370.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421274.97,348.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421279.86,348.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421285.1,516.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421289.92,389.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421295.19,628.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421299.9,348.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421305.25,676.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421310.38,753.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421315.02,461.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421320.12,571.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421325.41,817.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421330.09,524.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421335.32,719.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421340.37,777.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421345.39,769.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421350.3,690.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421355.33,665.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421360.45,793.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421365.43,812.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421370.7,1060.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421375.53,885.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421380.47,823.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421385.45,801.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421390.83,1146.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421395.76,1139.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421400.72,1084.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421405.39,770.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421410.57,942.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421415.72,1055.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421420.6,950.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421425.5,846.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421430.6,906.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421435.36,711.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421440.5,840.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421445.5,847.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421450.36,689.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421455.47,822.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421460.41,767.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421465.54,884.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421470.54,896.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421475.62,961.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421480.8,1103.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421485.21,543.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421490.97,483.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421495.26,575.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421500.36,435.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421505.33,639.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421510.25,575.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421515.27,556.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421520.81,558.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421525.39,695.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421530.26,505.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421535.44,684.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421540.36,581.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421546.54,593.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421550.35,655.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421555.56,809.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421560.35,615.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421565.39,651.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421570.27,530.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421575.42,639.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421580.53,760.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421586.03,861.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421590.52,790.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421595.44,713.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421600.3,584.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421605.61,753.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421610.66,889.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421616.68,1140.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421620.57,753.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421625.43,657.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421630.44,683.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421635.47,681.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421640.79,942.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421645.73,893.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421650.67,883.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421658.06,787.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421662.76,1571.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421670.34,2945.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421675.34,867.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421679.4,866.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421684.5,968.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421688.23,907.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421692.15,993.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421698.15,882.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421703.31,1866.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421708.23,930.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421713.05,1125.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421717.06,816.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421720.72,691.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421725.93,992.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421730.6,750.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421735.98,1102.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421740.86,967.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421745.93,1022.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421750.81,942.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421764.96,1444.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421770.46,1131.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421776.57,1302.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421782.08,1126.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421787.64,1173.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421800.85,4008.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421810.26,2682.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421816.58,1169.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421822.81,1312.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421831.92,1480.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421840.65,1255.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421847.4,923.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421854.17,1814.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421859.73,1190.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421868.89,3408.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421879.34,1065.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421885.24,1097.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421892.34,2159.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421899.73,1690.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421908.01,1281.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421914.22,1263.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421921.43,2025.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421930.18,2160.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421936.7,1390.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421942.18,1063.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421949.27,1244.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421956.58,1866.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421964.43,1088.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421970.79,1304.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421976.65,1175.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421983.44,1675.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421989.43,1092.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760421995.49,1258.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422001.32,1250.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422009.23,1838.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422016.28,1563.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422029.36,3310.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422037.03,1795.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422049.59,2463.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422064.77,2740.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422076.64,4372.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422085.95,1407.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422092.54,1755.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422101.64,1960.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422109.74,1341.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422116.06,1200.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422124.02,2054.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422133.69,3575.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422141.77,1644.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422149.87,1592.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422157.1,1361.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422163.9,1226.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422171.18,1224.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422177.61,1108.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422185.0,1607.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422191.43,1109.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422198.65,1604.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422205.87,1627.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422213.87,1675.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422221.18,1610.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422228.67,1565.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422235.94,1387.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422243.2,1470.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422250.88,1591.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422259.08,1655.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422270.86,1409.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422278.18,1636.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422286.07,1571.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422298.83,5837.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422308.9,2906.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422318.78,3819.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422327.01,1491.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422337.53,3081.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422348.01,1814.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422354.2,1008.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422361.89,2126.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422471.84,2515.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422494.42,6341.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422514.44,1541.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422522.75,1491.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422530.08,1442.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422537.15,1177.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422543.87,1387.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422550.46,1082.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422557.15,1214.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422563.18,1017.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422573.07,3074.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422593.78,7325.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422615.05,2313.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422630.45,1825.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422645.21,2961.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422664.36,4887.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422683.01,3943.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422696.59,2846.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422715.0,4002.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422739.83,5650.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422754.08,2590.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422764.63,2017.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422783.39,4611.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422801.9,5428.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422820.59,3914.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422842.88,4874.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422861.19,3335.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422878.73,3658.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422905.95,2889.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422922.61,4293.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422942.79,3443.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422958.48,2762.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422972.87,3514.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760422991.86,4671.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423009.72,5017.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423030.39,6255.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423052.45,3649.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423075.47,5463.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423127.7,3897.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423146.8,3721.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423162.48,1450.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423172.66,751.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423179.11,1168.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423197.46,5235.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423238.37,4698.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760423261.52,5424.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424516.16,99.8,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424521.04,123.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424526.04,119.4,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424531.24,183.3,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424536.07,353.3,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424541.09,353.8,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424546.07,363.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424551.09,327.6,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424556.09,363.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424561.09,368.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424566.17,388.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424571.08,340.1,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424576.08,366.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424581.09,417.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424586.09,246.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424591.11,275.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424596.12,274.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424601.12,290.3,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424606.14,246.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424611.14,268.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424616.14,279.1,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424621.18,529.4,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424626.17,530.8,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424631.18,527.4,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424636.18,519.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424641.19,584.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424646.2,550.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424651.18,569.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424656.19,564.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424661.19,505.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424666.21,634.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424671.23,579.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424676.24,535.1,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424681.25,602.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424686.27,652.4,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424691.26,660.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424696.24,642.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424701.26,586.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424706.26,540.8,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424711.24,334.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424716.25,442.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424721.24,417.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424726.3,565.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424731.25,461.4,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424736.25,509.3,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424741.27,782.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424746.28,371.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424751.28,381.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424756.25,336.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424761.26,408.4,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424766.28,405.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424771.36,894.3,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424776.29,923.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424781.31,993.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424786.27,917.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424791.39,762.6,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424796.3,651.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424801.3,1083.8,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424806.41,987.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424811.36,877.8,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424816.31,821.6,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424821.3,1076.8,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424826.53,958.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424831.48,904.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424836.36,790.6,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424841.32,925.1,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424846.41,828.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424851.38,879.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424856.54,988.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424861.37,1017.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424866.89,1340.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424872.42,928.6,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424877.36,1142.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424882.61,728.2,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424887.67,1638.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424892.99,914.3,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424897.0,644.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424901.35,759.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424906.38,862.3,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424911.4,812.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424916.47,987.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424921.41,1018.6,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424926.47,1120.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424931.79,898.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424936.48,1117.8,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424941.45,1019.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424946.44,737.5,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424951.52,982.4,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424956.53,1311.0,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424961.94,1034.7,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424967.43,1004.8,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760424972.31,748.9,0.0,PredictServer
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427278.52,1853.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427282.24,564.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427287.23,582.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427292.27,583.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427297.18,510.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427302.22,536.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427307.33,670.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427312.35,655.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427316.89,218.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427321.91,237.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427326.9,224.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427331.89,191.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427337.4,642.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427342.54,790.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427347.1,382.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427352.04,326.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427356.89,215.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427361.98,282.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427367.03,334.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427372.08,362.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427377.1,371.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427382.13,406.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427387.25,475.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427392.09,364.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427397.05,320.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427402.11,367.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427407.19,430.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427412.15,412.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427417.26,485.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427422.11,383.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427427.11,341.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427432.13,380.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427437.27,526.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427442.23,428.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427447.19,475.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427452.13,397.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427457.18,406.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427462.2,439.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427467.36,554.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427472.31,542.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427477.36,472.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427482.19,416.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427487.41,616.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427492.34,464.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427497.41,568.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427502.29,483.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427507.27,479.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427512.34,559.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427517.36,525.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427522.25,433.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427527.54,741.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427532.41,626.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427537.55,786.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427542.27,480.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427572.95,668.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427625.87,736.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427665.86,676.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427722.88,773.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427785.14,712.0,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427846.02,687.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427893.8,1980.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760427971.6,1085.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428131.3,207.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428154.39,257.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428174.88,245.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428197.32,245.7,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428234.98,448.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428282.15,524.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428332.65,470.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428378.97,1351.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428432.66,397.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428504.53,808.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428597.45,1137.4,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760428725.59,282.6,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429183.66,201.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429202.47,223.1,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429231.84,272.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429304.57,254.3,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429323.67,215.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429362.04,346.5,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429663.77,248.2,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429694.71,330.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429716.53,208.8,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429743.22,437.9,0.0
+ok,signal_response,EURUSD,SELL,0.95,0.05,1760429803.91,1666.6,0.0

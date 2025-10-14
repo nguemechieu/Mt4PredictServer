@@ -102,14 +102,17 @@ class GPTAdvisor(QObject):
             if self.controller:
                 self.controller.logger.info("⚙️ GPTAdvisor running in offline mode (no API key).")
             else:
-                self.logger.info("⚙️ GPTAdvisor running in offline mode (no API key).")
+                self.controller.logger.info("⚙️ GPTAdvisor running in offline mode (no API key).")
 
     # ==========================================================
     # STREAMING ANALYSIS
     # ==========================================================
-    def analyze_signal_stream(self, payload: dict):
-        """Run GPT stream analysis in background."""
-        threading.Thread(target=self._stream_thread, args=(payload,), daemon=True).start()
+    def analyze_signal_stream(self, payload1=None):
+        """Run GPT stream analysis in background.
+
+        :param payload1:
+        """
+        threading.Thread(target=self._stream_thread, args=payload1, daemon=True).start()
 
     def _stream_thread(self, payload: dict):
         try:
@@ -170,12 +173,12 @@ class GPTAdvisor(QObject):
                         if "content" in delta:
                             self.stream_signal.emit(delta["content"])
                 except Exception as stream_err:
-                    self.logger.warning(f"⚠️ Stream chunk parse error: {stream_err}")
+                    self.controller.logger.warning(f"⚠️ Stream chunk parse error: {stream_err}")
 
             self.done_signal.emit("✅ Streaming completed.")
 
         except Exception as e:
-            self.logger.error(f"Stream error: {e}")
+            self.controller.logger.error(f"Stream error: {e}")
             self.error_signal.emit(f"❌ Stream error: {e}")
 
     # ==========================================================
@@ -218,14 +221,14 @@ class GPTAdvisor(QObject):
 
             if recent_loss > 0:
                 result += f"\n⚠️ Recent drawdown of {recent_loss:.2f} detected; reduce trade risk."
-                self.logger.info(f"🧠 GPTAdvisor Response (risk warning): {result[:120]}...")
+                self.controller.logger.info(f"🧠 GPTAdvisor Response (risk warning): {result[:120]}...")
             else:
-                self.logger.info(f"🧠 GPTAdvisor: {result[:120]}...")
+                self.controller.logger.info(f"🧠 GPTAdvisor: {result[:120]}...")
 
             return result
 
         except Exception as e:
-            self.logger.error(f"❌ GPTAdvisor.ask() failed: {e}")
+            self.controller.logger.error(f"❌ GPTAdvisor.ask() failed: {e}")
             return f"Error: {e}"
 
     # ==========================================================
@@ -250,7 +253,7 @@ class GPTAdvisor(QObject):
                 )
             return "\n".join(formatted)
         except Exception as e:
-            self.logger.warning(f"⚠️ Failed to load news data: {e}")
+            self.controller.logger.warning(f"⚠️ Failed to load news data: {e}")
             return "⚠️ News unavailable."
 
     # ==========================================================
@@ -264,7 +267,7 @@ class GPTAdvisor(QObject):
                 return 0.0
 
             df = pd.read_csv(path)
-            if "profit" not in df or df.empty:
+            if "profit" not in df.values or df.empty:
                 return 0.0
 
             recent = df.tail(5)["profit"]
@@ -272,5 +275,5 @@ class GPTAdvisor(QObject):
             return abs(losses.sum()) if not losses.empty else 0.0
 
         except Exception as e:
-            self.logger.warning(f"⚠️ get_recent_loss() failed: {e}")
+            self.controller.logger.warning(f"⚠️ get_recent_loss() failed: {e}")
             return 0.0

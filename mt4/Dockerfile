@@ -1,44 +1,51 @@
-# Use Ubuntu base with Wine support
-FROM ubuntu:latest
+# 🏗️ Use Ubuntu base with Wine support
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install dependencies
+# 🧰 Install dependencies
 RUN dpkg --add-architecture i386 && \
     apt-get update && \
-    apt-get install -y \
-    software-properties-common \
-    wget \
-    gnupg2 \
-    ca-certificates \
-    wine64 \
-    wine32 \
-    xvfb \
-    x11vnc \
-    unzip \
-    xdg-utils \
-    curl \
-    cabextract \
-    net-tools \
-    supervisor \
-    && apt-get clean
+    apt-get install -y --no-install-recommends \
+        software-properties-common \
+        wget \
+        gnupg2 \
+        ca-certificates \
+        wine64 \
+        wine32 \
+        xvfb \
+        x11vnc \
+        unzip \
+        xdg-utils \
+        curl \
+        cabextract \
+        net-tools \
+        supervisor && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Create wine user
-RUN useradd -m trader
-USER trader
+# 👤 Create dedicated 'trader' user
+RUN useradd -m -s /bin/bash trader
+
+# ⚙️ Set working directory
 WORKDIR /home/trader
 
-# Setup Wine
+# 🥂 Initialize Wine environment (ignore first-run warnings)
 RUN wineboot --init || true
 
-# Copy your MT4 installer (assumes you have a terminal.exe or installer.exe)
-COPY mt4setup.exe.exe /home/trader/
+# 📦 Copy MT4 installer (make sure filename matches your real installer)
+COPY --chown=trader:trader mt4setup.exe /home/trader/mt4setup.exe
 
-# Install MT4 (silent if possible)
-RUN xvfb-run wine mt4setup.exe || true
+# 🧩 Install MT4 silently (Wine GUI offscreen via xvfb)
+RUN xvfb-run wine /home/trader/mt4setup.exe || true
 
-# Optional: configure Wine and start script
-COPY start.sh /home/trader/
-RUN chmod +x /home/trader/start.sh
+# 🚀 Copy startup script inside trader folder
+USER root
+COPY --chown=trader:trader start.sh /home/trader/start.sh
 
-CMD ["xvfb-run", "/home/trader/start.sh"]
+
+# 👤 Switch back to 'trader' user
+USER trader
+
+# 🏁 Default working directory and command
+WORKDIR /home/trader
+ENTRYPOINT ["bash", "start.sh"]

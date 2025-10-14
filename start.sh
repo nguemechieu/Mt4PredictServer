@@ -28,3 +28,9 @@ sleep 10
 
 echo "✅ MT4 running (PID $MT4_PID)"
 wait $MT4_PID
+#!/bin/bash
+echo "🚀 Starting MT4 via Wine (headless)..."
+export DISPLAY=:99
+Xvfb :99 -screen 0 1024x768x16 &
+sleep 3
+wine "/home/trader/.wine/drive_c/Program Files/MetaTrader 4/terminal.exe"

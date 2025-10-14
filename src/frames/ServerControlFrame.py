@@ -222,7 +222,7 @@ class ServerControlFrame(QWidget):
         except subprocess.TimeoutExpired:
             gpu_status = "⚠️ GPU check timed out."
         except Exception as e:
-            gpu_status = f"❌ GPU check error: {e}"
+            gpu_status = f"❌ GPU check error: {e.__str__()}"
 
         self.output.append(gpu_status + "\n")
         self.output.moveCursor(QTextCursor.End)

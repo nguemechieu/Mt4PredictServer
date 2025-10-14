@@ -1,2 +1,726 @@
 ,ema_fast,ema_slow,rsi,macd,previous_loss,last_open_price,last_close_price,avg_loss_last_3
 0,1.34935,1.35018,40.08927,-0.00083,0.0,0.0,0.0,0.0
+error,Invalid payload format.,1760418578.3858073
+error,Invalid payload format.,1760418581.1060152
+error,Invalid payload format.,1760418586.1162007
+error,Invalid payload format.,1760418591.1091979
+error,Invalid payload format.,1760418596.1135597
+error,Invalid payload format.,1760418601.1179
+error,Invalid payload format.,1760418606.1103795
+error,Invalid payload format.,1760418611.1331856
+error,Invalid payload format.,1760418616.1161962
+error,Invalid payload format.,1760418621.1272073
+error,Invalid payload format.,1760418626.1170592
+error,Invalid payload format.,1760418631.1205752
+error,Invalid payload format.,1760418636.1291556
+error,Invalid payload format.,1760418648.8909485
+error,Invalid payload format.,1760418653.8817556
+error,Invalid payload format.,1760418658.9006999
+error,Invalid payload format.,1760418663.9094794
+error,Invalid payload format.,1760418668.9465003
+error,Invalid payload format.,1760418673.9405289
+error,Invalid payload format.,1760418678.964744
+error,Invalid payload format.,1760418683.9601626
+error,Invalid payload format.,1760418688.9768457
+error,Invalid payload format.,1760418693.9940765
+error,Invalid payload format.,1760418699.0062912
+error,Invalid payload format.,1760418704.0161536
+error,Invalid payload format.,1760418709.0297775
+error,Invalid payload format.,1760418714.0201292
+error,Invalid payload format.,1760418719.007522
+error,Invalid payload format.,1760418724.003889
+error,Invalid payload format.,1760418729.0160735
+error,Invalid payload format.,1760418734.0210369
+error,Invalid payload format.,1760418739.0546067
+error,Invalid payload format.,1760418744.0303113
+error,Invalid payload format.,1760418749.0346303
+error,Invalid payload format.,1760418753.9906101
+error,Invalid payload format.,1760418759.025583
+error,Invalid payload format.,1760418764.0423412
+error,Invalid payload format.,1760418769.0292459
+error,Invalid payload format.,1760418774.0381992
+error,Invalid payload format.,1760418779.0599608
+error,Invalid payload format.,1760418784.057319
+error,Invalid payload format.,1760418789.0414748
+error,Invalid payload format.,1760418794.093141
+error,Invalid payload format.,1760418799.0985546
+error,Invalid payload format.,1760418804.0920875
+error,Invalid payload format.,1760418809.1126888
+error,Invalid payload format.,1760418814.1113026
+error,Invalid payload format.,1760418819.1156588
+error,Invalid payload format.,1760418824.0945485
+error,Invalid payload format.,1760418829.1065583
+error,Invalid payload format.,1760418834.1018717
+error,Invalid payload format.,1760418839.0757782
+error,Invalid payload format.,1760418844.0963998
+error,Invalid payload format.,1760418849.1063719
+error,Invalid payload format.,1760418854.1323166
+error,Invalid payload format.,1760418859.1009097
+error,Invalid payload format.,1760418864.1150231
+error,Invalid payload format.,1760418869.1675296
+error,Invalid payload format.,1760418874.3207977
+error,Invalid payload format.,1760418879.221095
+error,Invalid payload format.,1760418884.1729949
+error,Invalid payload format.,1760418889.1802444
+error,Invalid payload format.,1760418894.1829157
+error,Invalid payload format.,1760418899.2178617
+error,Invalid payload format.,1760418904.1506307
+error,Invalid payload format.,1760418909.2170646
+error,Invalid payload format.,1760418914.1831853
+error,Invalid payload format.,1760418919.2538307
+error,Invalid payload format.,1760418924.180566
+error,Invalid payload format.,1760418929.1855204
+error,Invalid payload format.,1760418934.1955109
+error,Invalid payload format.,1760418939.2941034
+error,Invalid payload format.,1760418944.207566
+error,Invalid payload format.,1760418949.2806973
+error,Invalid payload format.,1760418954.2160206
+error,Invalid payload format.,1760418959.2809117
+error,Invalid payload format.,1760418964.2624388
+error,Invalid payload format.,1760418969.2995906
+error,Invalid payload format.,1760418974.240963
+error,Invalid payload format.,1760418979.25175
+error,Invalid payload format.,1760418984.262697
+error,Invalid payload format.,1760418989.267098
+error,Invalid payload format.,1760418994.2962034
+error,Invalid payload format.,1760418999.2671983
+error,Invalid payload format.,1760419004.781532
+error,Invalid payload format.,1760419010.748523
+error,Invalid payload format.,1760419014.2037127
+error,Invalid payload format.,1760419019.2944536
+error,Invalid payload format.,1760419024.2927902
+error,Invalid payload format.,1760419029.2683108
+error,Invalid payload format.,1760419034.3069243
+error,Invalid payload format.,1760419051.3594093
+error,Invalid payload format.,1760419054.1723738
+error,Invalid payload format.,1760419059.1690693
+error,Invalid payload format.,1760419064.1719332
+error,Invalid payload format.,1760419069.1772025
+error,Invalid payload format.,1760419074.178842
+error,Invalid payload format.,1760419079.186791
+error,Invalid payload format.,1760419090.9554439
+error,Invalid payload format.,1760419095.9698415
+error,Invalid payload format.,1760419100.9708796
+error,Invalid payload format.,1760419105.9674573
+error,Invalid payload format.,1760419110.9668322
+error,Invalid payload format.,1760419115.9589338
+error,Invalid payload format.,1760419120.977262
+error,Invalid payload format.,1760419125.9599283
+error,Invalid payload format.,1760419130.9781306
+error,Invalid payload format.,1760419135.9854755
+error,Invalid payload format.,1760419141.013175
+error,Invalid payload format.,1760419145.9954076
+error,Invalid payload format.,1760419150.9957366
+error,Invalid payload format.,1760419156.0145435
+error,Invalid payload format.,1760419161.025763
+error,Invalid payload format.,1760419166.0630486
+error,Invalid payload format.,1760419171.0468013
+error,Invalid payload format.,1760419176.0766833
+error,Invalid payload format.,1760419181.1065102
+error,Invalid payload format.,1760419186.121254
+error,Invalid payload format.,1760419191.100265
+error,Invalid payload format.,1760419196.1402423
+error,Invalid payload format.,1760419201.145547
+error,Invalid payload format.,1760419206.146842
+error,Invalid payload format.,1760419211.1486526
+error,Invalid payload format.,1760419216.5143836
+error,Invalid payload format.,1760419221.1501393
+error,Invalid payload format.,1760419226.1713557
+error,Invalid payload format.,1760419231.51958
+error,Invalid payload format.,1760419236.169583
+error,Invalid payload format.,1760419241.2148674
+error,Invalid payload format.,1760419246.2220905
+error,Invalid payload format.,1760419251.2074509
+error,Invalid payload format.,1760419256.9571736
+error,Invalid payload format.,1760419261.2085066
+error,Invalid payload format.,1760419266.2590778
+error,Invalid payload format.,1760419271.2495575
+error,Invalid payload format.,1760419276.2376413
+error,Invalid payload format.,1760419281.3316956
+error,Invalid payload format.,1760419286.2587328
+error,Invalid payload format.,1760419292.2876365
+error,Invalid payload format.,1760419296.254775
+error,Invalid payload format.,1760419302.530183
+error,Invalid payload format.,1760419306.2853456
+error,Invalid payload format.,1760419311.2754967
+error,Invalid payload format.,1760419316.2776852
+error,Invalid payload format.,1760419321.3342745
+error,Invalid payload format.,1760419326.337336
+error,Invalid payload format.,1760419331.3061798
+error,Invalid payload format.,1760419336.3198957
+error,Invalid payload format.,1760419344.0996733
+error,Invalid payload format.,1760419346.36927
+error,Invalid payload format.,1760419351.3613591
+error,Invalid payload format.,1760419558.3817122
+error,Invalid payload format.,1760419558.4240315
+error,Invalid payload format.,1760419561.4565504
+error,Invalid payload format.,1760419566.4478412
+error,Invalid payload format.,1760419571.4692807
+error,Invalid payload format.,1760419576.4723961
+error,Invalid payload format.,1760419581.4734633
+error,Invalid payload format.,1760419586.4771767
+error,Invalid payload format.,1760419591.4691513
+error,Invalid payload format.,1760419596.4765298
+error,Invalid payload format.,1760419601.478378
+error,Invalid payload format.,1760419606.4895785
+error,Invalid payload format.,1760419611.4856255
+error,Invalid payload format.,1760419616.4963813
+error,Invalid payload format.,1760419621.503529
+error,Invalid payload format.,1760419626.4966192
+error,Invalid payload format.,1760419631.5056593
+error,Invalid payload format.,1760419636.5004447
+error,Invalid payload format.,1760419641.5129163
+error,Invalid payload format.,1760419646.50907
+error,Invalid payload format.,1760419651.5026653
+error,Invalid payload format.,1760419656.5079107
+error,Invalid payload format.,1760419661.5124412
+error,Invalid payload format.,1760419666.5240831
+error,Invalid payload format.,1760419671.510874
+error,Invalid payload format.,1760419676.5034707
+error,Invalid payload format.,1760419681.5160046
+error,Invalid payload format.,1760419686.5232873
+error,Invalid payload format.,1760419691.5271015
+error,Invalid payload format.,1760419696.525696
+error,Invalid payload format.,1760419701.5166004
+error,Invalid payload format.,1760419706.5520942
+error,Invalid payload format.,1760419711.5674908
+error,Invalid payload format.,1760419716.5893433
+error,Invalid payload format.,1760419721.639989
+error,Invalid payload format.,1760419726.5585148
+error,Invalid payload format.,1760419731.5942786
+error,Invalid payload format.,1760419736.8748298
+error,Invalid payload format.,1760419741.6162674
+error,Invalid payload format.,1760419746.6107607
+error,Invalid payload format.,1760419751.6354897
+error,Invalid payload format.,1760419756.6506429
+error,Invalid payload format.,1760419761.6536417
+error,Invalid payload format.,1760419766.6671853
+error,Invalid payload format.,1760419771.6721792
+error,Invalid payload format.,1760419776.6766474
+error,Invalid payload format.,1760419781.654319
+error,Invalid payload format.,1760419786.6594074
+error,Invalid payload format.,1760419791.6697829
+error,Invalid payload format.,1760419796.6850274
+error,Invalid payload format.,1760419801.70431
+error,Invalid payload format.,1760419806.658902
+error,Invalid payload format.,1760419811.7055035
+error,Invalid payload format.,1760419816.6596978
+error,Invalid payload format.,1760419821.7222288
+error,Invalid payload format.,1760419826.6651118
+error,Invalid payload format.,1760419831.6623218
+error,Invalid payload format.,1760419836.6789591
+error,Invalid payload format.,1760419841.7268999
+error,Invalid payload format.,1760419846.7591743
+error,Invalid payload format.,1760419851.6865325
+error,Invalid payload format.,1760419856.7207239
+error,Invalid payload format.,1760419861.7627177
+error,Invalid payload format.,1760419866.75683
+error,Invalid payload format.,1760419871.7996454
+error,Invalid payload format.,1760419876.763231
+error,Invalid payload format.,1760419881.808502
+error,Invalid payload format.,1760419886.7693548
+error,Invalid payload format.,1760419891.7685394
+error,Invalid payload format.,1760419896.7610607
+error,Invalid payload format.,1760419901.773643
+error,Invalid payload format.,1760419906.8003302
+error,Invalid payload format.,1760419911.841394
+error,Invalid payload format.,1760419916.8046978
+error,Invalid payload format.,1760419921.8389559
+error,Invalid payload format.,1760419926.908992
+error,Invalid payload format.,1760419932.0153546
+error,Invalid payload format.,1760419936.8003106
+error,Invalid payload format.,1760419941.8122933
+error,Invalid payload format.,1760419946.8577204
+error,Invalid payload format.,1760419951.847403
+error,Invalid payload format.,1760419956.8575768
+error,Invalid payload format.,1760419961.8352091
+error,Invalid payload format.,1760419966.8296149
+error,Invalid payload format.,1760419971.876078
+error,Invalid payload format.,1760419977.1661325
+error,Invalid payload format.,1760419981.850959
+error,Invalid payload format.,1760419986.8220654
+error,Invalid payload format.,1760419991.8600347
+error,Invalid payload format.,1760419996.8595498
+error,Invalid payload format.,1760420001.9128394
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420032.2780602
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420036.7389612
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420041.735496
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420046.7413654
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420051.7528694
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420056.7385375
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420061.7468898
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420066.8174791
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420071.755738
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420076.7806604
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420081.7881951
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420086.8830304
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420091.841332
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420096.8316262
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420101.8381665
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420106.8519068
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420111.8454072
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420116.8826945
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420121.8581197
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420126.8847277
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420131.862139
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420136.8675268
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420141.8986275
+error,Invalid payload format,1760420161.862075
+error,Invalid payload format,1760420166.8942833
+error,Invalid payload format,1760420171.9114096
+error,Invalid payload format,1760420176.906506
+error,Invalid payload format,1760420181.9080083
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420362.3814654
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420362.4108734
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420367.0345037
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420372.0280745
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420377.0350053
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420382.0387883
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420387.0314355
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420392.0421348
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420397.0513208
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420402.0597713
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420407.0653212
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420412.0773144
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420417.0784914
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420422.07155
+error,"Prediction failed: X has 4 features, but StandardScaler is expecting 9 features as input.",1760420427.065676
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421050.31,112.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421052.95,152.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421057.89,141.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421062.92,185.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421067.92,194.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421073.01,200.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421077.99,211.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421084.67,592.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421088.0,188.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421093.09,251.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421098.1,214.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421103.18,259.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421108.17,258.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421113.15,224.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421118.03,230.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421123.11,241.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421128.37,330.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421133.31,346.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421138.36,267.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421143.28,298.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421148.19,231.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421153.18,244.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421158.01,181.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421163.16,273.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421168.21,276.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421173.2,270.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421178.06,187.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421183.2,267.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421188.26,275.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421193.25,308.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421198.25,313.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421203.16,273.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421208.24,340.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421213.26,304.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421218.25,295.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421223.39,408.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421228.27,307.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421233.51,374.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421238.31,309.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421243.26,330.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421250.56,397.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421255.16,295.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421260.32,422.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421265.66,359.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421270.47,401.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421275.42,336.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421280.36,351.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421285.68,421.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421290.57,472.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421295.63,377.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421300.39,440.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421305.8,468.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421311.05,595.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421315.66,560.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421320.75,556.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421326.03,486.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421330.75,527.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421335.96,585.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421341.29,834.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421346.12,639.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421351.21,830.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421356.42,1025.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421361.3,729.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421366.47,927.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421372.02,1186.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421376.41,797.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421381.57,1007.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421386.49,928.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421391.87,942.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421396.8,934.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421401.89,1032.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421406.74,1172.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421411.69,1005.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421416.8,991.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421421.56,837.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421426.45,842.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421431.49,807.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421436.14,682.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421441.4,841.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421446.34,779.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421451.33,886.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421456.27,723.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421461.59,1047.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421466.59,934.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421471.66,990.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421476.58,826.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421482.13,1213.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421485.94,485.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421491.69,613.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421495.79,394.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421500.91,457.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421506.07,604.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421510.84,482.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421515.92,494.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421521.68,696.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421526.24,644.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421531.13,680.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421536.23,648.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421541.84,1333.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421547.27,628.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421551.25,711.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421556.57,849.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421561.13,585.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421566.0,492.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421571.1,691.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421576.14,567.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421581.26,621.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421587.2,1057.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421591.74,1006.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421596.18,592.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421601.0,524.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421606.44,680.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421613.3,2165.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421617.53,656.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421621.58,736.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421626.37,738.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421631.32,754.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421636.62,1058.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421641.8,863.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421646.57,648.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421652.64,1745.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421659.01,809.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421663.95,1021.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421671.28,811.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421676.57,1070.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421680.57,997.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421685.4,724.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421689.13,788.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421694.81,2484.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421699.0,735.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421704.61,1105.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421709.36,930.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421714.05,850.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421717.83,617.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421721.78,965.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421726.88,779.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421731.37,623.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421737.04,902.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421742.2,1137.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421746.96,846.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421752.06,1042.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421766.53,1250.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421771.83,1271.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421778.19,1336.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421782.99,762.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421789.45,1570.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421802.7,1680.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421812.13,1664.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421817.88,1091.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421824.8,1649.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421832.98,940.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421842.89,2006.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421849.11,1491.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421855.77,1432.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421860.87,976.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421870.11,988.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421880.76,1220.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421886.63,1106.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421894.96,2465.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421903.61,3646.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421909.34,1190.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421915.73,1347.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421923.43,1726.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421931.79,1371.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421937.96,1107.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421943.8,1377.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421950.84,1350.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421958.26,1473.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421966.26,1433.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421972.24,1193.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421978.36,1431.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421985.24,1567.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421990.9,1234.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760421996.87,1112.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422003.2,1679.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422010.85,1420.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422017.69,1176.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422031.59,1949.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422040.14,2910.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422053.09,3064.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422066.86,1756.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422080.7,3725.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422087.52,1279.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422094.55,1684.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422103.87,1968.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422111.01,1010.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422117.95,1594.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422126.11,1832.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422135.64,1809.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422143.59,1584.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422151.56,1408.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422158.8,1486.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422165.74,1572.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422172.92,1626.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422179.47,1512.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422186.87,1525.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422193.04,1411.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422200.7,1819.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422208.19,1967.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422215.76,1480.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422222.78,1319.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422230.4,1399.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422237.9,1632.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422244.77,1272.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422252.85,1784.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422265.31,6005.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422272.66,1509.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422280.33,1829.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422288.46,2157.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422300.78,1641.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422310.95,1875.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422322.09,1947.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422329.45,2137.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422340.34,2477.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422349.64,1358.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422355.62,1100.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422363.83,1577.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422474.75,2554.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422501.65,6851.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422516.42,1554.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422524.87,1424.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422531.66,1292.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422539.07,1471.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422545.9,1677.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422551.85,1029.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422558.83,1203.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422565.25,1860.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422577.28,3762.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422597.28,3173.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422619.03,3510.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422633.64,2529.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422649.1,3446.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422668.78,3948.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422685.9,2456.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422700.88,3777.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422721.68,5465.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422744.81,4019.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422756.59,2070.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422767.38,2458.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422788.16,4034.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422805.65,3337.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422826.22,4499.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422846.36,3078.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422865.73,3885.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422883.71,4454.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422909.27,2850.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422927.17,3815.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422948.11,4333.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422961.7,2415.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422977.06,3744.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760422995.88,3549.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423014.18,4023.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423035.58,3795.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423057.15,3967.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423080.87,4517.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423132.64,4131.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423152.68,5076.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423166.65,3613.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423174.11,1107.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423182.54,3053.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423203.34,5146.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423244.46,5120.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760423267.25,4594.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424516.33,128.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424521.26,142.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424526.18,127.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424531.45,164.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424536.46,324.1,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424541.47,326.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424546.47,348.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424551.44,343.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424556.49,416.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424561.51,357.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424566.59,410.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424571.49,371.1,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424576.49,416.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424581.58,453.2,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424586.38,265.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424591.42,318.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424596.43,255.7,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424601.46,266.7,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424606.43,242.2,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424611.46,246.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424616.47,246.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424621.81,477.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424626.79,447.1,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424631.79,537.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424636.79,422.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424641.88,560.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424646.85,584.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424651.84,535.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424656.86,625.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424661.78,601.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424666.95,604.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424671.93,518.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424676.82,567.7,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424681.95,574.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424687.07,563.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424692.03,632.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424696.98,730.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424701.93,496.7,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424706.93,535.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424711.64,318.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424716.76,571.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424721.78,407.5,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424726.94,446.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424731.82,520.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424736.9,493.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424742.21,456.2,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424746.73,417.1,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424751.72,460.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424756.7,424.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424761.78,327.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424766.77,442.5,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424772.4,624.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424777.43,867.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424782.44,981.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424787.43,907.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424792.36,865.1,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424797.13,955.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424802.59,845.1,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424807.55,920.2,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424812.43,848.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424817.32,948.7,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424822.64,1093.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424827.69,1329.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424832.6,952.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424837.32,1141.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424842.58,1063.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424847.43,1079.2,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424852.45,912.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424857.77,1184.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424862.61,1263.7,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424868.46,1075.7,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424873.5,1288.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424878.83,1116.3,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424883.52,1077.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424889.45,1067.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424894.04,942.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424897.82,672.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424902.19,601.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424907.46,884.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424912.46,994.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424917.64,876.7,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424922.63,1005.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424927.84,1217.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424932.93,875.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424937.82,888.0,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424942.76,572.2,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424947.38,1023.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424952.71,927.4,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424958.11,1236.5,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424963.24,1180.6,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424968.55,1305.9,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760424973.2,1115.8,0.0,PredictServer
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427279.38,588.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427283.15,692.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427287.96,667.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427292.81,505.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427297.64,415.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427302.97,647.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427308.05,610.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427312.72,306.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427317.15,202.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427322.19,213.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427327.22,245.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427332.23,233.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427338.0,539.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427343.53,851.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427347.64,485.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427352.4,298.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427357.19,246.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427362.34,294.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427367.45,376.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427372.48,341.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427377.52,363.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427382.61,404.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427387.81,447.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427392.5,365.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427397.5,366.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427402.46,296.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427407.65,393.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427412.68,444.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427417.82,473.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427422.56,388.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427427.62,426.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427432.75,432.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427437.78,472.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427442.77,426.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427447.82,553.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427452.64,431.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427457.75,396.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427462.79,449.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427467.95,503.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427472.89,444.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427478.08,529.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427482.8,527.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427487.92,448.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427492.85,428.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427498.06,533.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427502.96,553.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427507.83,477.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427512.91,477.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427517.92,463.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427522.76,401.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427528.26,645.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427533.02,465.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427538.34,627.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427543.11,750.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427580.78,640.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427633.38,644.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427731.52,742.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760427989.37,978.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428119.94,139.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428133.95,272.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428157.5,224.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428177.72,247.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428201.07,354.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428241.04,582.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428288.82,528.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428339.19,573.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428388.04,598.1,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428441.62,592.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428516.4,1463.0,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428609.95,1269.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428705.73,120.8,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760428729.36,321.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429186.39,228.7,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429205.02,205.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429234.96,299.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429292.4,181.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429306.96,178.6,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429331.08,299.4,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429653.43,97.2,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429666.23,200.3,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429698.78,434.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429721.14,534.9,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429748.42,333.5,0.0
+ok,signal_response,GBPUSD,SELL,0.95,0.05,1760429815.43,1519.3,0.0

@@ -15,22 +15,19 @@ from PySide6.QtWidgets import (
 )
 from tensorflow.keras.models import load_model
 
-# --- Frame imports ---
-from src.components.GPTAdvisor import GPTAdvisor
-from src.components.mt4_predictor import MT4Predictor
+from components.GPTAdvisor import GPTAdvisor
 from src.frames.AccountInfo import AccountInfo
-
-from src.frames.tensorboadviewer import TensorBoardViewer
-
 from src.frames.ExecuteCommand import ExecuteCommand
 from src.frames.GPTChat import GPTChatFrame
 from src.frames.LivePredictionsFrame import LivePredictionsFrame
 from src.frames.PositionHistory import PositionHistory
 from src.frames.ResourceMonitorFrame import ResourceMonitorFrame
 from src.frames.ServerControlFrame import ServerControlFrame
-
+from src.frames.tensorboadviewer import TensorBoardViewer
 from src.frames.tensorflow_metrics import TensorFlowMetricsTab
 from src.server.server import PredictServer
+
+# --- Frame imports ---
 
 # =====================================================
 # CONSTANTS
@@ -73,6 +70,7 @@ class OutputReaderThread(QThread):
         self.output.setReadOnly(True)
         self.output.setStyleSheet(dark_theme_stylesheet())
         self.running = True
+
         self.server = PredictServer(controller)
 
 
@@ -164,9 +162,8 @@ class Mt4PredictServer(QWidget):
         self.api_key = self.config.get("OPENAI_API_KEY", "not_set")
 
         # Core backend components
-        self.gpt = GPTAdvisor(controller=self)
-        self.predictor = MT4Predictor(controller=self)
-        self.server = PredictServer(controller=self)
+        self.server = PredictServer(controller=self.controller)
+        self.gpt=GPTAdvisor(self.controller)
         # UI setup
         self.server_tab = ServerControlFrame(
             controller=self.controller,
@@ -189,8 +186,6 @@ class Mt4PredictServer(QWidget):
         QTimer.singleShot(1500, self.connect_to_server)
 
         # Start PredictServer in background
-
-
         self.logger.info("🚀 PredictServer launched successfully.")
 
     # =====================================================
@@ -367,26 +362,26 @@ class Mt4PredictServer(QWidget):
     # =====================================================
     def _append_log(self, msg, level="INFO"):
 
-     if self.server_tab is not None:
-        self.server_tab.gpu_status_display.setPlainText(msg)
-        """Append logs to visible GUI output."""
-        target_output = getattr(self.server_tab, "output", None)
-        if not target_output:
-             return
+        if self.server_tab is not None:
+            self.server_tab.gpu_status_display.setPlainText(msg)
+            """Append logs to visible GUI output."""
+            target_output = getattr(self.server_tab, "output", None)
+            if not target_output:
+                return
 
-        cursor = target_output.textCursor()
-        cursor.movePosition(QTextCursor.End)
-        fmt = QTextCharFormat()
-        colors = {
-            "INFO": "#00ff66",
-            "WARNING": "#ffcc00",
-            "ERROR": "#ff4444",
-            "CRITICAL": "#ff0000"
-        }
-        fmt.setForeground(QColor(colors.get(level, "#ffffff")))
-        cursor.insertText(f"{msg}\n", fmt)
-        target_output.setTextCursor(cursor)
-        target_output.ensureCursorVisible()
+            cursor = target_output.textCursor()
+            cursor.movePosition(QTextCursor.End)
+            fmt = QTextCharFormat()
+            colors = {
+                "INFO": "#00ff66",
+                "WARNING": "#ffcc00",
+                "ERROR": "#ff4444",
+                "CRITICAL": "#ff0000"
+            }
+            fmt.setForeground(QColor(colors.get(level, "#ffffff")))
+            cursor.insertText(f"{msg}\n", fmt)
+            target_output.setTextCursor(cursor)
+            target_output.ensureCursorVisible()
 
     # =====================================================
     # CLEANUP
